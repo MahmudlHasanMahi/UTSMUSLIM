@@ -1,0 +1,65 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  min-height: min(131px, 6.5vw);
+  padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
+  position: fixed;
+  width: 100%;
+}
+.navbar-container-Dark {
+  background: rgba(117, 117, 111, 0.29);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.navbar-container-Light {
+  background: rgba(246, 244, 226, 0.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.navlogo {
+  background-image: url(../../assets/Navlogo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: min(416px, 25vw);
+  height: min(74px, 3.3vw);
+}
+.navitem-list-container {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(1000px, 53vw);
+}
+.navitem {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(28px, calc(0.8vw + 0.4rem));
+  text-align: center;
+  cursor: pointer;
+}
+.navitem-Light {
+  color: #000000;
+}
+.navitem-Dark {
+  color: white;
+}
+.navitem-lastChild {
+  border-radius: min(13px, 1vw);
+  font-weight: 500;
+  font-size: min(28px, calc(0.8vw + 0.4rem));
+  padding: min(18px, 1vw);
+}
+.navitem-lastChild-Light {
+  background: #6c4e22;
+  color: white;
+}
+.navitem-lastChild-Dark {
+  background: #b0afaa;
+  color: black;
+}

@@ -1,0 +1,159 @@
+.contentContainer.aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65%;
+}
+.postTitle.aboutUs {
+  background: #afab9c;
+  border-radius: 40px;
+  font-size: clamp(1vw, 31px, 1.7vw);
+  padding: clamp(0.8vw, 15px, 0.3vw);
+  text-align: center;
+  line-height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: clamp(1vw, 207px, 10vw);
+}
+.heading.aboutUs {
+  font-family: "TT Wellingtons Trl";
+  font-size: clamp(1vw, 4.76rem, 4vw);
+}
+.paragraph.aboutUs {
+  font-family: "Open Sauce Sans";
+  font-size: clamp(1vw, 2.2rem, 2.2vw);
+}
+.btn-main.aboutUs {
+  background-color: #443115;
+  border-radius: 15px;
+  z-index: 99;
+  font-size: 28px;
+  font-size: clamp(1vw, 28px, 1.7vw);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  color: white;
+  background: #443115;
+  border-radius: 15px;
+  border: none;
+  width: clamp(0vw, 209.89px, 11vw);
+  padding: clamp(0vw, 15px, 3vw);
+  transition: background-color 0.5s;
+}
+.btn-main.aboutUs:hover {
+  background-color: #70562f;
+}
+.contentContainer.ourMission {
+  height: min(400px, 23vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.postTitle.ourMission {
+  background: #d9d7c4;
+  border-radius: 40px;
+  font-size: clamp(1vw, 31px, 1.7vw);
+  padding: clamp(0.8vw, 15px, 0.3vw);
+  text-align: center;
+  line-height: 38px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: clamp(1vw, 228px, 13vw);
+}
+.heading.ourMission {
+  font-size: clamp(1vw, 4.76rem, 4vw);
+  font-family: "TT Wellingtons Trl";
+  text-align: center;
+}
+.paragraph.ourMission {
+  font-family: "Open Sauce Sans";
+  font-size: clamp(1vw, 2.2rem, 2.2vw);
+  text-align: center;
+  width: 65%;
+}
+
+.contentContainer.membership {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: min(1000px, 58vw);
+  width: 50%;
+  margin-left: min(120px, 6vw);
+}
+.postTitle.membership {
+  background: rgba(0, 0, 0, 0.27);
+  border-radius: 40px;
+  font-size: clamp(1vw, 31px, 1.5vw);
+  padding: clamp(0.8vw, 20px, 1.3vw);
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  color: #ffffff;
+  font-weight: 400;
+  width: clamp(1vw, 235px, 13vw);
+}
+.heading.membership {
+  font-family: "TT Wellingtons Trl";
+  color: white;
+  font-size: clamp(1vw, 4.76rem, 3.65vw);
+}
+.paragraph.membership {
+  color: white;
+  font-family: "Open Sauce Sans";
+  font-size: clamp(1vw, 2.2rem, 1.9vw);
+}
+
+.btn-main.membership {
+  background-color: #b0afaa;
+  border-radius: 15px;
+  font-size: 28px;
+  font-size: clamp(1vw, 28px, 1.7vw);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  border-radius: min(15px, 1.2vw);
+  border: none;
+  width: clamp(0vw, 209.89px, 15vw);
+  padding: min(18px, 1.4vw);
+  transition: background-color 0.5s;
+}
+.btn-main.membership:hover {
+  background-color: #ffffff;
+}
+.btn-main.joinUs {
+  background-color: #d9d7c4;
+  border-radius: 15px;
+  font-size: 28px;
+  font-size: clamp(1vw, 28px, 1.7vw);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  border-radius: min(15px, 1.2vw);
+  border: none;
+  width: clamp(0vw, 209.89px, 15vw);
+  padding: min(18px, 1.4vw);
+  transition: background-color 0.5s;
+}
+@media screen and (max-width: 618px) {
+  .contentContainer.ourMission {
+    height: min(180px, 35vw);
+  }
+  .postTitle.ourMission {
+    font-size: min(14px, 2.5vw);
+    padding: min(15px, 0vw);
+    width: min(125px, 22vw);
+    line-height: min(35px, 7vw);
+  }
+  .heading.ourMission {
+    font-size: min(2.6rem, 5.3vw);
+  }
+  .paragraph.ourMission {
+    font-size: min(1.2rem, 3vw);
+    width: 75%;
+  }
+}

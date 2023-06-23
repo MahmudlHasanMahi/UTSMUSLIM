@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Marcellus&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600&display=swap");
+@font-face {
+  font-family: "TT Wellingtons Trl";
+  src: url("./assets/Fonts/TTWellingtonsTrialBold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sauce Sans";
+  src: url("./assets/Fonts/OpenSauceOne-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@media only screen and (min-width: 1920px) {
+  body {
+    /* border: solid red; */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  overflow: hidden;
+}
+
+body {
+  overscroll-behavior: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.landingpage-container {
+  background: linear-gradient(
+    89.86deg,
+    #f5f3e1 44.66%,
+    rgba(245, 243, 225, 0) 188.92%
+  );
+  height: min(1080px, 57vw);
+  box-shadow: 1px 6px 15px rgba(119, 119, 119, 0.64);
+}
+.image-1 {
+  background-image: url(./assets/Image-1.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  height: 100%;
+  width: 60%;
+
+  float: right;
+  position: relative;
+  right: 0;
+  display: inline;
+  z-index: -1;
+}
+.landingtitle-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: min(329px, 13vw) 0 0 min(116px, 10vw);
+  width: min(1030px, 61vw);
+}
+.landingtitle {
+  font-size: min(7rem, calc(4.5vw + 0.5rem));
+  /* font-size: 3em; */
+  font-family: "TT Wellingtons Trl";
+  line-height: min(165px, 8vw);
+  color: #323232;
+}
+.since94 {
+  background-image: url(./assets/since94.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  width: min(317px, 20vw);
+  height: min(193px, 11vw);
+  margin-left: 20px;
+}
+.aboutus-container {
+  background-color: #c3bead;
+  height: clamp(0vw, 1080px, 56vw);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.aboutImagebox-container {
+  background-image: url("./assets/Frame-12.png");
+  background-repeat: no-repeat;
+  background-position: 320%;
+  opacity: 1;
+  background-size: 90%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.contentbox-container {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  padding-left: clamp(0vw, 166px, 10vw);
+}
+.ourmission-container {
+  background: #f5f3e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: min(1080px, 56vw);
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: space-evenly;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(395.55px, 20vw);
+  height: min(417px, 23vw);
+  background: #e4e3d3;
+  border-radius: min(36px, 1.9vw);
+  justify-content: space-evenly;
+  padding: clamp(0vw, 40px, 2vw);
+}
+.cardLogo {
+  border-radius: 50%;
+  padding: min(15px, 1vw);
+  width: min(110px, 6vw);
+  height: min(110px, 6vw);
+}
+.card-postTitle {
+  font-family: "TT Wellingtons Trl";
+  font-style: normal;
+  font-weight: 800;
+  font-size: min(36px, 1.9vw);
+  line-height: 50px;
+  text-align: center;
+}
+.card-heading {
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(21px, 1.3vw);
+  line-height: min(26px, 2vw);
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (max-width: 618px) {
+  .ourmission-container {
+    background: #f5f3e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: min(750px, 145vw);
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    width: min(445px, 85vw);
+    height: min(465px, 96vw);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(200px, 39vw);
+    height: min(220px, 45vw);
+    background: #e4e3d3;
+    border-radius: min(18px, 3.5vw);
+    justify-content: space-evenly;
+  }
+  .cardLogo {
+    border-radius: 50%;
+    padding: min(6px, 2.9vw);
+    width: min(50px, 12vw);
+    height: min(50px, 12vw);
+  }
+  .card-postTitle {
+    font-size: min(20px, 4.6vw);
+    line-height: 50px;
+  }
+  .card-heading {
+    font-size: min(15px, 2.5vw);
+    line-height: min(15px, 3vw);
+  }
+}
+.membership-container {
+  height: min(1200px, 65vw);
+  background: #343431;
+  display: flex;
+  align-items: center;
+  background-image: url("./assets//Membership-image.png");
+  background-position: 125%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+.benefit-container {
+  height: min(484px, 21vw);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.membershipInfo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: min(115px, 6vw);
+  background: rgba(0, 0, 0, 0.27);
+  border-radius: min(20px, 1.5vw);
+}
+.membershipInfo-logo {
+  width: min(63px, 3.5vw);
+  height: min(63px, 3.5vw);
+  margin-left: 25px;
+}
+.membershipInfo-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(30px, 1.7vw);
+  margin-left: min(35px, 1.5vw);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.iphoneImage-container {
+  background-image: url("./assets//Iphone.png");
+  background-position: max(-10px, -5vw);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  flex-grow: 1;
+  height: 90%;
+}
+.ourvalues-container {
+  background: #f5f3e1;
+  height: min(1400px, 90vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hexagons-main-container {
+  background-image: url("./assets/OurvalueImage.png");
+  background-repeat: no-repeat;
+  background-position-x: min(1700px, 77vw);
+  background-position-y: 70px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+}
+.hexagon-container-1,
+.hexagon-container-2,
+.hexagon-container-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.hexagon-container-2,
+.hexagon-container-3 {
+  margin-top: max(-45px, -3vw);
+}
+
+.hexagon {
+  background-image: url("./assets/Hexagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(300px, 21vw);
+  width: min(300px, 21vw);
+}
+
+.hexagon-hidden {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(300px, 21vw);
+
+  width: min(300px, 21vw);
+}
+
+.ourValueSvg {
+  width: 100%;
+  height: 100%;
+}
+.hexagon-title {
+  font-family: "TT Wellingtons Trl";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(30px, 2vw);
+  width: 59%;
+  text-align: center;
+  z-index: 1;
+}
+.hexagon-svg {
+  position: absolute;
+  width: min(200px, 12vw);
+  height: min(200px, 12vw);
+}
+.hexagon-utmslogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.utsMuslim {
+  height: 100%;
+  width: 100%;
+}
+.quotes-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(
+    89.38deg,
+    #aa9473 65.87%,
+    rgba(170, 148, 115, 0) 228.39%
+  );
+  height: min(1128px, 60vw);
+  overflow: hidden;
+}
+.quotesContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 600px;
+  padding-left: min(120px, 6vw);
+}
+.intro {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-style: normal;
+  font-weight: 00;
+  font-size: min(38px, 2vw);
+  display: flex;
+  line-height: min(100px, 5vw);
+  align-items: center;
+}
+.quote {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(75px, 4vw);
+  display: flex;
+  align-items: center;
+}
+.origin {
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(31px, 2vw);
+  display: flex;
+  line-height: min(100px, 5vw);
+  align-items: center;
+  text-align: center;
+}
+.arabicCalligraphy {
+  background-image: url("./assets/ArabicCalligraphy.svg");
+  background-repeat: no-repeat;
+  background-position-x: min(120px, 7vw);
+  background-position-y: min(30px, 2vw);
+  background-size: contain;
+  height: 85%;
+  width: min(2500px, 130vw);
+}
+.quotesimage {
+  background-image: url("./assets/QuotesImage.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: min(1128px, 60vw);
+}
+.footer-container {
+  height: min(850px, 45vw);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background: #3f3526;
+}
+
+.joinUs-container {
+  width: min(1507px, 83vw);
+  height: min(141px, 8vw);
+  background: #000000;
+  padding-inline: min(90px, 5vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.75);
+  border-radius: 70.5px;
+  position: relative;
+  top: -17%;
+}
+.joinUs-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(40px, 2vw);
+  color: white;
+}
+.footer-section-container {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: min(100px, 4vw);
+  width: 100%;
+}
+.UtsmuslimFooterLogo {
+  background-image: url("./assets/UtsmuslimFooterLogo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: min(501px, 25vw);
+  height: min(97.03px, 6vw);
+}
+.followUs {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(36px, 2vw);
+  color: white;
+}
+.footer-section-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: min(385px, 26vw);
+}
+.footer-section-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: min(860px, 44vw);
+}
+.socialMedia-container {
+  display: flex;
+  justify-content: space-around;
+  width: min(275px, 20vw);
+}
+.socialMediaLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(52px, 4vw);
+  width: min(52px, 4vw);
+  padding: min(15px, 1vw);
+
+  background: #ab9473;
+  border-radius: 50%;
+}
+.link-container {
+  display: flex;
+  flex-direction: column;
+}
+.Link-title,
+.Link {
+  font-size: min(29px, 1.2vw);
+  line-height: min(75px, 3.5vw);
+}
+.Link-title {
+  font-family: "Inter";
+  font-weight: 700;
+  color: white;
+  cursor: default;
+}
+.Link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+}
