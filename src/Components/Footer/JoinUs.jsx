@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const JoinUs = ({ children }) => {
   return (
     <div className="joinUs-container">
