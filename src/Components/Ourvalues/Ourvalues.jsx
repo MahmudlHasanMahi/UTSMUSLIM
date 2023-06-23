@@ -13,7 +13,6 @@ const Ourvalues = () => {
     if (inView) {
       setNavigation("Light");
     }
-    console.log(inView);
   }, [inView]);
 
   return (

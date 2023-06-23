@@ -16,7 +16,6 @@ const Membership = () => {
     if (inView) {
       setNavigation("Dark");
     }
-    console.log(inView);
   }, [inView]);
 
   return (

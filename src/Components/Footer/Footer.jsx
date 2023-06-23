@@ -1,4 +1,4 @@
-import JoinUs from "./Joinus";
+import JoinUs from "./JoinUs";
 import Button from "../Content/Button";
 import styles from "../Content/Contentbox.module.css";
 import SocialMediaLink from "./SocialMediaLink";

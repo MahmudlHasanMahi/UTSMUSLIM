@@ -13,7 +13,6 @@ const Ourmission = () => {
     if (inView) {
       setNavigation("Light");
     }
-    console.log(inView);
   }, [inView]);
 
   return (
