@@ -7,7 +7,6 @@ import { useState } from "react";
 const Listitem = ({ title, animate = true, lastchild = false }) => {
   const value = useNavContext();
   const [listColor, setlistColor] = useState();
-
   return (
     <motion.li
       className={
@@ -21,9 +20,9 @@ const Listitem = ({ title, animate = true, lastchild = false }) => {
               value ? styles["navitem-Dark"] : styles["navitem-Light"]
             } `
       }
-      initial={{ opacity: animate ? 0 : null, scale: animate ? 0.5 : null }}
+      initial={{ opacity: animate ? 0 : 1, scale: animate ? 0.5 : 1 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: animate ? 0.5 : null }}
+      transition={{ duration: animate ? 0.5 : 0 }}
     >
       {title}
     </motion.li>
