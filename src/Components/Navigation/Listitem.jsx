@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./Navigation.module.css";
 import { useNavContext } from "../../Utils/NavbarContext";
+import { setDocumentTitle } from "../../Utils/DocumentTitle";
 const Listitem = ({
   title,
   animate = true,
@@ -16,6 +17,7 @@ const Listitem = ({
       key={pk}
       onClick={() => {
         animate && setActive(pk);
+        setDocumentTitle(title);
       }}
       className={
         lastchild
