@@ -26,13 +26,7 @@ const Footer = () => {
             <Link title={"LinkTree"} />
             <Link title={"ActivateUTS"} />
           </Links>
-          <Links heading={"Our Services"}>
-            <Link title={"LinkTree"} />
-            <Link title={"ActivateUTS"} />
-            <Link title={"LinkTree"} />
-            <Link title={"ActivateUTS"} />
-            <Link title={"LinkTree"} />
-          </Links>
+          <Links heading={"Our Services"}></Links>
         </div>
       </div>
     </div>
