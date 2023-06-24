@@ -1,23 +1,37 @@
 import { motion } from "framer-motion";
-// eslint-disable-next-line react/prop-types
 import styles from "./Navigation.module.css";
 import { useNavContext } from "../../Utils/NavbarContext";
-import { useState } from "react";
+const Listitem = ({
+  title,
+  animate = true,
+  lastchild = false,
+  pk,
+  active,
+  setActive,
+}) => {
+  const listTheme = useNavContext();
 
-const Listitem = ({ title, animate = true, lastchild = false }) => {
-  const value = useNavContext();
-  const [listColor, setlistColor] = useState();
   return (
     <motion.li
+      key={pk}
+      onClick={() => {
+        animate && setActive(pk);
+      }}
       className={
         lastchild
           ? `${styles.navitem} ${styles["navitem-lastChild"]} ${
-              value
+              listTheme
                 ? styles["navitem-lastChild-Dark"]
                 : styles["navitem-lastChild-Light"]
             }`
           : `${styles.navitem} ${
-              value ? styles["navitem-Dark"] : styles["navitem-Light"]
+              listTheme
+                ? styles["navitem-Dark"]
+                : `${
+                    active == pk
+                      ? styles["navitem-Light-active"]
+                      : styles["navitem-Light"]
+                  }`
             } `
       }
       initial={{ opacity: animate ? 0 : 1, scale: animate ? 0.5 : 1 }}
@@ -25,6 +39,14 @@ const Listitem = ({ title, animate = true, lastchild = false }) => {
       transition={{ duration: animate ? 0.5 : 0 }}
     >
       {title}
+      {active == pk && animate && (
+        <motion.div
+          layoutId="underline"
+          className={` ${styles.underline} ${
+            listTheme ? styles["underline-Dark"] : styles["underline-Light"]
+          }`}
+        />
+      )}
     </motion.li>
   );
 };

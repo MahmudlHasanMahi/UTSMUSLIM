@@ -42,6 +42,26 @@
   font-size: min(28px, calc(0.8vw + 0.4rem));
   text-align: center;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.navitem-Light-active {
+  color: #6c4e22;
+  font-weight: 700;
+}
+.underline {
+  bottom: -2px;
+  position: absolute;
+  width: 60%;
+  border-radius: 10px;
+}
+.underline-Light {
+  border: 1.4px solid #6c4e22;
+}
+.underline-Dark {
+  border: 1.4px solid #c7c7c7;
 }
 .navitem-Light {
   color: #000000;

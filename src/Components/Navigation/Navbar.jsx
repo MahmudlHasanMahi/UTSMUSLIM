@@ -19,10 +19,10 @@ const Navbar = () => {
   }, [value]);
 
   return (
-    <div className={`${styles["navbar-container"]} ${navBg}`}>
-      <Navlogo />
-      <Navitems />
-    </div>
+      <div className={`${styles["navbar-container"]} ${navBg}`}>
+        <Navlogo />
+        <Navitems />
+      </div>
   );
 };
 
