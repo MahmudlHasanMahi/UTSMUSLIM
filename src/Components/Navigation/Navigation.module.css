@@ -46,7 +46,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
+
 .navitem-Light-active {
   color: #6c4e22;
   font-weight: 700;

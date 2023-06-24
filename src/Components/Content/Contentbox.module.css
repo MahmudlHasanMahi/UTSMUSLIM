@@ -40,6 +40,9 @@
   width: clamp(0vw, 209.89px, 11vw);
   padding: clamp(0vw, 15px, 3vw);
   transition: background-color 0.5s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn-main.aboutUs:hover {
   background-color: #70562f;
@@ -120,10 +123,15 @@
   width: clamp(0vw, 209.89px, 15vw);
   padding: min(18px, 1.4vw);
   transition: background-color 0.5s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 .btn-main.membership:hover {
   background-color: #ffffff;
 }
+
 .btn-main.joinUs {
   background-color: #d9d7c4;
   border-radius: 15px;
@@ -138,7 +146,11 @@
   width: clamp(0vw, 209.89px, 15vw);
   padding: min(18px, 1.4vw);
   transition: background-color 0.5s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 @media screen and (max-width: 618px) {
   .contentContainer.ourMission {
     height: min(180px, 35vw);
