@@ -7,7 +7,7 @@
   unicode-range: U+000-5FF;
 }
 @font-face {
-  font-family: "Open Sauce Sans";
+  font-family: "Open Sauce Sans" !important;
   src: url("./assets/Fonts/OpenSauceOne-Light.woff2") format("woff2");
   font-display: swap;
   font-weight: normal;
@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
 .landingtitle {
   font-size: min(7rem, calc(4.5vw + 0.5rem));
   /* font-size: 3em; */
-  font-family: "TT Wellingtons Trl";
+  font-family: "TT Wellingtons Trl" !important;
   line-height: min(165px, 8vw);
   color: #323232;
 }
@@ -132,7 +132,7 @@ body::-webkit-scrollbar {
   height: min(110px, 6vw);
 }
 .card-postTitle {
-  font-family: "TT Wellingtons Trl";
+  font-family: "TT Wellingtons Trl" !important;
   font-style: normal;
   font-weight: 800;
   font-size: min(36px, 1.9vw);
@@ -140,7 +140,7 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 .card-heading {
-  font-family: "Open Sauce Sans";
+  font-family: "Open Sauce Sans" !important;
   font-style: normal;
   font-weight: 400;
   font-size: min(21px, 1.3vw);
@@ -223,7 +223,7 @@ body::-webkit-scrollbar {
   margin-left: 25px;
 }
 .membershipInfo-title {
-  font-family: "Inter";
+  font-family: "Inter" !important;
   font-style: normal;
   font-weight: 700;
   font-size: min(30px, 1.7vw);
@@ -296,7 +296,7 @@ body::-webkit-scrollbar {
   height: 100%;
 }
 .hexagon-title {
-  font-family: "TT Wellingtons Trl";
+  font-family: "TT Wellingtons Trl" !important;
   font-style: normal;
   font-weight: 700;
   font-size: min(30px, 2vw);
@@ -339,7 +339,7 @@ body::-webkit-scrollbar {
   padding-left: min(120px, 6vw);
 }
 .intro {
-  font-family: "Noto Sans Arabic", sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif !important;
   font-style: normal;
   font-weight: 00;
   font-size: min(38px, 2vw);
@@ -348,7 +348,7 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .quote {
-  font-family: "Marcellus";
+  font-family: "Marcellus" !important;
   font-style: normal;
   font-weight: 400;
   font-size: min(75px, 4vw);
@@ -356,7 +356,7 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .origin {
-  font-family: "Open Sauce Sans";
+  font-family: "Open Sauce Sans" !important;
   font-style: normal;
   font-weight: 400;
   font-size: min(31px, 2vw);
@@ -407,7 +407,7 @@ body::-webkit-scrollbar {
   top: -17%;
 }
 .joinUs-title {
-  font-family: "Inter";
+  font-family: "Inter" !important;
   font-style: normal;
   font-weight: 700;
   font-size: min(40px, 2vw);
@@ -428,7 +428,7 @@ body::-webkit-scrollbar {
   height: min(97.03px, 6vw);
 }
 .followUs {
-  font-family: "Inter";
+  font-family: "Inter" !important;
   font-style: normal;
   font-weight: 700;
   font-size: min(36px, 2vw);
@@ -474,13 +474,13 @@ body::-webkit-scrollbar {
   line-height: min(75px, 3.5vw);
 }
 .Link-title {
-  font-family: "Inter";
+  font-family: "Inter" !important;
   font-weight: 700;
   color: white;
   cursor: default;
 }
 .Link {
-  font-family: "Inter";
+  font-family: "Inter" !important;
   font-style: normal;
   font-weight: 400;
   color: #ffffff;
