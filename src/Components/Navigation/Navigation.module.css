@@ -36,8 +36,8 @@
   width: min(1000px, 53vw);
 }
 .navitem {
-  font-family: "Inter" !important;
-  font-style: normal ;
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 400;
   font-size: min(28px, calc(0.8vw + 0.4rem));
   text-align: center;
@@ -48,7 +48,7 @@
   align-items: flex-end;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; 
 }
 
 .navitem-Light-active {

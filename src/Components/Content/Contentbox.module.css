@@ -11,17 +11,17 @@
   padding: clamp(0.8vw, 15px, 0.3vw);
   text-align: center;
   line-height: 30px;
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   width: clamp(1vw, 207px, 10vw);
 }
 .heading.aboutUs {
-  font-family: "TT Wellingtons Trl" !important;
+  font-family: "TT Wellingtons Trl";
   font-size: clamp(1vw, 4.76rem, 4vw);
 }
 .paragraph.aboutUs {
-  font-family: "Open Sauce Sans" !important;
+  font-family: "Open Sauce Sans";
   font-size: clamp(1vw, 2.2rem, 2.2vw);
 }
 .btn-main.aboutUs {
@@ -30,7 +30,7 @@
   z-index: 99;
   font-size: 28px;
   font-size: clamp(1vw, 28px, 1.7vw);
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   color: white;
@@ -61,18 +61,18 @@
   padding: clamp(0.8vw, 15px, 0.3vw);
   text-align: center;
   line-height: 38px;
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   width: clamp(1vw, 228px, 13vw);
 }
 .heading.ourMission {
   font-size: clamp(1vw, 4.76rem, 4vw);
-  font-family: "TT Wellingtons Trl" !important;
+  font-family: "TT Wellingtons Trl";
   text-align: center;
 }
 .paragraph.ourMission {
-  font-family: "Open Sauce Sans" !important;
+  font-family: "Open Sauce Sans";
   font-size: clamp(1vw, 2.2rem, 2.2vw);
   text-align: center;
   width: 65%;
@@ -92,20 +92,20 @@
   font-size: clamp(1vw, 31px, 1.5vw);
   padding: clamp(0.8vw, 20px, 1.3vw);
   text-align: center;
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   color: #ffffff;
   font-weight: 400;
   width: clamp(1vw, 235px, 13vw);
 }
 .heading.membership {
-  font-family: "TT Wellingtons Trl" !important;
+  font-family: "TT Wellingtons Trl";
   color: white;
   font-size: clamp(1vw, 4.76rem, 3.65vw);
 }
 .paragraph.membership {
   color: white;
-  font-family: "Open Sauce Sans" !important;
+  font-family: "Open Sauce Sans";
   font-size: clamp(1vw, 2.2rem, 1.9vw);
 }
 
@@ -114,7 +114,7 @@
   border-radius: 15px;
   font-size: 28px;
   font-size: clamp(1vw, 28px, 1.7vw);
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   color: rgb(0, 0, 0);
@@ -137,7 +137,7 @@
   border-radius: 15px;
   font-size: 28px;
   font-size: clamp(1vw, 28px, 1.7vw);
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   color: rgb(0, 0, 0);
