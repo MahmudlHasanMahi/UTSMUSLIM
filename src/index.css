@@ -58,7 +58,6 @@ body::-webkit-scrollbar {
 }
 .landingtitle {
   font-size: min(7rem, calc(4.5vw + 0.5rem));
-  /* font-size: 3em; */
   font-family: "TT Wellingtons Trl";
   line-height: min(165px, 8vw);
   color: #323232;
@@ -81,6 +80,7 @@ body::-webkit-scrollbar {
   background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Frame-12.png?updatedAt=1689504717281");
   background-repeat: no-repeat;
   background-position: 320%;
+
   background-size: 90%;
   opacity: 1;
   position: absolute;
@@ -254,7 +254,6 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
 }
-
 .hexagon-container-2,
 .hexagon-container-3 {
   margin-top: max(-45px, -3vw);

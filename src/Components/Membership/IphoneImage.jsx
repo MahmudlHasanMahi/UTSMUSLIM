@@ -19,7 +19,7 @@ const IphoneImage = () => {
         opacity: isInview ? 1 : 0,
         y: isInview ? -50 : 50,
         transitionProperty: "opacity , y",
-        transition: "0.5s cubic-bezier(0,0,1,1) 1s",
+        transition: "0.5s cubic-bezier(0,0,1,1) 0.7s",
       }}
     />
   );

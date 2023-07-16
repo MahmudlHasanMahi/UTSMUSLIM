@@ -1,6 +1,6 @@
-const Hexagon = ({ svg, title, attr = false }) => {
+const Hexagon = ({ svg, title, attr = false, pkey }) => {
   return (
-    <div className={attr ? "hexagon-hidden" : "hexagon"}>
+    <div key={pkey} id={`hexagon-${pkey}`} className={attr ? "hexagon-hidden" : "hexagon"}>
       {attr ? (
         <span className="hexagon-utmslogo">{svg}</span>
       ) : (

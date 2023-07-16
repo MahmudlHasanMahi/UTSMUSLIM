@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import Contentbox from "../Content/Contentbox";
 import Hexagons from "./Hexagons";
 import styles from "../../Components/Content/Contentbox.module.css";
+import { motion } from "framer-motion";
 const Ourvalues = () => {
   const setNavigation = useNavUpdateContext();
   const { ref, inView } = useInView({
@@ -16,7 +17,10 @@ const Ourvalues = () => {
   }, [inView]);
 
   return (
-    <div ref={ref} className="ourvalues-container">
+    <motion.div
+      ref={ref}
+      className="ourvalues-container"
+    >
       <Contentbox
         postTitle={"Our Values"}
         heading={"What Do We Stand For?"}
@@ -27,7 +31,7 @@ const Ourvalues = () => {
         animate={true}
       />
       <Hexagons />
-    </div>
+    </motion.div>
   );
 };
 
