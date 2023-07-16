@@ -38,21 +38,17 @@ body::-webkit-scrollbar {
   );
   height: min(1080px, 57vw);
   box-shadow: 1px 6px 15px rgba(119, 119, 119, 0.64);
+  overflow: hidden;
 }
 .image-1 {
-  background-image: url(./assets/Image-1.png);
-  background-repeat: no-repeat;
-  background-position: cover;
-  background-size: cover;
-  height: 100%;
   width: 60%;
-
   float: right;
   position: relative;
   right: 0;
   display: inline;
   z-index: -1;
 }
+
 .landingtitle-container {
   display: flex;
   flex-direction: column;
@@ -68,10 +64,6 @@ body::-webkit-scrollbar {
   color: #323232;
 }
 .since94 {
-  background-image: url(./assets/since94.png);
-  background-repeat: no-repeat;
-  background-position: cover;
-  background-size: cover;
   width: min(317px, 20vw);
   height: min(193px, 11vw);
   margin-left: 20px;
@@ -80,16 +72,17 @@ body::-webkit-scrollbar {
   background-color: #c3bead;
   height: clamp(0vw, 1080px, 56vw);
   display: flex;
+  width: 100%;
   position: relative;
   overflow: hidden;
   z-index: -1;
 }
 .aboutImagebox-container {
-  background-image: url("./assets/Frame-12.png");
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Frame-12.png?updatedAt=1689504717281");
   background-repeat: no-repeat;
   background-position: 320%;
-  opacity: 1;
   background-size: 90%;
+  opacity: 1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -196,7 +189,7 @@ body::-webkit-scrollbar {
   background: #343431;
   display: flex;
   align-items: center;
-  background-image: url("./assets//Membership-image.png");
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Membership-image.png?updatedAt=1689504714904");
   background-position: 125%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -233,13 +226,10 @@ body::-webkit-scrollbar {
   color: #ffffff;
 }
 .iphoneImage-container {
-  background-image: url("./assets//Iphone.png");
-  background-position: max(-10px, -5vw);
-  background-repeat: no-repeat;
-  background-size: contain;
   position: relative;
   flex-grow: 1;
-  height: 90%;
+  height: 80%;
+  object-fit: cover;
 }
 .ourvalues-container {
   background: #f5f3e1;
@@ -250,7 +240,7 @@ body::-webkit-scrollbar {
 }
 
 .hexagons-main-container {
-  background-image: url("./assets/OurvalueImage.png");
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/OurvalueImage.png?updatedAt=1689504714751");
   background-repeat: no-repeat;
   background-position-x: min(1700px, 77vw);
   background-position-y: 70px;
@@ -271,7 +261,7 @@ body::-webkit-scrollbar {
 }
 
 .hexagon {
-  background-image: url("./assets/Hexagon.svg");
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Hexagon.svg?updatedAt=1689504714696");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -366,16 +356,13 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 .arabicCalligraphy {
-  background-image: url("./assets/ArabicCalligraphy.svg");
-  background-repeat: no-repeat;
-  background-position-x: min(120px, 7vw);
-  background-position-y: min(30px, 2vw);
-  background-size: contain;
-  height: 85%;
+  margin-top: -150px;
+  object-position: 100px;
+  height: 60%;
   width: min(2500px, 130vw);
 }
 .quotesimage {
-  background-image: url("./assets/QuotesImage.png");
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/QuotesImage.png?updatedAt=1689504714946");
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -420,10 +407,6 @@ body::-webkit-scrollbar {
   width: 100%;
 }
 .UtsmuslimFooterLogo {
-  background-image: url("./assets/UtsmuslimFooterLogo.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: min(501px, 25vw);
   height: min(97.03px, 6vw);
 }
@@ -460,10 +443,15 @@ body::-webkit-scrollbar {
   height: min(52px, 4vw);
   width: min(52px, 4vw);
   padding: min(15px, 1vw);
-
+  cursor: pointer;
   background: #ab9473;
   border-radius: 50%;
+  transition: 0.3s ease-in;
 }
+.socialMediaLogo:hover {
+  background: #f0d2a8;
+}
+
 .link-container {
   display: flex;
   flex-direction: column;

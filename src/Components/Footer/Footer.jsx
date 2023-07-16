@@ -12,7 +12,13 @@ const Footer = () => {
       </JoinUs>
       <div className="footer-section-container">
         <div className="footer-section-1">
-          <div className="UtsmuslimFooterLogo"></div>
+          <img
+            className="UtsmuslimFooterLogo"
+            src="https://ik.imagekit.io/ytjlb3rhi/assets/UtsmuslimFooterLogo.svg?updatedAt=1689504714655"
+            alt="UtsmuslimFooterLogo"
+            loading="lazy"
+          />
+
           <span className="followUs">Follow Us</span>
           <SocialMediaLink />
         </div>

@@ -3,6 +3,7 @@ import Landingtitle from "./Landingtitle";
 import { useNavUpdateContext } from "../../Utils/NavbarContext";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+
 const Landingpage = () => {
   const setNavigation = useNavUpdateContext();
   const { ref, inView } = useInView({
@@ -15,12 +16,17 @@ const Landingpage = () => {
   }, [inView]);
   return (
     <div ref={ref} className="landingpage-container">
-      <motion.div
+      <motion.img
         initial={{ x: 60, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         className="image-1"
-      ></motion.div>
+        src="https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
+        alt="image-1"
+        srcset=""
+        loading="lazy"
+      />
+
       <Landingtitle />
     </div>
   );

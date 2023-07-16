@@ -20,11 +20,6 @@
 }
 
 .navlogo {
-  background-image: url(../../assets/Navlogo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
   width: min(416px, 25vw);
   height: min(74px, 3.3vw);
 }
@@ -48,7 +43,7 @@
   align-items: flex-end;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none; 
+  user-select: none;
 }
 
 .navitem-Light-active {

@@ -8,16 +8,20 @@ const IphoneImage = () => {
     { once: true }
   );
   return (
-    <motion.div
+    <motion.img
       ref={contentBoxRef}
+      className="iphoneImage-container"
+      src="https://ik.imagekit.io/ytjlb3rhi/assets/Iphone.png?updatedAt=1689504714722"
+      alt="Iphone"
+      srcset=""
+      loading="lazy"
       style={{
         opacity: isInview ? 1 : 0,
         y: isInview ? -50 : 50,
         transitionProperty: "opacity , y",
         transition: "0.5s cubic-bezier(0,0,1,1) 1s",
       }}
-      className="iphoneImage-container"
-    ></motion.div>
+    />
   );
 };
 

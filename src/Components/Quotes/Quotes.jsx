@@ -22,7 +22,14 @@ const Quotes = () => {
         }
         origin={"Sunan Abi Dawud 4833 (Hasan)"}
       />
-      <div className="arabicCalligraphy"></div>
+
+      <img
+        className="arabicCalligraphy"
+        src="https://ik.imagekit.io/ytjlb3rhi/assets/ArabicCalligraphy.svg?updatedAt=1689504714797"
+        alt="arabicCalligraphy"
+        loading="lazy"
+      />
+
       <div className="quotesimage"></div>
     </div>
   );
