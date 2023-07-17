@@ -8,7 +8,7 @@ const Landingtitle = () => {
         src="https://ik.imagekit.io/ytjlb3rhi/assets/since94.png?updatedAt=1689504714636"
         alt="since94"
         srcset=""
-        loading="lazy"
+        // loading="lazy"
       />
     </div>
   );

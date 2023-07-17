@@ -24,7 +24,7 @@ const Landingpage = () => {
         src="https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
         alt="image-1"
         srcset=""
-        loading="lazy"
+        // loading="lazy"
       />
 
       <Landingtitle />
