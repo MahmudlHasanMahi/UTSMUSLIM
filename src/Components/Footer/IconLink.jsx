@@ -1,6 +1,10 @@
 // eslint-disable-next-line react/prop-types
-const IconLink = ({ logo }) => {
-  return <div className="socialMediaLogo">{logo}</div>;
+const IconLink = ({ logo, link = "/" }) => {
+  return (
+    <a className="socialMediaLogo" href={link} target="_blank">
+      {logo}
+    </a>
+  );
 };
 
 export default IconLink;

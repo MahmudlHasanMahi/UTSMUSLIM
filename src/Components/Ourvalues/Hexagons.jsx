@@ -44,7 +44,7 @@ const Hexagons = () => {
           view ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 },
         ],
       ];
-      animate(sequence, { duration: 0.5 });
+      animate(sequence, { duration: 0.8 });
     }, [view]);
     return scope;
   };
