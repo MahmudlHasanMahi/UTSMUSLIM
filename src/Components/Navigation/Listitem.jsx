@@ -5,8 +5,8 @@ import { setDocumentTitle } from "../../Utils/DocumentTitle";
 import { Link } from "react-router-dom";
 const Listitem = ({
   title,
-  animate = true,
   lastchild = false,
+  linkTitle,
   pk,
   active,
   setActive,
@@ -17,16 +17,16 @@ const Listitem = ({
     <motion.div
       key={pk}
       onClick={() => {
-        animate && setActive(pk);
+        setActive(linkTitle);
         setDocumentTitle(title);
       }}
       className={`${styles.navitem}`}
-      initial={{ opacity: animate ? 0 : 1, scale: animate ? 0.5 : 1 }}
+      initial={{ opacity: !lastchild ? 0 : 1, scale: !lastchild ? 0.5 : 1 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: animate ? 0.5 : 0 }}
+      transition={{ duration: !lastchild ? 0.5 : 0 }}
     >
       <Link
-        to={`/${title == "Home" ? "" : title}`}
+        to={`${linkTitle}`}
         className={
           lastchild
             ? `${styles.navitem} ${styles["navitem-lastChild"]} ${
@@ -38,7 +38,7 @@ const Listitem = ({
                 listTheme
                   ? styles["navitem-Dark"]
                   : `${
-                      active == pk
+                      active == linkTitle
                         ? styles["navitem-Light-active"]
                         : styles["navitem-Light"]
                     }`
@@ -48,7 +48,7 @@ const Listitem = ({
         {title}
       </Link>
 
-      {active == pk && animate && (
+      {active == linkTitle && !lastchild && (
         <motion.div
           layoutId="underline"
           className={` ${styles.underline} ${
