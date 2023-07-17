@@ -27,7 +27,9 @@ const Listitem = ({
     >
       <Link
         to={`${linkTitle}`}
-        onClick={window.scroll(0, 0)}
+        onClick={() => {
+          window.scroll(0, 0);
+        }}
         className={
           lastchild
             ? `${styles.navitem} ${styles["navitem-lastChild"]} ${
