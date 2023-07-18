@@ -50,10 +50,7 @@ const Hexagons = () => {
   };
   const scope = useHexagonAnimation(inView);
   return (
-    <div
-      className="hexagons-main-container"
-      
-    >
+    <div className="hexagons-main-container">
       <div ref={scope}>
         <div className="hexagon-container-1">
           <Hexagon pkey={1} svg={<Ourvalues_1 />} title={"Quran and Sunnah"} />

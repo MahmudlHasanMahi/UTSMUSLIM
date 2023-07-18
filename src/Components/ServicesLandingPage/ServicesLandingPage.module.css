@@ -12,7 +12,7 @@
 .servicesLanding-image {
   height: 120%;
   object-fit: cover;
-  margin-left: max(-105px, -7vw);
+  margin-left: max(-136px, -7vw);
 }
 .contentBox-container {
   display: flex;
@@ -27,14 +27,14 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  height: 50%;
-  padding-right: min(70px, 4vw);
+  height: 52%;
+  padding-right: min(97px, 4vw);
 }
 .Title {
   color: #323232;
   text-align: right;
   font-family: Montserrat;
-  font-size: min(4rem, 5vw);
+  font-size: min(6.3125rem, 5vw);
   font-style: normal;
   font-weight: 700;
   width: 100%;
@@ -43,7 +43,7 @@
   color: #323232;
   text-align: right;
   font-family: Open Sauce Sans;
-  font-size: min(2rem, 3vw);
+  font-size: min(2.6875rem, 2.2vw);
   font-style: normal;
   font-weight: 400;
   width: 100%;

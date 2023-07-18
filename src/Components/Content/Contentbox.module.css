@@ -169,3 +169,34 @@
     width: 75%;
   }
 }
+.contentContainer.PAS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: min(51%, 28vw);
+}
+.postTitle.PAS {
+  background: #d9d7c4;
+  border-radius: 40px;
+  font-size: clamp(1vw, 31px, 1.7vw);
+  padding: clamp(0.8vw, 15px, 0.3vw);
+  text-align: center;
+  line-height: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: clamp(1vw, 377px, 20vw);
+}
+.heading.PAS {
+  font-family: "TT Wellingtons Trl";
+  text-align: center;
+  font-size: clamp(1vw, 4.76rem, 4vw);
+  width: 60%;
+}
+.paragraph.PAS {
+  font-family: "Open Sauce Sans";
+  text-align: center;
+  font-size: clamp(1vw, 2.2rem, 2.2vw);
+  width: 60%;
+}
