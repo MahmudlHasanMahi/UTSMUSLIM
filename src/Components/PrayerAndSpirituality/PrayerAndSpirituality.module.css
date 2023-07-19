@@ -35,14 +35,7 @@
   justify-content: flex-start;
   padding-inline: min(63px, 3vw);
 }
-.Card3-container {
-  border-radius: min(52px, 3vw) 0px 0px min(52px, 3vw);
-  background: rgba(167, 137, 186, 0.63);
-  width: 98.43%;
-  height: min(1045px, 52vw);
-  margin-inline-start: auto;
-  margin-top: min(30px, 2vw);
-}
+
 .Card1-title-location-container {
   display: flex;
   flex-direction: column;
@@ -193,4 +186,187 @@
   font-size: min(31px, 2vw);
   font-style: normal;
   font-weight: 700;
+}
+.Card3-container {
+  border-radius: min(52px, 3vw) 0px 0px min(52px, 3vw);
+  background: rgba(167, 137, 186, 0.63);
+  width: 98.43%;
+  height: min(1045px, 52vw);
+  margin-inline-start: auto;
+  margin-top: min(30px, 2vw);
+  display: flex;
+  flex-direction: coloum;
+}
+.Card3-section-1 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-inline: min(120px, 7vw);
+  padding-block: min(160px, 8vw);
+}
+.Card3-date-svg-container {
+  display: flex;
+  align-items: center;
+}
+.Card3-svg {
+  display: block;
+  width: min(50px, 3vw);
+  height: min(50px, 3vw);
+  margin-right: min(46px, 2vw);
+}
+.Card3-date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: min(100px, 6vw);
+}
+.Card3-Islamic-date {
+  color: #4e2955;
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: min(34px, 1.8vw);
+}
+.Card3-Gregorian-date {
+  color: #4e2955;
+  font-family: Open Sauce Sans;
+  font-size: min(34px, 1.8vw);
+  font-style: normal;
+  font-weight: 400;
+}
+.Maintime-container {
+}
+.Time {
+  color: #4e2955;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: min(132px, 6.7vw);
+  font-style: normal;
+  font-weight: 700;
+}
+.AmOrPm {
+  color: #4e2955;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: min(41px, 2vw);
+  font-style: normal;
+  font-weight: 700;
+  margin-left: min(15px, 0.9vw);
+}
+.NextPrayer-Progress-Container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: min(170px, 10vw);
+}
+.NextPrayer-container {
+  color: #4e2955;
+  font-family: Open Sauce Sans;
+  font-size: min(48px, 3vw);
+}
+.Next-Prayer {
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: bold;
+}
+.Timeleft {
+  color: #4e2955;
+  text-align: center;
+  font-family: Open Sauce Sans;
+  font-size: min(37px, 2vw);
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+}
+.Progress-container,
+.Progress {
+  height: min(10px, 0.5vw);
+  border-radius: min(12px, 0.5vw);
+}
+.Progress-container {
+  background-color: #b87cc5;
+  width: 70%;
+  position: relative;
+}
+.Progress {
+  background-color: #873a97;
+  width: 50%;
+}
+.Card3-section-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.Card3-section-2-Salah-container {
+  margin-right: min(115px, 6vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 73%;
+}
+.Salah-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: min(25px, 1vw) min(30px, 1vw) min(25px, 1vw) min(20px, 1vw);
+  border-radius: min(25px, 1.5vw);
+  color: #3f3548;
+}
+.Salah-container.active {
+  background: #bc9cc2;
+  color: #4e2955;
+}
+.Day-svg {
+  display: block;
+  width: min(50px, 3vw);
+  height: min(50px, 3vw);
+  margin-right: min(46px, 2vw);
+}
+.Salah {
+  font-family: Montserrat;
+  font-size: min(50px, 2.5vw);
+  font-style: normal;
+  font-weight: 700;
+  flex-grow: 1;
+  margin-left: min(32px, 1vw);
+}
+.SalahTime-container {
+}
+.SalahTime {
+  text-align: right;
+  font-family: Montserrat;
+  font-size: min(50px, 2.6vw);
+  font-style: normal;
+  font-weight: 400;
+}
+.SalahTime-AmOrPm {
+  text-align: right;
+  font-family: Montserrat;
+  font-size: min(34px, 1.75vw);
+  font-style: normal;
+  font-weight: 400;
+}
+.Card3-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 32%;
+  color: rgba(63, 53, 72, 0.61);
+  font-family: Montserrat;
+  font-size: min(18px, 1vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 17%;
+}
+.location-svg {
+  width: min(35px, 2vw);
+  height: min(35px, 2vw);
+  color: rgba(63, 53, 72, 0.61);
 }
