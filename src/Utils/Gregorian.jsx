@@ -30,7 +30,7 @@ export const time = (isInView) => {
     var date = new Date();
     var hour = date.getHours();
     var minute = date.getMinutes();
-
+    
     var period = "";
     if (hour >= 12) {
       period = "pm";
