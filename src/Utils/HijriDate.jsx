@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { Gregorian as gr } from "./Gregorian";
 export const hijriDate = async (isInView) => {
-  const res = await fetch("https://api.aladhan.com/v1/gToH/07-12-2014");
+  const Gregorian = gr();
+  const res = await fetch(
+    `https://api.aladhan.com/v1/gToH/${Gregorian.day}-${Gregorian.monthNo}-${Gregorian.year}`
+  );
   const data = await res.json();
   return data;
 };

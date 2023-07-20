@@ -4,7 +4,7 @@ import FacilityInfo from "./FacilityInfo";
 import { useRef, useMemo } from "react";
 import { useInView, motion } from "framer-motion";
 import { hijriDate as hd } from "../../Utils/HijriDate";
-import { Gregorian as gr } from "../../Utils/Gregorian";
+import { Gregorian as gr, time } from "../../Utils/Gregorian";
 import {
   Wc,
   WaterDrop,
@@ -136,9 +136,11 @@ export const Card2 = () => {
 
 export const Card3 = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: false });
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
+  const Time = time(isInView);
+
   useMemo(() => {
     if (isInView) {
       hd().then((data) => {
@@ -172,11 +174,10 @@ export const Card3 = () => {
         </div>
         <div className={styles["Maintime-container"]}>
           <span className={styles["Time"]}>
-            {(Gregorian && `${Gregorian.hour}:${Gregorian.minute}`) ||
-              "-------"}
+            {(Time && `${Time.hour}:${Time.minute}`) || ""}
           </span>
           <span className={styles["AmOrPm"]}>
-            {(Gregorian && `${Gregorian.amPm}`) || "-------"}
+            {(Time && `${Time.amPm}`) || ""}
           </span>
         </div>
         <div className={styles["NextPrayer-Progress-Container"]}>
