@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ServicesLandingPage.module.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 const ContentBox = () => {
   return (
     <div className={styles["contentBox-container"]}>
