@@ -6,11 +6,10 @@ import Contentbox from "../Content/Contentbox";
 import styles from "../Content/Contentbox.module.css";
 import IphoneImage from "./IphoneImage";
 import Button from "../Content/Button";
-
 const Membership = () => {
   const setNavigation = useNavUpdateContext();
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.7,
   });
   useEffect(() => {
     if (inView) {

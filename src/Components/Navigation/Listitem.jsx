@@ -39,7 +39,9 @@ const Listitem = ({
               }`
             : `${styles.navitem} ${
                 listTheme
-                  ? styles["navitem-Dark"]
+                  ? active == linkTitle
+                    ? styles["navitem-Dark-active"]
+                    : styles["navitem-Dark"]
                   : `${
                       active == linkTitle
                         ? styles["navitem-Light-active"]

@@ -20,9 +20,9 @@
 }
 
 .navlogo {
-  width:min(350px,18vw);
+  width: min(350px, 18vw);
   height: 74px;
-  margin-left: min(40px,2vw);
+  margin-left: min(40px, 2vw);
   object-position: center;
   object-fit: scale-down;
 }
@@ -72,6 +72,11 @@
 .navitem-Dark {
   color: white;
 }
+
+.navitem-Dark-active {
+  color: #fcf5da;
+  font-weight: 700;
+}
 .navitem-lastChild {
   border-radius: min(13px, 1vw);
   font-weight: 500;
@@ -81,9 +86,8 @@
 .navitem-lastChild-Light {
   background: #6c4e22;
   color: white;
-  
 }
 .navitem-lastChild-Dark {
-  background: #AB9473;
+  background: #ab9473;
   color: black;
 }
