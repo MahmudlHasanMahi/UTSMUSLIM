@@ -34,6 +34,5 @@ export const getLocation = async () => {
     await fetch(`https://geolocation-db.com/json/${import.meta.env.VITE_API_KEY}
 `);
   const { latitude, longitude } = await req.json();
-  console.log(latitude, longitude);
   return { lat: latitude, lon: longitude };
 };
