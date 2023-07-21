@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 99;
-  min-height: min(131px, 6.5vw);
+  min-height: min(131px, 5.5vw);
   padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
   position: fixed;
   width: 100%;
@@ -21,14 +21,17 @@
 
 .navlogo {
   width: min(416px, 25vw);
-  height: min(74px, 3.3vw);
+  height: min(74px, 3.6vw);
+  /* border: solid red; */
+  object-position: center;
+  object-fit: cover;
 }
 .navitem-list-container {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(1000px, 53vw);
+  width: min(910px, 47vw);
 }
 .navitem {
   font-family: "Inter";
@@ -52,7 +55,7 @@
   font-weight: 700;
 }
 .underline {
-  bottom: -2px;
+  bottom: max(-8px, -1vw);
   position: absolute;
   width: 60%;
   border-radius: 10px;

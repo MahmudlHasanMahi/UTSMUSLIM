@@ -70,10 +70,14 @@ body::-webkit-scrollbar {
   line-height: min(165px, 8vw);
   color: #323232;
 }
-.since94 {
-  width: min(317px, 20vw);
-  height: min(193px, 11vw);
-  margin-left: 20px;
+.landingPage-title {
+  color: #000;
+  font-family: Open Sauce Sans;
+  font-size: min(39px,2vw);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: min(140px,6vw);
 }
 .aboutus-container {
   background-color: #c3bead;
@@ -398,7 +402,7 @@ body::-webkit-scrollbar {
   box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.75);
   border-radius: 70.5px;
   position: relative;
-  top: -17%;
+  top: -24%;
 }
 .joinUs-title {
   font-family: "Inter";
@@ -410,12 +414,14 @@ body::-webkit-scrollbar {
 .footer-section-container {
   display: flex;
   justify-content: space-between;
-  padding-inline: min(100px, 4vw);
+  padding-inline: min(130px, 6vw);
   width: 100%;
+  margin-top: -100px;
 }
 .UtsmuslimFooterLogo {
   width: min(501px, 25vw);
   height: min(97.03px, 6vw);
+  margin-top: min(-40px, -2vw);
 }
 .followUs {
   font-family: "Inter";
@@ -435,8 +441,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  width: min(860px, 44vw);
+  width: min(700px, 36vw);
 }
 .socialMedia-container {
   display: flex;
@@ -447,9 +452,9 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: min(52px, 4vw);
-  width: min(52px, 4vw);
-  padding: min(15px, 1vw);
+  height: min(52px, 3vw);
+  width: min(52px, 3vw);
+  padding: min(13px, 0.8vw);
   cursor: pointer;
   background: #ab9473;
   border-radius: 50%;

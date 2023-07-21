@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Landingtitle = () => {
   // const ref = useRef();
@@ -14,16 +13,18 @@ const Landingtitle = () => {
         Empowering Muslims On Campus
       </motion.div>
 
-      <motion.img
-        className="since94"
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.5 } }}
-        exit={{ opacity: 1 }}
-        src="https://ik.imagekit.io/ytjlb3rhi/assets/since94.png?updatedAt=1689504714636"
-        alt="since94"
-        srcset=""
-        // loading="lazy"
-      />
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
+        className="landingPage-title"
+      >
+        We are the UTS Muslim Society. We are the sole representatives for
+        muslims since 94’.
+      </motion.span>
     </div>
   );
 };
