@@ -153,6 +153,7 @@ export const Card3 = () => {
     }
   }, [isInView]);
 
+
   return (
     <div ref={ref} className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>
@@ -198,21 +199,32 @@ export const Card3 = () => {
       </div>
       <div className={styles["Card3-section-2"]}>
         <div className={styles["Card3-section-2-Salah-container"]}>
-          <Salah logo={<PrayerTimes />} prayer={"Fajr"} time={"12:45"} />
           <Salah
             logo={<ClearDay />}
             prayer={"Dhur"}
             time={"12:45"}
-            // amPm={(prayerTimes && prayerTimes.Dhuhr.amPm) || ""}
+            amPm={"pm"}
           />
-          <Salah logo={<PartlyCloudy />} prayer={"Asr"} time={"12:45"} />
+          <Salah
+            logo={<PartlyCloudy />}
+            prayer={"Asr"}
+            time={"12:45"}
+            amPm={"pm"}
+          />
           <Salah
             logo={<Twilight />}
             prayer={"Margib"}
             time={"12:45"}
+            amPm={"pm"}
             active={true}
           />
-          <Salah logo={<Dark />} prayer={"Isha"} time={"12:45"} />
+          <Salah logo={<Dark />} prayer={"Isha"} time={"12:45"} amPm={"pm"} />
+          <Salah
+            logo={<PrayerTimes />}
+            prayer={"Jumuah"}
+            time={"12:45"}
+            amPm={"pm"}
+          />
 
           <div className={styles["Card3-location"]}>
             <span className={styles["location-svg"]}>{<Location />}</span>UTS

@@ -10,8 +10,8 @@ const Salah = ({ logo, prayer, active = false, time, amPm }) => {
       <span className={styles["Day-svg"]}>{logo}</span>
       <span className={styles["Salah"]}>{prayer}</span>
       <span className={styles["SalahTime-container"]}>
-        <span className={styles["SalahTime"]}>{ time}</span>
-        <span className={styles["SalahTime-AmOrPm"]}>{` ${amPm}`}</span>
+        <span className={styles["SalahTime"]}>{time} </span>
+        <span className={styles["SalahTime-AmOrPm"]}>{amPm}</span>
       </span>
     </div>
   );
