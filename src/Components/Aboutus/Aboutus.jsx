@@ -17,7 +17,7 @@ const Aboutus = () => {
   }, [inView]);
 
   return (
-    <div className="aboutus-container" ref={ref}>
+    <div className="aboutus-container" ref={ref} >
       <div className="contentbox-container">
         <Contentbox
           postTitle="About Us"
