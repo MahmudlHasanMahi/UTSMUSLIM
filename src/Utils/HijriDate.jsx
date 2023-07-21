@@ -5,6 +5,5 @@ export const hijriDate = async (isInView) => {
     `https://api.aladhan.com/v1/gToH/${Gregorian.day}-${Gregorian.monthNo}-${Gregorian.year}`
   );
   const data = await res.json();
-  console.log
   return data;
 };
