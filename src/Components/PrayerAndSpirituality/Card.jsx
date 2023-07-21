@@ -158,7 +158,7 @@ export const Card3 = () => {
       });
     }
   }, [isInView]);
-
+  
   return (
     <div ref={ref} className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>

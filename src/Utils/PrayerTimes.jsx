@@ -9,14 +9,14 @@ const formatter = (time) => {
 
   const min = parseInt(arr[1]) < 10 ? "0" + parseInt(arr[1]) : parseInt(arr[1]);
   const fullTime = `${hr}:${min}`;
-  return { hour: hr, minute: min, amPm: amPm, fullTime:fullTime };
+  return { hour: hr, minute: min, amPm: amPm, fullTime: fullTime };
 };
 export const PrayerTimes = async () => {
   const location = await getLocation();
   const req = await fetch(
     `https://api.aladhan.com/v1/timings/20-07-2023?latitude=${location.lat}&longitude=${location.lon}&method=1`
   );
-  
+
   const { code, status, ...data } = await req.json();
   const { timings } = data.data;
   const { Fajr, Dhuhr, Asr, Maghrib, Isha } = timings;
@@ -31,9 +31,9 @@ export const PrayerTimes = async () => {
 
 export const getLocation = async () => {
   const req =
-    await fetch(`https://geolocation-db.com/json/8ccfa540-1cde-11ee-b4fb-5f58249fb2cc
+    await fetch(`https://geolocation-db.com/json/${import.meta.env.VITE_API_KEY}
 `);
   const { latitude, longitude } = await req.json();
+  console.log(latitude, longitude);
   return { lat: latitude, lon: longitude };
 };
-// 23.7 90.375
