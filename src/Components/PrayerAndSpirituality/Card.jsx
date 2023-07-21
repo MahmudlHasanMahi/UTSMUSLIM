@@ -5,7 +5,6 @@ import { useRef, useMemo } from "react";
 import { useInView, motion } from "framer-motion";
 import { hijriDate as hd } from "../../Utils/HijriDate";
 import { Gregorian as gr, time } from "../../Utils/Gregorian";
-import { PrayerTimes as Timings } from "../../Utils/PrayerTimes";
 import {
   Wc,
   WaterDrop,
@@ -141,7 +140,6 @@ export const Card3 = () => {
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
   const Time = time(isInView);
-  const [prayerTimes, setPrayerTimes] = useState();
   useMemo(() => {
     if (isInView) {
       hd().then((data) => {
@@ -152,13 +150,9 @@ export const Card3 = () => {
         };
         setHijriDate(value);
       });
-    } else {
-      Timings().then((data) => {
-        setPrayerTimes(data);
-      });
     }
   }, [isInView]);
-  
+
   return (
     <div ref={ref} className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>
@@ -194,8 +188,8 @@ export const Card3 = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{
-                width: isInView ? "50%" : 0,
-                transition: { duration: 0.2 },
+                width: "50%",
+                transition: { duration: 2 },
               }}
               className={styles["Progress"]}
             ></motion.div>
@@ -204,37 +198,21 @@ export const Card3 = () => {
       </div>
       <div className={styles["Card3-section-2"]}>
         <div className={styles["Card3-section-2-Salah-container"]}>
-          <Salah
-            logo={<PrayerTimes />}
-            prayer={"Fajr"}
-            time={(prayerTimes && prayerTimes.Fajr.fullTime) || ""}
-            amPm={(prayerTimes && prayerTimes.Fajr.amPm) || ""}
-          />
+          <Salah logo={<PrayerTimes />} prayer={"Fajr"} time={"12:45"} />
           <Salah
             logo={<ClearDay />}
             prayer={"Dhur"}
-            time={(prayerTimes && prayerTimes.Dhuhr.fullTime) || ""}
-            amPm={(prayerTimes && prayerTimes.Dhuhr.amPm) || ""}
+            time={"12:45"}
+            // amPm={(prayerTimes && prayerTimes.Dhuhr.amPm) || ""}
           />
-          <Salah
-            logo={<PartlyCloudy />}
-            prayer={"Asr"}
-            time={(prayerTimes && prayerTimes.Asr.fullTime) || ""}
-            amPm={(prayerTimes && prayerTimes.Asr.amPm) || ""}
-          />
+          <Salah logo={<PartlyCloudy />} prayer={"Asr"} time={"12:45"} />
           <Salah
             logo={<Twilight />}
             prayer={"Margib"}
-            time={(prayerTimes && prayerTimes.Maghrib.fullTime) || ""}
-            amPm={(prayerTimes && prayerTimes.Maghrib.amPm) || ""}
+            time={"12:45"}
             active={true}
           />
-          <Salah
-            logo={<Dark />}
-            prayer={"Isha"}
-            time={(prayerTimes && prayerTimes.Isha.fullTime) || ""}
-            amPm={(prayerTimes && prayerTimes.Isha.amPm) || ""}
-          />
+          <Salah logo={<Dark />} prayer={"Isha"} time={"12:45"} />
 
           <div className={styles["Card3-location"]}>
             <span className={styles["location-svg"]}>{<Location />}</span>UTS
