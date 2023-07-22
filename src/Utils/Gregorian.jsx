@@ -20,6 +20,7 @@ export const Gregorian = () => {
 
   return {
     day: parseInt(day),
+    dayOfweek: date.getDay(),
     month: months[date.getMonth()],
     monthNo: date.getMonth() + 1,
     year: date.getFullYear(),
@@ -27,11 +28,11 @@ export const Gregorian = () => {
 };
 export const time = (isInView) => {
   const getTime = () => {
-    var date = new Date();
-    var hour = date.getHours();
-    var minute = date.getMinutes();
-    
-    var period = "";
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+
+    let period = "";
     if (hour >= 12) {
       period = "pm";
     } else {
@@ -45,7 +46,13 @@ export const time = (isInView) => {
       }
     }
     minute = update(minute);
-    return { hour: hour, minute: minute, amPm: period };
+
+    return {
+      hour: hour,
+      minute: minute,
+      amPm: period,
+      "24hour":12,
+    };
   };
 
   const interval = useRef();
@@ -53,7 +60,7 @@ export const time = (isInView) => {
     if (isInView) {
       interval.current = setInterval(() => {
         setTime(getTime());
-      }, 500);
+      }, 1000);
     }
   }, [isInView]);
   useEffect(() => {

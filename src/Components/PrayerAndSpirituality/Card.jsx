@@ -142,7 +142,59 @@ export const Card3 = () => {
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
   const Time = time(isInView);
+  const [prayers, setPrayers] = useState([]);
   const [nextPrayer, setNextPrayer] = useState();
+
+  const findNextPrayer = (Time) => {
+    let formatted = Time["24hour"];
+    setPrayers(
+      Timings.map((data) => {
+        if (
+          (Gregorian.dayOfweek !== 5 && data.prayer === "Jumuah") ||
+          (Gregorian.dayOfweek === 5 && data.prayer === "Dhur")
+        ) {
+          return;
+        } else {
+          return { ...data, active: false };
+        }
+      })
+    );
+
+    setPrayers((prayer) =>
+      prayer.filter((element) => {
+        return element !== undefined;
+      })
+    );
+
+    let arr = prayers.map(({ hour, minute, amPm, prayer, active }) => {
+      let hr =
+        (hour === 12 && amPm === "pm" ? hour : 0) ||
+        (hour < 12 && amPm === "am" ? hour : hour + 12);
+      if (hr - formatted >= 0) {
+        return {
+          prayer: prayer,
+          hour: hour,
+          minute: minute,
+          amPm: amPm,
+          active: !active,
+        };
+      }
+    });
+    let cleanedArr = arr.filter((element) => {
+      return element !== undefined;
+    });
+    if (!cleanedArr.length) {
+      if (Gregorian.dayOfweek !== 4) {
+        cleanedArr = prayers[0];
+      }
+      // else {
+      //   cleanedArr = "nothing";
+      // }
+    }else{
+    setNextPrayer(cleanedArr[0])}
+    console.log(nextPrayer);
+  };
+
   useMemo(() => {
     if (isInView) {
       hd().then((data) => {
@@ -153,10 +205,12 @@ export const Card3 = () => {
         };
         setHijriDate(value);
       });
-      console.log();
     }
   }, [isInView]);
 
+  useEffect(() => {
+    findNextPrayer(Time);
+  }, [Time]);
   return (
     <div ref={ref} className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>
@@ -185,7 +239,11 @@ export const Card3 = () => {
         </div>
         <div className={styles["NextPrayer-Progress-Container"]}>
           <span className={styles["NextPrayer-container"]}>
-            Next Prayer:<span className={styles["Next-Prayer"]}> Isha</span>
+            Next Prayer:
+            <span className={styles["Next-Prayer"]}>
+              {" "}
+              {(nextPrayer && nextPrayer.prayer) || ""}
+            </span>
           </span>
           <span className={styles["Timeleft"]}>1 hr and 24 min left</span>
           <div className={styles["Progress-container"]}>
