@@ -28,11 +28,11 @@ export const Gregorian = () => {
 };
 export const time = (isInView) => {
   const getTime = () => {
-    let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
 
-    let period = "";
+    var period = "";
     if (hour >= 12) {
       period = "pm";
     } else {
@@ -51,7 +51,7 @@ export const time = (isInView) => {
       hour: hour,
       minute: minute,
       amPm: period,
-      "24hour":12,
+      "24hour": date.getHours(),
     };
   };
 

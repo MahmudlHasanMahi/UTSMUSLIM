@@ -271,6 +271,7 @@
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: bold;
+  margin-left: min(15px,1vw);
 }
 .Timeleft {
   color: #4e2955;

@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./PrayerAndSpirituality.module.css";
 import FacilityInfo from "./FacilityInfo";
 import { useRef, useMemo } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, useTransform } from "framer-motion";
 import { hijriDate as hd } from "../../Utils/HijriDate";
 import { Gregorian as gr, time } from "../../Utils/Gregorian";
 import { Timings } from "../../PrayerTimings";
 import Salah from "./Salah";
-
 import {
   Wc,
   WaterDrop,
@@ -142,57 +141,69 @@ export const Card3 = () => {
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
   const Time = time(isInView);
-  const [prayers, setPrayers] = useState([]);
+  const [prayers, setPrayers] = useState();
   const [nextPrayer, setNextPrayer] = useState();
 
   const findNextPrayer = (Time) => {
+    let Timing = Timings;
     let formatted = Time["24hour"];
+    Timing = Timing.map((data) => {
+      return { ...data, active: false };
+    });
+
+    let nextPrayer = [];
+
+    function array_move(arr, old_index, new_index) {
+      if (new_index >= arr.length) {
+        var k = new_index - arr.length + 1;
+        while (k--) {
+          arr.push(undefined);
+        }
+      }
+      arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+      return arr;
+    }
+
+    for (let i = 1; i <= Timing.length - 1; i++) {
+      if (Gregorian.dayOfweek === 5) {
+        array_move(Timing, 0, 1);
+      }
+      let hr =
+        (Timing[i].hour === 12 && Timing[i].amPm === "pm"
+          ? Timing[i].hour
+          : 0) ||
+        (Timing[i].hour < 12 && Timing[i].amPm === "am"
+          ? Timing[i].hour
+          : Timing[i].hour + 12);
+      if (hr - formatted >= 0) {
+        nextPrayer.push(Timing[i]);
+        Timing[i].active = true;
+        break;
+      }
+      if (Timing[i + 1] === undefined) {
+        if (Gregorian.dayOfweek + 1 !== 5) {
+          Timing[1].active = true;
+          nextPrayer.push(Timing[1]);
+
+          break;
+        } else {
+          Timing[0].active = true;
+          nextPrayer.push(Timing[0]);
+          break;
+        }
+      }
+    }
+
+    setNextPrayer(nextPrayer[0]);
     setPrayers(
       Timings.map((data) => {
-        if (
-          (Gregorian.dayOfweek !== 5 && data.prayer === "Jumuah") ||
-          (Gregorian.dayOfweek === 5 && data.prayer === "Dhur")
-        ) {
-          return;
+        if (data.prayer === nextPrayer[0].prayer) {
+          return nextPrayer[0];
         } else {
           return { ...data, active: false };
         }
       })
     );
-
-    setPrayers((prayer) =>
-      prayer.filter((element) => {
-        return element !== undefined;
-      })
-    );
-
-    let arr = prayers.map(({ hour, minute, amPm, prayer, active }) => {
-      let hr =
-        (hour === 12 && amPm === "pm" ? hour : 0) ||
-        (hour < 12 && amPm === "am" ? hour : hour + 12);
-      if (hr - formatted >= 0) {
-        return {
-          prayer: prayer,
-          hour: hour,
-          minute: minute,
-          amPm: amPm,
-          active: !active,
-        };
-      }
-    });
-    let cleanedArr = arr.filter((element) => {
-      return element !== undefined;
-    });
-    if (!cleanedArr.length) {
-      if (Gregorian.dayOfweek !== 4) {
-        cleanedArr = prayers[0];
-      }
-      // else {
-      //   cleanedArr = "nothing";
-      // }
-    }else{
-    setNextPrayer(cleanedArr[0])}
-    console.log(nextPrayer);
   };
 
   useMemo(() => {
@@ -207,10 +218,10 @@ export const Card3 = () => {
       });
     }
   }, [isInView]);
-
   useEffect(() => {
     findNextPrayer(Time);
   }, [Time]);
+
   return (
     <div ref={ref} className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>
@@ -241,8 +252,7 @@ export const Card3 = () => {
           <span className={styles["NextPrayer-container"]}>
             Next Prayer:
             <span className={styles["Next-Prayer"]}>
-              {" "}
-              {(nextPrayer && nextPrayer.prayer) || ""}
+              {(nextPrayer && nextPrayer.prayer) || "Loading"}
             </span>
           </span>
           <span className={styles["Timeleft"]}>1 hr and 24 min left</span>
@@ -251,7 +261,7 @@ export const Card3 = () => {
               initial={{ width: 0 }}
               animate={{
                 width: "50%",
-                transition: { duration: 2 },
+                transition: { duration: 1 },
               }}
               className={styles["Progress"]}
             ></motion.div>
@@ -262,74 +272,79 @@ export const Card3 = () => {
         <div className={styles["Card3-section-2-Salah-container"]}>
           <Salah
             logo={<ClearDay />}
-            prayer={(Timings && Timings[0].prayer) || ""}
+            prayer={(prayers && prayers[1].prayer) || ""}
             time={
-              (Timings &&
-                `${Timings[0].hour}:${
-                  Timings[0].minute < 10
-                    ? "0" + Timings[0].minute
-                    : Timings[0].minute
+              (prayers &&
+                `${prayers[1].hour}:${
+                  prayers[1].minute < 10
+                    ? "0" + prayers[1].minute
+                    : prayers[1].minute
                 }`) ||
               ""
             }
-            amPm={(Timings && Timings[0].amPm) || ""}
+            amPm={(prayers && prayers[1].amPm) || ""}
+            active={prayers ? prayers[1].active : false}
           />
           <Salah
             logo={<PartlyCloudy />}
-            prayer={(Timings && Timings[1].prayer) || ""}
+            prayer={(prayers && prayers[2].prayer) || ""}
             time={
-              (Timings &&
-                `${Timings[1].hour}:${
-                  Timings[1].minute < 10
-                    ? "0" + Timings[1].minute
-                    : Timings[1].minute
+              (prayers &&
+                `${prayers[2].hour}:${
+                  prayers[2].minute < 10
+                    ? "0" + prayers[2].minute
+                    : prayers[2].minute
                 }`) ||
               ""
             }
-            amPm={(Timings && Timings[1].amPm) || ""}
+            amPm={(prayers && prayers[2].amPm) || ""}
+            active={prayers ? prayers[2].active : false}
           />
           <Salah
             logo={<Twilight />}
-            prayer={(Timings && Timings[2].prayer) || ""}
+            prayer={(prayers && prayers[3].prayer) || ""}
             time={
-              (Timings &&
-                `${Timings[2].hour}:${
-                  Timings[2].minute < 10
-                    ? "0" + Timings[2].minute
-                    : Timings[2].minute
+              (prayers &&
+                `${prayers[3].hour}:${
+                  prayers[3].minute < 10
+                    ? "0" + prayers[3].minute
+                    : prayers[3].minute
                 }`) ||
               ""
             }
-            amPm={(Timings && Timings[2].amPm) || ""}
+            amPm={(prayers && prayers[3].amPm) || ""}
             active={true}
+            active={prayers ? prayers[3].active : false}
           />
           <Salah
             logo={<Dark />}
-            prayer={(Timings && Timings[3].prayer) || ""}
+            prayer={(prayers && prayers[4].prayer) || ""}
             time={
-              (Timings &&
-                `${Timings[3].hour}:${
-                  Timings[3].minute < 10
-                    ? "0" + Timings[3].minute
-                    : Timings[3].minute
+              (prayers &&
+                `${prayers[4].hour}:${
+                  prayers[4].minute < 10
+                    ? "0" + prayers[4].minute
+                    : prayers[4].minute
                 }`) ||
               ""
             }
-            amPm={(Timings && Timings[3].amPm) || ""}
+            amPm={(prayers && prayers[4].amPm) || ""}
+            active={prayers ? prayers[4].active : false}
           />
           <Salah
             logo={<PrayerTimes />}
-            prayer={(Timings && Timings[4].prayer) || ""}
+            prayer={(prayers && prayers[0].prayer) || ""}
             time={
-              (Timings &&
-                `${Timings[4].hour}:${
-                  Timings[4].minute < 10
-                    ? "0" + Timings[4].minute
-                    : Timings[4].minute
+              (prayers &&
+                `${prayers[0].hour}:${
+                  prayers[0].minute < 10
+                    ? "0" + prayers[0].minute
+                    : prayers[0].minute
                 }`) ||
               ""
             }
-            amPm={(Timings && Timings[4].amPm) || ""}
+            amPm={(prayers && prayers[0].amPm) || ""}
+            active={prayers ? prayers[0].active : false}
           />
 
           <div className={styles["Card3-location"]}>
