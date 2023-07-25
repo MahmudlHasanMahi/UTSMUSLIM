@@ -17,7 +17,6 @@ export const Gregorian = () => {
 
   const date = new Date();
   const day = JSON.stringify(date).split("-")[2].split("T")[0];
-
   return {
     day: parseInt(day),
     dayOfweek: date.getDay(),
@@ -49,7 +48,7 @@ export const time = (isInView) => {
 
     return {
       hour: hour,
-      minute: minute,
+      minute: date.getMinutes(),
       amPm: period,
       "24hour": date.getHours(),
     };

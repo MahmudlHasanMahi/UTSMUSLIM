@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./PrayerAndSpirituality.module.css";
 import FacilityInfo from "./FacilityInfo";
 import { useRef, useMemo } from "react";
-import { useInView, motion, useTransform } from "framer-motion";
+import { useInView, motion, useTransform, useScroll } from "framer-motion";
 import { hijriDate as hd } from "../../Utils/HijriDate";
 import { Gregorian as gr, time } from "../../Utils/Gregorian";
 import { Timings } from "../../PrayerTimings";
@@ -137,12 +137,38 @@ export const Card2 = () => {
 
 export const Card3 = () => {
   const ref = useRef(null);
+
   const isInView = useInView(ref, { once: false });
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
   const Time = time(isInView);
   const [prayers, setPrayers] = useState();
   const [nextPrayer, setNextPrayer] = useState();
+  const [timeLeft, setTimeLeft] = useState([]);
+
+  function timeDifference(date1, date2) {
+    var difference = date1.getTime() - date2.getTime();
+
+    var hoursDifference = Math.floor(difference / 1000 / 60 / 60);
+    difference -= hoursDifference * 1000 * 60 * 60;
+
+    var minutesDifference = Math.floor(difference / 1000 / 60);
+    difference -= minutesDifference * 1000 * 60;
+
+    setTimeLeft({
+      hoursDifference: hoursDifference,
+      minutesDifference: minutesDifference,
+      Progress: hoursDifference * 60 + minutesDifference,
+      hoursForHTML:
+        hoursDifference !== 0
+          ? minutesDifference === 0
+            ? hoursDifference + " hr left"
+            : hoursDifference + " hr and"
+          : "",
+      minutesForHTML:
+        minutesDifference !== 0 ? minutesDifference + " min left" : "",
+    });
+  }
 
   const findNextPrayer = (Time) => {
     let Timing = Timings;
@@ -164,27 +190,46 @@ export const Card3 = () => {
       return arr;
     }
 
+    const getPrayerFormatted = (value) => {
+      const hourFormatted =
+        (value.hour === 12 && value.amPm === "pm" ? value.hour : 0) ||
+        (value.hour < 12 && value.amPm === "am" ? value.hour : value.hour + 12);
+      return hourFormatted;
+    };
+
     for (let i = 1; i <= Timing.length - 1; i++) {
       if (Gregorian.dayOfweek === 5) {
         array_move(Timing, 0, 1);
       }
-      let hr =
-        (Timing[i].hour === 12 && Timing[i].amPm === "pm"
-          ? Timing[i].hour
-          : 0) ||
-        (Timing[i].hour < 12 && Timing[i].amPm === "am"
-          ? Timing[i].hour
-          : Timing[i].hour + 12);
+      let hr = getPrayerFormatted(Timing[i]);
+      let min = Timing[i].minute;
+
       if (hr - formatted >= 0) {
-        nextPrayer.push(Timing[i]);
-        Timing[i].active = true;
-        break;
+        if (hr - formatted === 0 && min - Time.minute <= 0) {
+          if (Timing[i + 1] === undefined) {
+            if (Gregorian.dayOfweek + 1 !== 5) {
+              nextPrayer.push(Timing[1]);
+              Timing[1].active = true;
+            } else {
+              array_move(Timing, 1, 0);
+              nextPrayer.push(Timing[1]);
+              Timing[1].active = true;
+            }
+          } else {
+            nextPrayer.push(Timing[i + 1]);
+            Timing[i + 1].active = true;
+          }
+        } else {
+          nextPrayer.push(Timing[i]);
+          Timing[i].active = true;
+          break;
+        }
       }
+
       if (Timing[i + 1] === undefined) {
         if (Gregorian.dayOfweek + 1 !== 5) {
           Timing[1].active = true;
           nextPrayer.push(Timing[1]);
-
           break;
         } else {
           Timing[0].active = true;
@@ -193,7 +238,6 @@ export const Card3 = () => {
         }
       }
     }
-
     setNextPrayer(nextPrayer[0]);
     setPrayers(
       Timings.map((data) => {
@@ -204,6 +248,27 @@ export const Card3 = () => {
         }
       })
     );
+
+    const date1 = new Date(0, 0, 0, Time["24hour"], Time.minute, 0, 0);
+    ////////////////////////////,hour,minutes,seconds,
+    const date2 = new Date(
+      0,
+      0,
+      nextPrayer[0].prayer === Timings[4].prayer
+        ? nextPrayer[0].prayer === Timings[0].prayer ||
+          nextPrayer[0].prayer === Timings[1].prayer
+          ? 1
+          : 0
+        : Time["24hour"] - getPrayerFormatted(Timings[4]) >= 0 &&
+          Time.minute - Timings[4].minute >= 0
+        ? 1
+        : 0,
+      getPrayerFormatted(nextPrayer[0]),
+      nextPrayer[0].minute,
+      0,
+      0
+    ); ///// Next Prayer
+    timeDifference(date2, date1);
   };
 
   useMemo(() => {
@@ -221,6 +286,12 @@ export const Card3 = () => {
   useEffect(() => {
     findNextPrayer(Time);
   }, [Time]);
+  // useEffect(()=>{
+
+  //   console.log()
+
+  // },[nextPrayer])
+
 
   return (
     <div ref={ref} className={styles["Card3-container"]}>
@@ -242,7 +313,11 @@ export const Card3 = () => {
         </div>
         <div className={styles["Maintime-container"]}>
           <span className={styles["Time"]}>
-            {(Time && `${Time.hour}:${Time.minute}`) || ""}
+            {(Time &&
+              `${Time.hour}:${
+                Time.minute < 10 ? "0" + Time.minute : Time.minute
+              }`) ||
+              ""}
           </span>
           <span className={styles["AmOrPm"]}>
             {(Time && `${Time.amPm}`) || ""}
@@ -255,12 +330,16 @@ export const Card3 = () => {
               {(nextPrayer && nextPrayer.prayer) || "Loading"}
             </span>
           </span>
-          <span className={styles["Timeleft"]}>1 hr and 24 min left</span>
+          <span className={styles["Timeleft"]}>
+            {timeLeft
+              ? `${timeLeft.hoursForHTML} ${timeLeft.minutesForHTML}`
+              : "Waiting..."}
+          </span>
           <div className={styles["Progress-container"]}>
             <motion.div
               initial={{ width: 0 }}
               animate={{
-                width: "50%",
+                width: `${50}%`,
                 transition: { duration: 1 },
               }}
               className={styles["Progress"]}
@@ -313,7 +392,7 @@ export const Card3 = () => {
               ""
             }
             amPm={(prayers && prayers[3].amPm) || ""}
-            active={true}
+            // active={true}
             active={prayers ? prayers[3].active : false}
           />
           <Salah
