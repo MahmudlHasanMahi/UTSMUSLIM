@@ -4,7 +4,6 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/HomePage/Home";
 import Services from "./Pages/Services.jsx/Services";
 import { Routes, Route } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 function App() {
   return (
     <div className="App">

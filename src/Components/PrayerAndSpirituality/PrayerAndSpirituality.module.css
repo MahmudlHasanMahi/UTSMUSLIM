@@ -79,7 +79,14 @@
   box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
+  transition: background 0.5s;
+  cursor: pointer;
 }
+
+.Card1-btn:hover {
+  background: #876213;
+}
+
 .Card1-facilityInfo-container {
   display: flex;
   flex-direction: column;
@@ -101,6 +108,7 @@
   background: #c8b184;
   padding-block: min(20px, 1vw);
   padding-inline: min(30px, 2vw);
+  cursor: default;
 }
 .facilityTitle.Card1 {
   color: #343431;
@@ -161,7 +169,14 @@
   box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: 0.5s;
 }
+
+.Card2-btn:hover {
+  background: #238538;
+}
+
 .Card2-facilityInfo-container {
   display: flex;
   flex-direction: column;
@@ -179,6 +194,7 @@
   background: #86bfa2;
   padding-block: min(20px, 1vw);
   padding-inline: min(30px, 2vw);
+  cursor: default;
 }
 .facilityTitle.Card2 {
   color: #343431;
@@ -221,6 +237,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: min(100px, 6vw);
+  cursor: default;
 }
 .Card3-Islamic-date {
   color: #4e2955;
@@ -237,6 +254,7 @@
   font-weight: 400;
 }
 .Maintime-container {
+  cursor: default;
 }
 .Time {
   color: #4e2955;
@@ -266,6 +284,7 @@
   color: #4e2955;
   font-family: Open Sauce Sans;
   font-size: min(48px, 3vw);
+  cursor: default;
 }
 .Next-Prayer {
   font-family: "Open Sauce Sans";
@@ -335,6 +354,7 @@
   font-weight: 700;
   flex-grow: 1;
   margin-left: min(32px, 1vw);
+  cursor: default;
 }
 .SalahTime-container {
 }
@@ -344,6 +364,7 @@
   font-size: min(50px, 2.6vw);
   font-style: normal;
   font-weight: 400;
+  cursor: default;
 }
 .SalahTime-AmOrPm {
   text-align: right;
@@ -351,6 +372,7 @@
   font-size: min(34px, 1.75vw);
   font-style: normal;
   font-weight: 400;
+  cursor: default;
 }
 .Card3-location {
   display: flex;
@@ -364,10 +386,16 @@
   font-style: normal;
   font-weight: 700;
   margin-left: 17%;
-  margin-top: -7%;
+  margin-top: -6%;
+  cursor: pointer;
+  transition:color 0.5s;
+}
+.Card3-location:hover{
+color: black;
 }
 .location-svg {
   width: min(35px, 2vw);
   height: min(35px, 2vw);
   color: rgba(63, 53, 72, 0.61);
+
 }
