@@ -73,11 +73,11 @@ body::-webkit-scrollbar {
 .landingPage-title {
   color: #000;
   font-family: Open Sauce Sans;
-  font-size: min(39px,2vw);
+  font-size: min(39px, 2vw);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-top: min(140px,6vw);
+  margin-top: min(140px, 6vw);
 }
 .aboutus-container {
   background-color: #c3bead;
@@ -503,4 +503,9 @@ body::-webkit-scrollbar {
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

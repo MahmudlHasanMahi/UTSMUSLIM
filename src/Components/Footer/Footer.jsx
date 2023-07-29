@@ -29,7 +29,7 @@ const Footer = () => {
             <Link title={"Events"} />
           </Links>
           <Links heading={"Quick Links"}>
-            <Link title={"LinkTree"} />
+            <Link title={"LinkTree"} link={"https://linktr.ee/UTSMS"} />
             <Link title={"ActivateUTS"} />
           </Links>
           <Links heading={"Our Services"}></Links>
