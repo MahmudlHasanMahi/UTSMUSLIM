@@ -259,10 +259,13 @@ export const Card3 = () => {
           nextPrayer[0].prayer === Timings[1].prayer
           ? 1
           : 0
-        : Time["24hour"] - getPrayerFormatted(Timings[4]) >= 0 &&
-          Time.minute - Timings[4].minute >= 0
-        ? 1
+        : Time["24hour"] - getPrayerFormatted(Timings[4]) >= 0
+        ? Time.minute - Timings[4].minute >= 0 ||
+          Time.minute - Timings[4].minute <= 0
+          ? 1
+          : 0
         : 0,
+
       getPrayerFormatted(nextPrayer[0]),
       nextPrayer[0].minute,
       0,
@@ -286,12 +289,6 @@ export const Card3 = () => {
   useEffect(() => {
     findNextPrayer(Time);
   }, [Time]);
-  // useEffect(()=>{
-
-  //   console.log()
-
-  // },[nextPrayer])
-
 
   return (
     <div ref={ref} className={styles["Card3-container"]}>
