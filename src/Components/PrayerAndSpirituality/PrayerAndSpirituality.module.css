@@ -261,7 +261,6 @@
   display: flex;
   justify-content: space-between;
   height: min(170px, 10vw);
-  
 }
 .NextPrayer-container {
   color: #4e2955;
@@ -272,7 +271,7 @@
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: bold;
-  margin-left: min(15px,1vw);
+  margin-left: min(15px, 1vw);
 }
 .Timeleft {
   color: #4e2955;
@@ -364,8 +363,8 @@
   font-size: min(18px, 1vw);
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin-left: 17%;
+  margin-top: -7%;
 }
 .location-svg {
   width: min(35px, 2vw);

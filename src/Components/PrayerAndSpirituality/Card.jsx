@@ -145,7 +145,7 @@ export const Card3 = () => {
   const [prayers, setPrayers] = useState();
   const [nextPrayer, setNextPrayer] = useState();
   const [timeLeft, setTimeLeft] = useState([]);
-
+  const [timeProgress, setTimeProgress] = useState();
   function timeDifference(date1, date2) {
     var difference = date1.getTime() - date2.getTime();
 
@@ -155,10 +155,9 @@ export const Card3 = () => {
     var minutesDifference = Math.floor(difference / 1000 / 60);
     difference -= minutesDifference * 1000 * 60;
 
-    setTimeLeft({
-      hoursDifference: hoursDifference,
-      minutesDifference: minutesDifference,
-      Progress: hoursDifference * 60 + minutesDifference,
+    return {
+      hoursDifference: hoursDifference || 0,
+      minutesDifference: minutesDifference || 0,
       hoursForHTML:
         hoursDifference !== 0
           ? minutesDifference === 0
@@ -167,9 +166,15 @@ export const Card3 = () => {
           : "",
       minutesForHTML:
         minutesDifference !== 0 ? minutesDifference + " min left" : "",
-    });
+      totalMinutes: hoursDifference * 60 + minutesDifference || 1,
+    };
   }
-
+  const getPrayerFormatted = (value) => {
+    const hourFormatted =
+      (value.hour === 12 && value.amPm === "pm" ? value.hour : 0) ||
+      (value.hour < 12 && value.amPm === "am" ? value.hour : value.hour + 12);
+    return hourFormatted;
+  };
   const findNextPrayer = (Time) => {
     let Timing = Timings;
     let formatted = Time["24hour"];
@@ -189,13 +194,6 @@ export const Card3 = () => {
       arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
       return arr;
     }
-
-    const getPrayerFormatted = (value) => {
-      const hourFormatted =
-        (value.hour === 12 && value.amPm === "pm" ? value.hour : 0) ||
-        (value.hour < 12 && value.amPm === "am" ? value.hour : value.hour + 12);
-      return hourFormatted;
-    };
 
     for (let i = 1; i <= Timing.length - 1; i++) {
       if (Gregorian.dayOfweek === 5) {
@@ -271,9 +269,105 @@ export const Card3 = () => {
       0,
       0
     ); ///// Next Prayer
-    timeDifference(date2, date1);
+    setTimeLeft(timeDifference(date2, date1));
   };
 
+  const findTimeProgress = () => {
+    let prev = "";
+    let next = "";
+
+    switch (nextPrayer?.prayer) {
+      case "Jumuah":
+        prev = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[4]),
+          minute: Timings[4].minute,
+        };
+        next = {
+          day: 1,
+          hour: getPrayerFormatted(Timings[0]),
+          minute: Timings[0].minute,
+        };
+        break;
+      case "Dhur":
+        prev = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[4]),
+          minute: Timings[4].minute,
+        };
+        next = {
+          day: 1,
+          hour: getPrayerFormatted(Timings[1]),
+          minute: Timings[1].minute,
+        };
+        break;
+      case "Asr":
+        prev = {
+          day: 0,
+          hour:
+            Gregorian.dayOfweek !== 5
+              ? getPrayerFormatted(Timings[1])
+              : getPrayerFormatted(Timings[0]),
+          minute: Timings[1].minute,
+        };
+        next = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[2]),
+          minute: Timings[2].minute,
+        };
+        break;
+      case "Margib":
+        prev = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[2]),
+          minute: Timings[2].minute,
+        };
+        next = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[3]),
+          minute: Timings[3].minute,
+        };
+        break;
+      case "Isha":
+        prev = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[3]),
+          minute: Timings[3].minute,
+        };
+        next = {
+          day: 0,
+          hour: getPrayerFormatted(Timings[4]),
+          minute: Timings[4].minute,
+        };
+        break;
+    }
+
+    const prevPrayerTime = new Date(
+      0,
+      0,
+      prev.day, /////day
+      prev.hour, /////hour
+      prev.minute, /////min
+      0,
+      0
+    );
+    const nextPrayerTime = new Date(
+      0,
+      0,
+      next.day,
+      next.hour,
+      next.minute,
+      0,
+      0
+    );
+
+    setTimeProgress(
+      ((timeDifference(nextPrayerTime, prevPrayerTime).totalMinutes -
+        timeLeft.totalMinutes) /
+        timeDifference(nextPrayerTime, prevPrayerTime).totalMinutes) *
+        100 || 0
+    );
+  };
   useMemo(() => {
     if (isInView) {
       hd().then((data) => {
@@ -286,8 +380,9 @@ export const Card3 = () => {
       });
     }
   }, [isInView]);
-  useEffect(() => {
+  useMemo(() => {
     findNextPrayer(Time);
+    findTimeProgress();
   }, [Time]);
 
   return (
@@ -336,7 +431,7 @@ export const Card3 = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{
-                width: `${50}%`,
+                width: `${timeProgress}%`,
                 transition: { duration: 1 },
               }}
               className={styles["Progress"]}
