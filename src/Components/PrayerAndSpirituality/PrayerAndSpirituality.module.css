@@ -9,7 +9,8 @@
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  height: min(2380px, 123.5vw);
 }
 .Card-Section-1 {
   display: flex;
@@ -313,7 +314,6 @@
 }
 .Progress {
   background-color: #873a97;
-  /* width: 50%; */
 }
 .Card3-section-2 {
   width: 50%;
@@ -388,14 +388,13 @@
   margin-left: 17%;
   margin-top: -6%;
   cursor: pointer;
-  transition:color 0.5s;
+  transition: color 0.5s;
 }
-.Card3-location:hover{
-color: black;
+.Card3-location:hover {
+  color: black;
 }
 .location-svg {
   width: min(35px, 2vw);
   height: min(35px, 2vw);
   color: rgba(63, 53, 72, 0.61);
-
 }

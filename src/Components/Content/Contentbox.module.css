@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 65%;
+  width: 100%;
 }
 .postTitle.aboutUs {
   background: #afab9c;
@@ -53,6 +54,7 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  width: 100%;
 }
 .postTitle.ourMission {
   background: #d9d7c4;
@@ -175,6 +177,7 @@
   justify-content: space-between;
   align-items: center;
   height: min(51%, 28vw);
+  width: 100%;
 }
 .postTitle.PAS {
   background: #d9d7c4;
@@ -199,4 +202,36 @@
   text-align: center;
   font-size: clamp(1vw, 2.2rem, 2.2vw);
   width: 60%;
+}
+.contentContainer.event {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  height: min(51%, 28vw);
+  width: 100%;
+  margin: min(90px, 5vw) 0 0 min(97px, 5vw);
+}
+.postTitle.event {
+  background: #d9d7c4;
+  border-radius: 40px;
+  font-size: clamp(1vw, 31px, 1.7vw);
+  padding: clamp(0.8vw, 15px, 0.3vw);
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  width: clamp(1vw, 195px, 12vw);
+}
+.heading.event {
+  font-family: "TT Wellingtons Trl";
+  text-align: left;
+  font-size: clamp(1vw, 4.76rem, 4vw);
+  width: 63%;
+}
+.paragraph.event {
+  font-family: "Open Sauce Sans";
+  text-align: left;
+  font-size: clamp(1vw, 2.2rem, 2.2vw);
+  width: 46%;
 }

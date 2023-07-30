@@ -3,7 +3,6 @@ import Contentbox from "../Content/Contentbox";
 import styles from "../Content/Contentbox.module.css";
 const ContentBox = () => {
   return (
-
       <Contentbox
         postTitle={"Prayer and Spirituality"}
         heading={"A Spiritual Oasis At The Heart of UTS"}
