@@ -9,7 +9,7 @@ const SocialMediaLink = () => {
         logo={<Instagram />}
         link={"https://www.instagram.com/utsms/"}
       />
-      <IconLink logo={<Tiktok />} link={"https://www.tiktok.com/"} />
+      <IconLink logo={<Tiktok />} link={"https://www.tiktok.com/@utsmsa"} />
       <IconLink logo={<Linkedin />} link={"https://www.linkedin.com/"} />
     </div>
   );
