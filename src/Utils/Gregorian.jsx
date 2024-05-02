@@ -51,7 +51,8 @@ export const time = (isInView) => {
       minute: date.getMinutes(),
       amPm: period,
       "24hour": date.getHours(),
-    };
+      
+    }
   };
 
   const interval = useRef();

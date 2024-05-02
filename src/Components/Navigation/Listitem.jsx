@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styles from "./Navigation.module.css";
 import { useNavContext } from "../../Utils/NavbarContext";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Listitem = ({
   title,
   lastchild = false,
@@ -12,7 +12,7 @@ const Listitem = ({
   setActive,
 }) => {
   const listTheme = useNavContext();
-
+  const location = useLocation();
   return (
     <motion.div
       key={pk}

@@ -1,3 +1,5 @@
+
+
 export const Timings = [
   { prayer: "Jumuah", hour: 12, minute: 30, amPm: "pm" },
   { prayer: "Dhur", hour: 12, minute: 0, amPm: "pm" },

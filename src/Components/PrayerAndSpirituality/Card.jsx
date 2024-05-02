@@ -7,6 +7,7 @@ import { hijriDate as hd } from "../../Utils/HijriDate";
 import { Gregorian as gr, time } from "../../Utils/Gregorian";
 import { Timings } from "../../PrayerTimings";
 import Salah from "./Salah";
+import { getPrayer } from "../../Utils/NextPrayer";
 import {
   Wc,
   WaterDrop,
@@ -22,6 +23,7 @@ import {
   PrayerTimes,
   Location,
 } from "../../Svg/ServicesSvg";
+import { NextPrayer } from "../../Utils/NextPrayer";
 
 export const Card1 = () => {
   const ref = useRef(null);
@@ -55,6 +57,7 @@ export const Card1 = () => {
           title={"Separate brothers and sisters rooms"}
           styleArg={styles.Card1}
         />
+
         <FacilityInfo
           svg={<WaterDrop />}
           title={"Wudhu facilities on same floor"}
@@ -76,7 +79,7 @@ export const Card1 = () => {
           styleArg={styles.Card1}
         />
       </div>
-      <span className={styles["Card1-info"]}>
+      <span id="PrayerTimes" className={styles["Card1-info"]}>
         * If you are a UTS College Student, contact us and we will organise
         access for you
       </span>
@@ -142,232 +145,21 @@ export const Card3 = () => {
   const [hijriDate, setHijriDate] = useState();
   const Gregorian = gr();
   const Time = time(isInView);
-  const [prayers, setPrayers] = useState();
-  const [nextPrayer, setNextPrayer] = useState();
+
   const [timeLeft, setTimeLeft] = useState([]);
-  const [timeProgress, setTimeProgress] = useState();
-  function timeDifference(date1, date2) {
-    var difference = date1.getTime() - date2.getTime();
+  const PrayerInfo = NextPrayer(Time);
 
-    var hoursDifference = Math.floor(difference / 1000 / 60 / 60);
-    difference -= hoursDifference * 1000 * 60 * 60;
+  useEffect(() => {
+    const href = window.location.href.substring(
+      window.location.href.lastIndexOf("#") + 1
+    );
 
-    var minutesDifference = Math.floor(difference / 1000 / 60);
-    difference -= minutesDifference * 1000 * 60;
-
-    return {
-      hoursDifference: hoursDifference || 0,
-      minutesDifference: minutesDifference || 0,
-      hoursForHTML:
-        hoursDifference !== 0
-          ? minutesDifference === 0
-            ? hoursDifference + " hr left"
-            : hoursDifference + " hr and"
-          : "",
-      minutesForHTML:
-        minutesDifference !== 0 ? minutesDifference + " min left" : "",
-      totalMinutes: hoursDifference * 60 + minutesDifference || 1,
-    };
-  }
-  const getPrayerFormatted = (value) => {
-    const hourFormatted =
-      (value.hour === 12 && value.amPm === "pm" ? value.hour : 0) ||
-      (value.hour < 12 && value.amPm === "am" ? value.hour : value.hour + 12);
-    return hourFormatted;
-  };
-  const findNextPrayer = (Time) => {
-    let Timing = Timings;
-    let formatted = Time["24hour"];
-    Timing = Timing.map((data) => {
-      return { ...data, active: false };
-    });
-
-    let nextPrayer = [];
-
-    function array_move(arr, old_index, new_index) {
-      if (new_index >= arr.length) {
-        var k = new_index - arr.length + 1;
-        while (k--) {
-          arr.push(undefined);
-        }
-      }
-      arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
-      return arr;
+    const element = document.getElementById(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
+  }, []);
 
-    for (let i = 1; i <= Timing.length - 1; i++) {
-      if (Gregorian.dayOfweek === 5) {
-        array_move(Timing, 0, 1);
-      }
-      let hr = getPrayerFormatted(Timing[i]);
-      let min = Timing[i].minute;
-
-      if (hr - formatted >= 0) {
-        if (hr - formatted === 0 && min - Time.minute <= 0) {
-          if (Timing[i + 1] === undefined) {
-            if (Gregorian.dayOfweek + 1 !== 5) {
-              nextPrayer.push(Timing[1]);
-              Timing[1].active = true;
-            } else {
-              array_move(Timing, 1, 0);
-              nextPrayer.push(Timing[1]);
-              Timing[1].active = true;
-            }
-          } else {
-            nextPrayer.push(Timing[i + 1]);
-            Timing[i + 1].active = true;
-          }
-        } else {
-          nextPrayer.push(Timing[i]);
-          Timing[i].active = true;
-          break;
-        }
-      }
-
-      if (Timing[i + 1] === undefined) {
-        if (Gregorian.dayOfweek + 1 !== 5) {
-          Timing[1].active = true;
-          nextPrayer.push(Timing[1]);
-          break;
-        } else {
-          Timing[0].active = true;
-          nextPrayer.push(Timing[0]);
-          break;
-        }
-      }
-    }
-    setNextPrayer(nextPrayer[0]);
-    setPrayers(
-      Timings.map((data) => {
-        if (data.prayer === nextPrayer[0].prayer) {
-          return nextPrayer[0];
-        } else {
-          return { ...data, active: false };
-        }
-      })
-    );
-
-    const date1 = new Date(0, 0, 0, Time["24hour"], Time.minute, 0, 0);
-    ////////////////////////////,hour,minutes,seconds,
-    const date2 = new Date(
-      0,
-      0,
-      nextPrayer[0].prayer === Timings[4].prayer
-        ? nextPrayer[0].prayer === Timings[0].prayer ||
-          nextPrayer[0].prayer === Timings[1].prayer
-          ? 1
-          : 0
-        : Time["24hour"] - getPrayerFormatted(Timings[4]) >= 0
-        ? Time.minute - Timings[4].minute >= 0 ||
-          Time.minute - Timings[4].minute <= 0
-          ? 1
-          : 0
-        : 0,
-
-      getPrayerFormatted(nextPrayer[0]),
-      nextPrayer[0].minute,
-      0,
-      0
-    ); ///// Next Prayer
-    setTimeLeft(timeDifference(date2, date1));
-  };
-
-  const findTimeProgress = () => {
-    let prev = "";
-    let next = "";
-
-    switch (nextPrayer?.prayer) {
-      case "Jumuah":
-        prev = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[4]),
-          minute: Timings[4].minute,
-        };
-        next = {
-          day: 1,
-          hour: getPrayerFormatted(Timings[0]),
-          minute: Timings[0].minute,
-        };
-        break;
-      case "Dhur":
-        prev = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[4]),
-          minute: Timings[4].minute,
-        };
-        next = {
-          day: 1,
-          hour: getPrayerFormatted(Timings[1]),
-          minute: Timings[1].minute,
-        };
-        break;
-      case "Asr":
-        prev = {
-          day: 0,
-          hour:
-            Gregorian.dayOfweek !== 5
-              ? getPrayerFormatted(Timings[1])
-              : getPrayerFormatted(Timings[0]),
-          minute: Timings[1].minute,
-        };
-        next = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[2]),
-          minute: Timings[2].minute,
-        };
-        break;
-      case "Margib":
-        prev = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[2]),
-          minute: Timings[2].minute,
-        };
-        next = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[3]),
-          minute: Timings[3].minute,
-        };
-        break;
-      case "Isha":
-        prev = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[3]),
-          minute: Timings[3].minute,
-        };
-        next = {
-          day: 0,
-          hour: getPrayerFormatted(Timings[4]),
-          minute: Timings[4].minute,
-        };
-        break;
-    }
-
-    const prevPrayerTime = new Date(
-      0,
-      0,
-      prev.day, /////day
-      prev.hour, /////hour
-      prev.minute, /////min
-      0,
-      0
-    );
-    const nextPrayerTime = new Date(
-      0,
-      0,
-      next.day,
-      next.hour,
-      next.minute,
-      0,
-      0
-    );
-
-    setTimeProgress(
-      ((timeDifference(nextPrayerTime, prevPrayerTime).totalMinutes -
-        timeLeft.totalMinutes) /
-        timeDifference(nextPrayerTime, prevPrayerTime).totalMinutes) *
-        100 || 0
-    );
-  };
   useMemo(() => {
     if (isInView) {
       hd().then((data) => {
@@ -380,13 +172,8 @@ export const Card3 = () => {
       });
     }
   }, [isInView]);
-  useMemo(() => {
-    findNextPrayer(Time);
-    findTimeProgress();
-  }, [Time]);
-
   return (
-    <div ref={ref} className={styles["Card3-container"]}>
+    <div ref={ref} id="PrayerTimes" className={styles["Card3-container"]}>
       <div className={styles["Card3-section-1"]}>
         <div className={styles["Card3-date-svg-container"]}>
           <span className={styles["Card3-svg"]}>{<Calender />}</span>
@@ -411,7 +198,7 @@ export const Card3 = () => {
               }`) ||
               ""}
           </span>
-          <span className={styles["AmOrPm"]}>
+          <span id="test234" className={styles["AmOrPm"]}>
             {(Time && `${Time.amPm}`) || ""}
           </span>
         </div>
@@ -419,19 +206,17 @@ export const Card3 = () => {
           <span className={styles["NextPrayer-container"]}>
             Next Prayer:
             <span className={styles["Next-Prayer"]}>
-              {(nextPrayer && nextPrayer.prayer) || "Loading"}
+              {(PrayerInfo && PrayerInfo.nextprayer.prayer) || "Loading"}
             </span>
           </span>
           <span className={styles["Timeleft"]}>
-            {timeLeft
-              ? `${timeLeft.hoursForHTML} ${timeLeft.minutesForHTML}`
-              : "Waiting..."}
+            {timeLeft ? PrayerInfo && PrayerInfo.progress.format : "Waiting..."}
           </span>
           <div className={styles["Progress-container"]}>
             <motion.div
               initial={{ width: 0 }}
               animate={{
-                width: `${timeProgress}%`,
+                width: `${PrayerInfo && PrayerInfo.progress.progress}%`,
                 transition: { duration: 1 },
               }}
               className={styles["Progress"]}
@@ -443,81 +228,70 @@ export const Card3 = () => {
         <div className={styles["Card3-section-2-Salah-container"]}>
           <Salah
             logo={<ClearDay />}
-            prayer={(prayers && prayers[1].prayer) || ""}
-            time={
-              (prayers &&
-                `${prayers[1].hour}:${
-                  prayers[1].minute < 10
-                    ? "0" + prayers[1].minute
-                    : prayers[1].minute
-                }`) ||
-              ""
+            prayer={Timings[1].prayer}
+            time={`${Timings[1].hour}:${
+              Timings[1].minute < 10
+                ? "0" + Timings[1].minute
+                : Timings[1].minute
+            }`}
+            amPm={Timings[1].amPm}
+            active={
+              Timings[1].prayer == PrayerInfo?.nextprayer.prayer ? true : null
             }
-            amPm={(prayers && prayers[1].amPm) || ""}
-            active={prayers ? prayers[1].active : false}
           />
           <Salah
             logo={<PartlyCloudy />}
-            prayer={(prayers && prayers[2].prayer) || ""}
-            time={
-              (prayers &&
-                `${prayers[2].hour}:${
-                  prayers[2].minute < 10
-                    ? "0" + prayers[2].minute
-                    : prayers[2].minute
-                }`) ||
-              ""
+            prayer={Timings[2].prayer}
+            time={`${Timings[2].hour}:${
+              Timings[2].minute < 10
+                ? "0" + Timings[2].minute
+                : Timings[2].minute
+            }`}
+            amPm={Timings[2].amPm}
+            active={
+              Timings[2].prayer == PrayerInfo?.nextprayer.prayer ? true : null
             }
-            amPm={(prayers && prayers[2].amPm) || ""}
-            active={prayers ? prayers[2].active : false}
           />
           <Salah
             logo={<Twilight />}
-            prayer={(prayers && prayers[3].prayer) || ""}
-            time={
-              (prayers &&
-                `${prayers[3].hour}:${
-                  prayers[3].minute < 10
-                    ? "0" + prayers[3].minute
-                    : prayers[3].minute
-                }`) ||
-              ""
+            prayer={Timings[3].prayer}
+            time={`${Timings[3].hour}:${
+              Timings[3].minute < 10
+                ? "0" + Timings[3].minute
+                : Timings[3].minute
+            }`}
+            amPm={Timings[3].amPm}
+            active={
+              Timings[3].prayer == PrayerInfo?.nextprayer.prayer ? true : null
             }
-            amPm={(prayers && prayers[3].amPm) || ""}
-            // active={true}
-            active={prayers ? prayers[3].active : false}
           />
+
           <Salah
             logo={<Dark />}
-            prayer={(prayers && prayers[4].prayer) || ""}
-            time={
-              (prayers &&
-                `${prayers[4].hour}:${
-                  prayers[4].minute < 10
-                    ? "0" + prayers[4].minute
-                    : prayers[4].minute
-                }`) ||
-              ""
+            prayer={Timings[4].prayer}
+            time={`${Timings[4].hour}:${
+              Timings[4].minute < 10
+                ? "0" + Timings[4].minute
+                : Timings[4].minute
+            }`}
+            amPm={Timings[4].amPm}
+            active={
+              Timings[4].prayer == PrayerInfo?.nextprayer.prayer ? true : null
             }
-            amPm={(prayers && prayers[4].amPm) || ""}
-            active={prayers ? prayers[4].active : false}
           />
           <Salah
             logo={<PrayerTimes />}
-            prayer={(prayers && prayers[0].prayer) || ""}
-            time={
-              (prayers &&
-                `${prayers[0].hour}:${
-                  prayers[0].minute < 10
-                    ? "0" + prayers[0].minute
-                    : prayers[0].minute
-                }`) ||
-              ""
+            prayer={Timings[0].prayer}
+            time={`${Timings[0].hour}:${
+              Timings[0].minute < 10
+                ? "0" + Timings[0].minute
+                : Timings[0].minute
+            }`}
+            amPm={Timings[0].amPm}
+            active={
+              Timings[0].prayer == PrayerInfo?.nextprayer.prayer ? true : null
             }
-            amPm={(prayers && prayers[0].amPm) || ""}
-            active={prayers ? prayers[0].active : false}
           />
-
           <div className={styles["Card3-location"]}>
             <span className={styles["location-svg"]}>{<Location />}</span>UTS
             Jumuah Hall

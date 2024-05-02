@@ -22,9 +22,9 @@ const Landingpage = () => {
         transition={{ duration: 0.6 }}
         className="image-1"
         src="https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
-        alt="image-1"
+        alt="Univeristy Of Technology Campus Sydney"
         srcset=""
-        // loading="lazy"
+        loading="lazy"
       />
 
       <Landingtitle />

@@ -91,3 +91,28 @@
   background: #ab9473;
   color: black;
 }
+.HamburgerMenu {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  .HamburgerMenu {
+    display: block;
+  }
+  .navbar-container {
+    height: min(57px, 54px);
+    align-items: center;
+  }
+  .navitem-list-container {
+    justify-content: flex-end;
+
+    width: auto;
+  }
+  .navitem {
+    display: none;
+  }
+  .navlogo {
+    width: 100%;
+    height: min(8.95px, 8px);
+    object-position: center;
+  }
+}

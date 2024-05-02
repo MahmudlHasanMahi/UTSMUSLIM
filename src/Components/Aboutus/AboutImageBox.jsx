@@ -11,14 +11,21 @@ const AboutImageBox = () => {
   const y = useTransform(scrollYProgress, [0, 1], [-120, 0]);
 
   return (
-    <motion.div
+    <div
       className="aboutImagebox-container"
-      ref={ref}
-      style={{
-        y: y,
-        opacity: opacity,
-      }}
-    ></motion.div>
+      // ref={ref}
+      // style={{
+      //   y: y,
+      //   opacity: opacity,
+      // }}
+      
+    >
+      <img src="/src/img/aboutusImg3.png" className="aboutusImg3" alt="" srcset="" />
+      <img src="/src/img/aboutusImg2.png" className="aboutusImg2" alt="" srcset="" />
+      <img src="/src/img/aboutusImg1.png" className="aboutusImg1" alt="" srcset="" />
+      
+    </div>
+  
   );
 };
 export default AboutImageBox;

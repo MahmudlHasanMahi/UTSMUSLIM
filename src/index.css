@@ -79,25 +79,98 @@ body::-webkit-scrollbar {
   line-height: normal;
   margin-top: min(140px, 6vw);
 }
+.prayerWidget-container {
+  height: min(135px, 7vw);
+  display: flex;
+  align-items: center;
+  background-color: #f5f3e1;
+  box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 430px) {
+  .landingpage-container {
+    height: 798px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    left: 150px;
+  }
+  .landingtitle-container {
+    width: min(245.09px, 244px);
+    margin: 0;
+  }
+  .landingtitle {
+    text-align: center;
+    font-size: min(2.05rem, 8vw);
+    line-height: 1.3;
+  }
+  .landingPage-title {
+    text-align: center;
+    font-size: min(0.83rem, 4vw);
+  }
+  .prayerWidget-container {
+    display: grid;
+
+    height: min(65px, 16vw);
+    overflow-x: scroll;
+  }
+}
+::-webkit-scrollbar {
+  /* outline: solid red; */
+  height: 0px;
+}
 .aboutus-container {
   background-color: #c3bead;
   height: clamp(0vw, 1080px, 56vw);
   display: flex;
   width: 100%;
   position: relative;
-  overflow: hidden;
   z-index: -1;
+  overflow: hidden;
 }
 .aboutImagebox-container {
-  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Frame-12.png?updatedAt=1689504717281");
-  background-repeat: no-repeat;
-  background-position: 320%;
-
-  background-size: 90%;
   opacity: 1;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: end;
   width: 100%;
-  height: 100%;
+  height: 90%;
+}
+.aboutusImg1,
+.aboutusImg2,
+.aboutusImg3 {
+  position: relative;
+}
+.aboutusImg1 {
+  width: min(770px, 40vw);
+  height: 555px;
+  right: 15%;
+  rotate: -22.32deg;
+}
+.aboutusImg2 {
+  width: min(533px, 28vw);
+  height: 555px;
+  bottom: 12%;
+  right: -5%;
+  rotate: -3.66deg;
+}
+.aboutusImg3 {
+  width: min(770px, 40vw);
+  right: 27%;
+  height: 555px;
+  rotate: 7.57deg;
 }
 .contentbox-container {
   display: flex;
@@ -154,7 +227,7 @@ body::-webkit-scrollbar {
   color: #000000;
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 430px) {
   .ourmission-container {
     background: #f5f3e1;
     display: flex;

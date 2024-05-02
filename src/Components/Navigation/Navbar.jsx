@@ -22,6 +22,7 @@ const Navbar = () => {
       <div className={`${styles["navbar-container"]} ${navBg}`}>
         <Navlogo />
         <Navitems />
+        
       </div>
   );
 };

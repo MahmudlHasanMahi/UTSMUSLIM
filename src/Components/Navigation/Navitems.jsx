@@ -1,10 +1,13 @@
 import Listitem from "./Listitem";
 import styles from "./Navigation.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 const Navitems = () => {
   const location = useLocation();
   const [active, setActive] = useState(location.pathname);
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location]);
   return (
     <ul className={styles["navitem-list-container"]}>
       <Listitem
@@ -50,6 +53,7 @@ const Navitems = () => {
         title="Contact Us"
         lastchild={true}
       />
+      <li className={styles.HamburgerMenu}>X</li>
     </ul>
   );
 };

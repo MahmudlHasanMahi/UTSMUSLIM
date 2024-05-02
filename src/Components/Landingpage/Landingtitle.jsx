@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 
 const Landingtitle = () => {
-  // const ref = useRef();
-  // const isInView = useInView(ref, { once: true });
   return (
     <div className="landingtitle-container">
       <motion.div
@@ -12,7 +10,6 @@ const Landingtitle = () => {
       >
         Empowering Muslims On Campus
       </motion.div>
-
       <motion.span
         initial={{ opacity: 0 }}
         animate={{
