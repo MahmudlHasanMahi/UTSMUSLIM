@@ -19,13 +19,6 @@ import PrayerWidget from "../../Components/Widget/prayerWidget";
 // const Quotes = lazy(() => import("../../Components/Quotes/Quotes"));
 
 const Home = () => {
-  const handleLoading = () => {
-    console.log("called");
-  };
-  useEffect(() => {
-    window.addEventListener("load", handleLoading);
-    return () => window.removeEventListener("load", handleLoading);
-  }, []);
   useEffect(() => {
     setDocumentTitle("Home");
   }, []);
@@ -33,7 +26,7 @@ const Home = () => {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Landingpage />
-        <PrayerWidget />
+        {/* <PrayerWidget /> */}
         <Aboutus />
         <Ourmission />
         <Membership />
