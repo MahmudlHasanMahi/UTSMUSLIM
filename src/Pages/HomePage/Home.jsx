@@ -8,7 +8,7 @@ import Quotes from "../../Components/Quotes/Quotes";
 import AboutImageBox from "../../Components/Aboutus/AboutImageBox";
 import { useEffect } from "react";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
-import PrayerWidget from "../../Components/Widget/prayerWidget";
+import PrayerWidget from "../../Components/Widget/PrayerWidget";
 // const Landingpage = lazy(() =>
 //   import("../../Components/Landingpage/Landingpage")
 // );
