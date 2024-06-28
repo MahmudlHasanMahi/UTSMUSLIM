@@ -8,8 +8,7 @@ import Quotes from "../../Components/Quotes/Quotes";
 import AboutImageBox from "../../Components/Aboutus/AboutImageBox";
 import { useEffect } from "react";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
-
-// import PrayerWidget from "../../Components/Widget/PrayerWidget";
+import PrayerWidget from "../../Components/Widget/PrayerWidget";
 const Home = () => {
   useEffect(() => {
     setDocumentTitle("Home");
@@ -19,7 +18,7 @@ const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <AboutImageBox />
         <Landingpage />
-        {/* <PrayerWidget /> */}
+        <PrayerWidget />
         <Aboutus />
         <Ourmission />
         <Membership />
