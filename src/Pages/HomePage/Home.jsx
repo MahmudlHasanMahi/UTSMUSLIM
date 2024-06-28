@@ -20,7 +20,7 @@ const Home = () => {
         <Aboutus />
         <Ourmission />
         <Membership />
-        <Ourvalues />
+        <Ourvalues />˝
         <Quotes />
       </Suspense>
     </>
