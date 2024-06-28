@@ -1,5 +1,5 @@
 import React from "react";
-import NextPrayerWidget from "./NextPrayerWidget";
+// import NextPrayerWidget from "./NextPrayerWidget";
 import WidgetNav from "./WidgetNav";
 import styles from "./Widget.module.css";
 import { Mosque, Moon, Confetti } from "../../Svg/WidgetLogo";
@@ -7,8 +7,8 @@ const PrayerWidget = () => {
   return (
     <div className="prayerWidget-container">
       <div className={styles["prayerWidget-container-inner"]}>
-        <NextPrayerWidget />
-        
+        {/* <NextPrayerWidget /> */}
+
         <WidgetNav
           title={"UTS Musalla"}
           logo={<Mosque />}
