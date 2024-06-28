@@ -18,14 +18,11 @@ const AboutImageBox = () => {
       //   y: y,
       //   opacity: opacity,
       // }}
-      
     >
-      <img src="/src/img/aboutusImg3.png" className="aboutusImg3" alt="" srcset="" />
-      <img src="/src/img/aboutusImg2.png" className="aboutusImg2" alt="" srcset="" />
-      <img src="/src/img/aboutusImg1.png" className="aboutusImg1" alt="" srcset="" />
-      
+      <img src="/src/img/aboutusImg3.png" className="aboutusImg3" />
+      <img src="/src/img/aboutusImg2.png" className="aboutusImg2" />
+      <img src="/src/img/aboutusImg1.png" className="aboutusImg1" />
     </div>
-  
   );
 };
 export default AboutImageBox;

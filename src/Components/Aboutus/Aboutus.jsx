@@ -17,11 +17,11 @@ const Aboutus = () => {
   }, [inView]);
 
   return (
-    <div className="aboutus-container" ref={ref} >
+    <div className="aboutus-container" ref={ref}>
       <div className="contentbox-container">
         <Contentbox
           postTitle="About Us"
-          heading="UTSMS: Where Muslims Connect, Learn and Grow"
+          heading="UTSMS: Where  Connect, Learn and Grow"
           paragraph="UTSMS is a platform for Muslim students at UTS to connect, learn and grow. We offer spiritual guidance, academic support, social events, and volunteering opportunities."
           styleArg={styles.aboutUs}
           animate={true}

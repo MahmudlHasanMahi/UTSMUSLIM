@@ -27,56 +27,61 @@
   padding: 0;
   box-sizing: border-box;
 }
-.App {
-  overflow: hidden;
-}
 
-body {
-  overscroll-behavior: none;
-}
 body::-webkit-scrollbar {
   display: none;
 }
-
+.App {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 50px;
+  position: relative;
+}
 .landingpage-container {
   background: linear-gradient(
     89.86deg,
     #f5f3e1 44.66%,
     rgba(245, 243, 225, 0) 188.92%
   );
-  height: min(1080px, 57vw);
+  height: 100vh;
   box-shadow: 1px 6px 15px rgba(119, 119, 119, 0.64);
   overflow: hidden;
+  height: 93vh;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .image-1 {
-  width: 60%;
+  width: 80%;
+  object-fit: fill;
   float: right;
   position: relative;
-  right: 0;
+  right: -20vw;
   display: inline;
+
   z-index: -1;
 }
 
 .landingtitle-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  margin: min(329px, 13vw) 0 0 min(116px, 10vw);
-  width: min(1030px, 61vw);
+  width: 100%;
+
+  padding: 3vh 32% 0 6%;
 }
 .landingtitle {
-  font-size: min(7rem, calc(4.5vw + 0.5rem));
+  font-size: min(7rem, calc(4.8vw));
   font-family: "TT Wellingtons Trl";
-  line-height: min(165px, 8vw);
   color: #323232;
 }
 .landingPage-title {
   color: #000;
   font-family: Open Sauce Sans;
-  font-size: min(39px, 2vw);
+  font-size: min(39px, 2.5vw);
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   margin-top: min(140px, 6vw);
 }
 .prayerWidget-container {
@@ -89,7 +94,130 @@ body::-webkit-scrollbar {
   -moz-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 7px) {
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.aboutus-container {
+  background-color: #c3bead;
+  height: 95vh;
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+.aboutImagebox-container {
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.aboutusImg1,
+.aboutusImg2,
+.aboutusImg3 {
+  /* border: solid red; */
+  position: relative;
+}
+
+.aboutusImg1 {
+  width: calc(min(770px, 40vw));
+  transform: translateZ(-15px) scale(1.3);
+
+  height: calc(555px);
+  rotate: -22.32deg;
+  right: 9.5%;
+  top: 14%;
+}
+.aboutusImg2 {
+  width: calc(min(533px, 28vw));
+  height: calc(555px);
+  rotate: -3.66deg;
+  right: -6%;
+  bottom: 14%;
+}
+.aboutusImg3 {
+  width: calc(min(770px, 40vw));
+  transform: translateZ(-15px) scale(1.3);
+  height: calc(555px);
+  rotate: 7.57deg;
+  right: 25%;
+  bottom: 18%;
+}
+.contentbox-container {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  padding-left: clamp(0vw, 166px, 10vw);
+}
+.ourmission-container {
+  background: #f5f3e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: space-evenly;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: min(417px, 25vw);
+  width: 23%;
+  background: #e4e3d3;
+  border-radius: min(36px, 1.9vw);
+  justify-content: space-evenly;
+  padding: clamp(0vw, 40px, 1.7vw);
+}
+.cardLogo {
+  border-radius: 50%;
+  padding: min(15px, 1vw);
+  width: min(110px, 6.5vw);
+  height: min(110px, 6.5vw);
+}
+.card-postTitle {
+  font-family: "TT Wellingtons Trl";
+  font-style: normal;
+  font-weight: 800;
+  font-size: min(36px, 2.2vw);
+  line-height: 50px;
+  text-align: center;
+}
+.card-heading {
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: min(21px, 1.7vw);
+  line-height: min(26px, 2vw);
+  text-align: center;
+  color: #000000;
+}
+/*
+------------------------------------| 
+**********************************  |
+  MOBILE VIEW                       |
+**********************************  |
+------------------------------------|  
+*/
+
+@media screen and (max-width: 730px) {
   .landingpage-container {
     height: 798px;
     display: flex;
@@ -105,8 +233,7 @@ body::-webkit-scrollbar {
     left: 150px;
   }
   .landingtitle-container {
-    width: min(245.09px, 244px);
-    margin: 0;
+    padding-inline: 20%;
   }
   .landingtitle {
     text-align: center;
@@ -123,118 +250,12 @@ body::-webkit-scrollbar {
     height: min(65px, 16vw);
     overflow-x: scroll;
   }
-}
-::-webkit-scrollbar {
-  /* outline: solid red; */
-  height: 0px;
-}
-.aboutus-container {
-  background-color: #c3bead;
-  height: clamp(0vw, 1080px, 56vw);
-  display: flex;
-  width: 100%;
-  position: relative;
-  z-index: -1;
-  overflow: hidden;
-}
-.aboutImagebox-container {
-  opacity: 1;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: end;
-  width: 100%;
-  height: 90%;
-}
-.aboutusImg1,
-.aboutusImg2,
-.aboutusImg3 {
-  position: relative;
-}
-.aboutusImg1 {
-  width: min(770px, 40vw);
-  height: 555px;
-  right: 15%;
-  rotate: -22.32deg;
-}
-.aboutusImg2 {
-  width: min(533px, 28vw);
-  height: 555px;
-  bottom: 12%;
-  right: -5%;
-  rotate: -3.66deg;
-}
-.aboutusImg3 {
-  width: min(770px, 40vw);
-  right: 27%;
-  height: 555px;
-  rotate: 7.57deg;
-}
-.contentbox-container {
-  display: flex;
-  width: 70%;
-  align-items: center;
-  padding-left: clamp(0vw, 166px, 10vw);
-}
-.ourmission-container {
-  background: #f5f3e1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: min(1080px, 56vw);
-}
-.card-container {
-  display: flex;
-  flex-direction: row;
-  width: 90vw;
-  justify-content: space-evenly;
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min(395.55px, 20vw);
-  height: min(417px, 23vw);
-  background: #e4e3d3;
-  border-radius: min(36px, 1.9vw);
-  justify-content: space-evenly;
-  padding: clamp(0vw, 40px, 2vw);
-}
-.cardLogo {
-  border-radius: 50%;
-  padding: min(15px, 1vw);
-  width: min(110px, 6vw);
-  height: min(110px, 6vw);
-}
-.card-postTitle {
-  font-family: "TT Wellingtons Trl";
-  font-style: normal;
-  font-weight: 800;
-  font-size: min(36px, 1.9vw);
-  line-height: 50px;
-  text-align: center;
-}
-.card-heading {
-  font-family: "Open Sauce Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: min(21px, 1.3vw);
-  line-height: min(26px, 2vw);
-  text-align: center;
-  color: #000000;
-}
-
-@media screen and (max-width: 430px) {
-  .ourmission-container {
+  /* .ourmission-container {
     background: #f5f3e1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: min(750px, 145vw);
   }
   .card-container {
     display: flex;
@@ -247,8 +268,10 @@ body::-webkit-scrollbar {
   .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: min(200px, 39vw);
+    align-items: center; */
+  /* display: grid;
+    grid-template-columns: auto auto; */
+  /* width: min(200px, 39vw);
     height: min(220px, 45vw);
     background: #e4e3d3;
     border-radius: min(18px, 3.5vw);
@@ -267,10 +290,44 @@ body::-webkit-scrollbar {
   .card-heading {
     font-size: min(15px, 2.5vw);
     line-height: min(15px, 3vw);
-  }
+  } */
 }
+/*
+------------------------------------| 
+**********************************  |
+  TABLET VIEW                       |
+**********************************  |
+------------------------------------|  
+*/
+@media screen and (min-height: 667px) and (max-width: 1280px) {
+  .landingpage-container {
+    height: 97vh;
+  }
+  .landingtitle-container {
+    padding: 0;
+    /* margin: 40vh 0 0 6vw; */
+    padding-inline: 15%;
+    text-align: center;
+  }
+  .image-1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-container {
+    width: 96%;
+  }
+  /* .iphoneImage-container {
+    display: none;
+  }
+  .membership-container{
+    display: flex;
+    justify-content: center;
+  } */
+}
+
 .membership-container {
-  height: min(1200px, 65vw);
+  height: 100vh;
   background: #343431;
   display: flex;
   align-items: center;
@@ -294,6 +351,7 @@ body::-webkit-scrollbar {
   height: min(115px, 6vw);
   background: rgba(0, 0, 0, 0.27);
   border-radius: min(20px, 1.5vw);
+
 }
 .membershipInfo-logo {
   width: min(63px, 3.5vw);
@@ -308,12 +366,14 @@ body::-webkit-scrollbar {
   margin-left: min(35px, 1.5vw);
   display: flex;
   align-items: center;
+  white-space: nowrap;
   color: #ffffff;
 }
 .iphoneImage-container {
   position: relative;
   flex-grow: 1;
-  height: 80%;
+  height: 67vw;
+  right: 0;
   object-fit: cover;
 }
 .ourvalues-container {
