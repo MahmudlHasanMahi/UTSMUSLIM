@@ -72,14 +72,14 @@ body::-webkit-scrollbar {
   padding: 3vh 32% 0 6%;
 }
 .landingtitle {
-  font-size: min(7rem, calc(4.8vw));
+  font-size: min(7rem, calc(4.5vw + 0.5vh));
   font-family: "TT Wellingtons Trl";
   color: #323232;
 }
 .landingPage-title {
   color: #000;
   font-family: Open Sauce Sans;
-  font-size: min(39px, 2.5vw);
+  font-size: min(39px, calc(2.2vw + 0.5vh));
   font-style: normal;
   font-weight: 400;
   margin-top: min(140px, 6vw);
@@ -92,12 +92,6 @@ body::-webkit-scrollbar {
   box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
-}
-
-@media screen and (max-width: 7px) {
-}
-::-webkit-scrollbar {
-  display: none;
 }
 
 .aboutus-container {
@@ -233,6 +227,7 @@ body::-webkit-scrollbar {
   }
   .landingtitle-container {
     padding-inline: 20%;
+    outline: solid red;
   }
   .landingtitle {
     text-align: center;
