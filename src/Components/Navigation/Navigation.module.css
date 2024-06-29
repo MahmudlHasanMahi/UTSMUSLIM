@@ -94,7 +94,7 @@
 .HamburgerMenu {
   display: none;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 703px) {
   .HamburgerMenu {
     display: block;
   }
@@ -112,7 +112,7 @@
   }
   .navlogo {
     width: 100%;
-    height: min(8.95px, 8px);
+    height: min(12.95px, 3vw);
     object-position: center;
   }
 }

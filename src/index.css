@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
 ------------------------------------|  
 */
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 703px) {
   .landingpage-container {
     height: 798px;
     display: flex;

@@ -297,7 +297,7 @@
   }
 }
 
-@media screen and (max-width: 730px) and (orientation: portrait) {
+@media screen and (max-width: 703px) and (orientation: portrait) {
   .contentContainer.ourMission {
     height: min(180px, 35vw);
   }
