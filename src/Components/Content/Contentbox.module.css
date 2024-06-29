@@ -317,18 +317,18 @@
 
   .contentContainer.aboutUs {
     height: calc(70vw + 3vh);
-    width: 78vw;
+    width: 90vw;
   }
 
   .postTitle.aboutUs {
-    font-size: 3vw;
-    width: 18vw;
+    font-size: 3.4vw;
+    width: 21vw;
   }
   .heading.aboutUs {
-    font-size: 6vw;
+    font-size: 6.5vw;
   }
   .paragraph.aboutUs {
-    font-size: 3vw;
+    font-size: 3.3vw;
   }
   .btn-main.aboutUs {
     font-size: 2.5vw;
