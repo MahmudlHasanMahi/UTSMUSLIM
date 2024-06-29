@@ -227,7 +227,6 @@ body::-webkit-scrollbar {
   }
   .landingtitle-container {
     padding-inline: 20%;
-    outline: solid red;
   }
   .landingtitle {
     text-align: center;

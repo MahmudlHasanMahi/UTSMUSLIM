@@ -8,9 +8,9 @@
   width: 100%;
 }
 .postTitle.aboutUs {
+  font-size: clamp(1.7vw, 31px, 1vw);
   background: #afab9c;
   border-radius: 100px;
-  font-size: clamp(1.7vw, 31px, 1vw);
   padding: clamp(0.8vw, 15px, 0.3vw);
   text-align: center;
   font-family: "Inter";
@@ -196,24 +196,6 @@
   user-select: none;
 }
 
-@media screen and (max-width: 618px) {
-  .contentContainer.ourMission {
-    height: min(180px, 35vw);
-  }
-  .postTitle.ourMission {
-    font-size: min(14px, 2.5vw);
-    padding: min(15px, 0vw);
-    width: min(125px, 22vw);
-    line-height: min(35px, 7vw);
-  }
-  .heading.ourMission {
-    font-size: min(2.6rem, 5.3vw);
-  }
-  .paragraph.ourMission {
-    font-size: min(1.2rem, 3vw);
-    width: 75%;
-  }
-}
 .contentContainer.PAS {
   display: flex;
   flex-direction: column;
@@ -312,5 +294,45 @@
   }
   .contentContainer.ourMission {
     height: 25%;
+  }
+}
+
+@media screen and (max-width: 730px) and (orientation: portrait) {
+  .contentContainer.ourMission {
+    height: min(180px, 35vw);
+  }
+  .postTitle.ourMission {
+    font-size: min(14px, 2.5vw);
+    padding: min(15px, 0vw);
+    width: min(125px, 22vw);
+    line-height: min(35px, 7vw);
+  }
+  .heading.ourMission {
+    font-size: min(2.6rem, 5.3vw);
+  }
+  .paragraph.ourMission {
+    font-size: min(1.2rem, 3vw);
+    width: 75%;
+  }
+
+  .contentContainer.aboutUs {
+    height: calc(70vw + 3vh);
+    width: 78vw;
+  }
+
+  .postTitle.aboutUs {
+    font-size: 3vw;
+    width: 18vw;
+  }
+  .heading.aboutUs {
+    font-size: 6vw;
+  }
+  .paragraph.aboutUs {
+    font-size: 3vw;
+  }
+  .btn-main.aboutUs {
+    font-size: 2.5vw;
+    width: 18vw;
+    border-radius: 2vw;
   }
 }
