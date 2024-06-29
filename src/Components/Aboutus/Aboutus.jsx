@@ -29,7 +29,6 @@ const Aboutus = () => {
           <Button title={"Join Us"} styleArg={styles.aboutUs} />
         </Contentbox>
       </div>
-      <AboutImageBox />
     </div>
   );
 };

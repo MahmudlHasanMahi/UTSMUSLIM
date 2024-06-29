@@ -2,28 +2,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 65%;
+  /* height: (40vh, 65%, 60vh); */
+  height: clamp(calc(2vh + 37vw), 65%, calc(40vh - 70vw));
+
   width: 100%;
 }
 .postTitle.aboutUs {
   background: #afab9c;
-  border-radius: 40px;
-  font-size: clamp(1vw, 31px, 1.7vw);
+  border-radius: 100px;
+  font-size: clamp(1.7vw, 31px, 1vw);
   padding: clamp(0.8vw, 15px, 0.3vw);
   text-align: center;
-  line-height: 30px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  width: clamp(1vw, 207px, 10vw);
+  width: clamp(11vw, 207px, 12vw);
 }
 .heading.aboutUs {
   font-family: "TT Wellingtons Trl";
-  font-size: clamp(1vw, 4.76rem, 4vw);
+  font-size: clamp(4.5vw, 4.76rem, 1vw);
 }
 .paragraph.aboutUs {
   font-family: "Open Sauce Sans";
-  font-size: clamp(1vw, 2.2rem, 2.2vw);
+  font-size: clamp(2vw, 2.2rem, 1.4vw);
 }
 .btn-main.aboutUs {
   background-color: #443115;
@@ -38,22 +39,20 @@
   background: #443115;
   border-radius: 15px;
   border: none;
-  width: clamp(0vw, 209.89px, 11vw);
-  padding: clamp(0vw, 15px, 3vw);
+  width: clamp(0vw, 209.89px, 15vw);
+  padding: clamp(0vw, 15px, 2vw);
   transition: background-color 0.5s;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-wrap: nowrap;
 }
 .btn-main.aboutUs:hover {
   background-color: #70562f;
 }
 .contentContainer.ourMission {
-  /* height: clamp(10%, 40%, 50%); */
   height: 40%;
-  /* padding-block: 20%; */
   display: flex;
-  /* border: solid red; */
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
@@ -84,15 +83,52 @@
   text-align: center;
   width: 65%;
 }
+.contentContainer.ourValue {
+  height: 40vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.postTitle.ourValue {
+  background: #d9d7c4;
+  font-size: clamp(1vw, 31px, 1.7vw);
+  width: auto;
+  border-radius: clamp(calc(40px + 3%), calc(40px - 0%), calc(40px - 2%));
+  padding-inline: 2%;
+  padding-block: 1%;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.heading.ourValue {
+  font-size: clamp(1vw, 4.76rem, 4vw);
+  font-family: "TT Wellingtons Trl";
+  text-align: center;
+}
+.paragraph.ourValue {
+  font-family: "Open Sauce Sans";
+  font-size: clamp(1vw, 2.2rem, 2.2vw);
+  text-align: center;
+  width: 65%;
+}
 
 .contentContainer.membership {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  height: 95%;
+  height: 100%;
   width: 50%;
   margin-left: min(120px, 6vw);
+  padding-block: calc(40vh - 18vw);
 }
 .postTitle.membership {
   background: rgba(0, 0, 0, 0.27);
@@ -109,7 +145,8 @@
 .heading.membership {
   font-family: "TT Wellingtons Trl";
   color: white;
-  font-size: clamp(1vw, 4.76rem, 3.65vw);
+
+  font-size: clamp(1vw, 3.8rem, 3.5vw);
 }
 .paragraph.membership {
   color: white;
@@ -241,21 +278,39 @@
   font-size: clamp(1vw, 2.2rem, 2.2vw);
   width: 46%;
 }
-@media screen and (min-height: 667px) and (max-width: 1280px) {
-  .contentContainer.ourMission {
-    height: 30%;
-  }
+@media screen and (min-height: 667px) and (max-width: 1280px) and (orientation: portrait) {
   .contentContainer.membership {
-    border: solid red;
     align-items: center;
-    /* height: 80vw; */
-    padding-block: calc(10vh - 3vw);
+    margin-left: calc(30vh - 14vw);
   }
   .heading.membership,
   .paragraph.membership {
     text-align: center;
   }
   .postTitle.membership {
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .contentContainer.ourValue {
+    height: 35vh;
+  }
+  .postTitle.ourValue {
+    font-size: clamp(1vw, 31px, 1.9vw);
+  }
+  .heading.ourValue {
+    font-size: clamp(1vw, 4.76rem, 4.6vw);
+  }
+  .paragraph.ourValue {
+    font-size: clamp(1vw, 2.2rem, 2.5vw);
+  }
+
+  .contentContainer.aboutUs {
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    width: calc(72vw - 3vh);
+    height: calc(67vw - 10vh);
+  }
+  .contentContainer.ourMission {
+    height: 25%;
   }
 }

@@ -17,17 +17,14 @@ const Ourvalues = () => {
   }, [inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="ourvalues-container"
-    >
+    <motion.div ref={ref} className="ourvalues-container">
       <Contentbox
         postTitle={"Our Values"}
         heading={"What Do We Stand For?"}
         paragraph={
           "We aim to strengthen the muslim community at UTS with a range of activities and services"
         }
-        styleArg={styles.ourMission}
+        styleArg={styles.ourValue}
         animate={true}
       />
       <Hexagons />

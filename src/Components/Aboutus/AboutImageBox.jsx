@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef } from "react";
+import { useScroll, useTransform } from "framer-motion";
 const AboutImageBox = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
