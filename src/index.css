@@ -72,17 +72,17 @@ body::-webkit-scrollbar {
   padding: 3vh 32% 0 6%;
 }
 .landingtitle {
-  font-size: min(7rem, calc(4.5vw + 0.5vh));
+  font-size: min(7rem, calc(4.3vw + 0.8vh));
   font-family: "TT Wellingtons Trl";
   color: #323232;
 }
 .landingPage-title {
   color: #000;
   font-family: Open Sauce Sans;
-  font-size: min(39px, calc(2.2vw + 0.5vh));
+  font-size: min(39px, calc(2vw + 0.9vh));
   font-style: normal;
   font-weight: 400;
-  margin-top: min(140px, calc(6vw - 1vw));
+  margin-top: min(140px, calc(7.2vw - 1.3vw));
 }
 .prayerWidget-container {
   height: min(135px, 7vw);
