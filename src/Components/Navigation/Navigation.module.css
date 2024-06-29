@@ -7,7 +7,6 @@
   padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
   position: fixed;
   width: 100%;
-  outline: solid red;
 }
 .navbar-container-Dark {
   background: rgba(117, 117, 111, 0.29);
