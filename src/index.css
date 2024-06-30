@@ -265,17 +265,17 @@ body::-webkit-scrollbar {
   .card {
     width: 38.5vw;
     height: 40vw;
-    padding-block: 4vw;
+    padding-block: 1vw;
     padding-inline: 3vw;
   }
   .cardLogo {
     padding: min(15px, 2vw);
     width: min(110px, 11.5vw);
     height: min(110px, 11.5vw);
-
   }
   .card-postTitle {
- font-size: 3.5vw; 
+    display: contents;
+    font-size: 3.5vw;
   }
   .card-heading {
     font-size: 2vw;
