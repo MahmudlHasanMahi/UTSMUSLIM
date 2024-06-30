@@ -340,14 +340,15 @@
     justify-content: space-evenly;
     height: calc(50vw + 16vh);
     width: 76vw;
+    position: relative;
   }
 
   .postTitle.ourMission {
     font-size: 3.4vw;
     width: 25vw;
     padding-block: 0.8vw;
-    position: relative;
-    top: -18.5%;
+    position: absolute;
+    top: -5%;
     /* margin-bottom:auto ; */
   }
   .heading.ourMission {
