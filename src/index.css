@@ -265,7 +265,7 @@ body::-webkit-scrollbar {
   .card {
     width: 38.5vw;
     height: 40vw;
-    padding-block: 0;
+    padding-block: 1vh;
     padding-inline: 3vw;
   }
   .cardLogo {
