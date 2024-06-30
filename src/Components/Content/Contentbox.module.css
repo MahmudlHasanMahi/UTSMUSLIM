@@ -338,7 +338,7 @@
 
   .contentContainer.ourMission {
     justify-content: space-evenly;
-    height: calc(50vw + 10vh);
+    height: calc(50vw + 16vh);
     width: 76vw;
   }
 
@@ -347,7 +347,7 @@
     width: 25vw;
     padding-block: 0.8vw;
     position: relative;
-    top: -16.5%;
+    top: -18.5%;
     /* margin-bottom:auto ; */
   }
   .heading.ourMission {
