@@ -338,7 +338,7 @@
 
   .contentContainer.ourMission {
     justify-content: space-evenly;
-    height: calc(50vw + 16vh);
+    height: calc(50vw + 10vh);
     width: 76vw;
   }
 
