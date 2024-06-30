@@ -181,6 +181,11 @@ body::-webkit-scrollbar {
 }
 .cardLogo {
   border-radius: 50%;
+  /* padding: min(15px, 1.5vw);
+  width: min(110px, 8.5vw);
+  height: min(110px, 8.5vw); */
+
+  border-radius: 50%;
   padding: min(15px, 1vw);
   width: min(110px, 6.5vw);
   height: min(110px, 6.5vw);
@@ -243,47 +248,39 @@ body::-webkit-scrollbar {
     height: min(65px, 16vw);
     overflow-x: scroll;
   }
-  /* .ourmission-container {
-    background: #f5f3e1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  .ourmission-container {
+    /* position: relative;
+   */
+    justify-content: start;
   }
   .card-container {
-    display: flex;
-    flex-direction: row;
-    width: min(445px, 85vw);
-    height: min(465px, 96vw);
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 7px;
+    row-gap: 7px;
+    justify-items: center;
+    justify-content: center;
   }
   .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
-  /* display: grid;
-    grid-template-columns: auto auto; */
-  /* width: min(200px, 39vw);
-    height: min(220px, 45vw);
-    background: #e4e3d3;
-    border-radius: min(18px, 3.5vw);
-    justify-content: space-evenly;
+    width: 38.5vw;
+    height: 40vw;
+    padding-block: 4vw;
+    padding-inline: 3vw;
   }
   .cardLogo {
-    border-radius: 50%;
-    padding: min(6px, 2.9vw);
-    width: min(50px, 12vw);
-    height: min(50px, 12vw);
+    padding: min(15px, 2vw);
+    width: min(110px, 11.5vw);
+    height: min(110px, 11.5vw);
+
   }
   .card-postTitle {
-    font-size: min(20px, 4.6vw);
-    line-height: 50px;
+ font-size: 3.5vw; 
   }
   .card-heading {
-    font-size: min(15px, 2.5vw);
-    line-height: min(15px, 3vw);
-  } */
+    font-size: 2vw;
+    line-height: 1.5vh;
+  }
 }
 
 .membership-container {
