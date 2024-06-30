@@ -175,7 +175,7 @@ body::-webkit-scrollbar {
   height: min(417px, 25vw);
   width: 23%;
   background: #e4e3d3;
-  border-radius: min(36px, 1.9vw);
+  border-radius: 10%;
   justify-content: space-evenly;
   padding: clamp(0vw, 40px, 1.7vw);
 }
