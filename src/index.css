@@ -207,86 +207,6 @@ body::-webkit-scrollbar {
   text-align: center;
   color: #000000;
 }
-/*
-------------------------------------| 
-**********************************  |
-  MOBILE VIEW                       |
-**********************************  |
-------------------------------------|  
-*/
-
-@media screen and (max-width: 703px) {
-  .landingpage-container {
-    height: 798px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .image-1 {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: right;
-    left: 150px;
-  }
-  .landingtitle-container {
-    padding-inline: 20%;
-  }
-  .landingtitle {
-    text-align: center;
-    font-size: min(2.05rem, 8vw);
-    line-height: 1.3;
-  }
-  .landingPage-title {
-    text-align: center;
-    font-size: min(0.83rem, 4vw);
-  }
-  .prayerWidget-container {
-    display: grid;
-
-    height: min(65px, 16vw);
-    overflow-x: scroll;
-  }
-  .ourmission-container {
-    /* position: relative;
-   */
-    justify-content: start;
-  }
-  .card-container {
-    /* margin-top: 5vh;
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 7px;
-    row-gap: 7px;
-    justify-items: center;
-    justify-content: center; */
-  }
-  /* .card {
-    width: 38.5vw;
-    height: 44vw;
-    padding-block: 2vh;
-    padding-inline: 3vw;
-  } */
-
-  .card {
-    width: 38.5vw;
-    height: 44vw;
-  }
-
-  .cardLogo {
-    padding: min(15px, 2vw);
-    height: 9vw;
-    width: 9vw;
-  }
-  .card-postTitle {
-    display: contents;
-    font-size: min(10px, 2vw);
-  }
-  .card-heading {
-    font-size: 2vw;
-  }
-}
 
 .membership-container {
   height: 110vh;
@@ -610,7 +530,7 @@ a {
 **********************************  |
 ------------------------------------|  
 */
-@media screen and (min-height: 667px) and (max-width: 1280px) and (orientation: portrait) {
+@media screen and (height >= 667px) and (width <= 1280px) and (orientation: portrait) {
   .landingpage-container {
     height: 97vh;
   }
@@ -645,6 +565,8 @@ a {
   .card {
     width: calc(38.5vw / 1.3);
     height: calc(44vw / 1.3);
+    /* width: 200px;
+    height: 200px; */
   }
   .card-postTitle {
     font-size: min(23px, 3vw);
@@ -726,5 +648,86 @@ a {
   }
   .quote {
     font-size: min(75px, 3.5vw);
+  }
+}
+/*
+------------------------------------| 
+**********************************  |
+  MOBILE VIEW                       |
+**********************************  |
+------------------------------------|  
+*/
+
+@media screen and (max-width: 703px) {
+  .landingpage-container {
+    height: 798px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-1 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    left: 150px;
+  }
+  .landingtitle-container {
+    padding-inline: 20%;
+  }
+  .landingtitle {
+    text-align: center;
+    font-size: min(2.05rem, 8vw);
+    line-height: 1.3;
+  }
+  .landingPage-title {
+    text-align: center;
+    font-size: min(0.83rem, 4vw);
+  }
+  .prayerWidget-container {
+    display: grid;
+
+    height: min(65px, 16vw);
+    overflow-x: scroll;
+  }
+  .ourmission-container {
+    /* position: relative;
+   */
+    justify-content: start;
+  }
+  /* .card-container {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 7px;
+    row-gap: 7px;
+    justify-items: center;
+    justify-content: center;
+  } */
+  /* .card {
+    width: 38.5vw;
+    height: 44vw;
+    padding-block: 2vh;
+    padding-inline: 3vw;
+  } */
+
+  .card {
+    width: 38.5vw;
+    height: 44vw;
+    padding-block: 3vh;
+  }
+
+  .cardLogo {
+    padding: min(5px, 2vw);
+    height: 10vw;
+    width: 10vw;
+  }
+  .card-postTitle {
+    display: contents;
+    font-size: min(13px, 5vw);
+  }
+  .card-heading {
+    font-size: 2.4vw;
   }
 }
