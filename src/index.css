@@ -187,8 +187,8 @@ body::-webkit-scrollbar {
 
   border-radius: 50%;
   padding: min(15px, 1vw);
-  width: min(110px, 6.5vw);
-  height: min(110px, 6.5vw);
+  width: min(110px, 7.5vw);
+  height: min(110px, 7.5vw);
 }
 .card-postTitle {
   font-family: "TT Wellingtons Trl";
@@ -203,7 +203,7 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 400;
   font-size: min(21px, 1.4vw);
-  line-height: min(26px, 2vw);
+
   text-align: center;
   color: #000000;
 }
@@ -254,32 +254,37 @@ body::-webkit-scrollbar {
     justify-content: start;
   }
   .card-container {
-    margin-top: 10%;
+    /* margin-top: 5vh;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 7px;
     row-gap: 7px;
     justify-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
+  /* .card {
+    width: 38.5vw;
+    height: 44vw;
+    padding-block: 2vh;
+    padding-inline: 3vw;
+  } */
+
   .card {
     width: 38.5vw;
-    height: 40vw;
-    padding-block: 1vh;
-    padding-inline: 3vw;
+    height: 44vw;
   }
+
   .cardLogo {
     padding: min(15px, 2vw);
-    width: min(110px, 11.5vw);
-    height: min(110px, 11.5vw);
+    height: 9vw;
+    width: 9vw;
   }
   .card-postTitle {
     display: contents;
-    font-size: 3.5vw;
+    font-size: min(10px, 2vw);
   }
   .card-heading {
-    font-size: 2.2vw;
-    line-height: 1.5vh;
+    font-size: 2vw;
   }
 }
 
@@ -629,6 +634,23 @@ a {
 
   .card-container {
     width: 96%;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 7px;
+    row-gap: 7px;
+    justify-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: calc(38.5vw / 1.3);
+    height: calc(44vw / 1.3);
+  }
+  .card-postTitle {
+    font-size: min(23px, 3vw);
+  }
+  .card-heading {
+    font-size: min(14px, 2vw);
   }
   .aboutusImg2 {
     display: none;
