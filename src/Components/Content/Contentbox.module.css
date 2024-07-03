@@ -124,7 +124,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   height: 100%;
   width: 50%;
   margin-left: min(120px, 6vw);
@@ -171,6 +170,7 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-wrap: nowrap;
 }
 
 .btn-main.membership:hover {
@@ -263,7 +263,8 @@
 @media screen and (min-height: 667px) and (max-width: 1280px) and (orientation: portrait) {
   .contentContainer.membership {
     align-items: center;
-    margin-left: calc(30vh - 14vw);
+    margin: 0;
+    width: auto;
   }
   .heading.membership,
   .paragraph.membership {
@@ -294,6 +295,13 @@
   }
   .contentContainer.ourMission {
     height: 25%;
+  }
+  .heading.membership {
+    width: 75%;
+  }
+
+  .paragraph.membership {
+    width: 50%;
   }
 }
 
@@ -358,9 +366,40 @@
     font-size: 3.5vw;
     width: 75%;
   }
+
   .btn-main.ourMission {
     font-size: 2.5vw;
     width: 18vw;
     border-radius: 2vw;
+  }
+  .contentContainer.membership {
+    position: relative;
+    padding-block: 0;
+    justify-content: space-around;
+    height: 90%;
+    padding-block: calc(34vh - 22vw);
+  }
+
+  .postTitle.membership {
+    position: absolute;
+    top: -4vw;
+    font-size: 3.4vw;
+    width: 25vw;
+    background-color: #262624;
+    padding-block: 2vw;
+  }
+  .heading.membership {
+    font-size: 6vw;
+
+    width: 85%;
+  }
+  .paragraph.membership {
+    width: 70%;
+    font-size: 3vw;
+  }
+  .btn-main.membership {
+    width: auto;
+    font-size: 3.3vw;
+    padding-inline: 2.3vw;
   }
 }

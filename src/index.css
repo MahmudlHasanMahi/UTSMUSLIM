@@ -217,13 +217,13 @@ body::-webkit-scrollbar {
   background-position: 125%;
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
 }
 .benefit-container {
   height: min(484px, 21vw);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  width: 100%;
 }
 .membershipInfo-container {
   display: flex;
@@ -231,7 +231,8 @@ body::-webkit-scrollbar {
   justify-content: flex-start;
   align-items: center;
   height: min(115px, 6vw);
-  background: rgba(0, 0, 0, 0.27);
+  background-color: rgba(38, 38, 36, 0.84);
+
   border-radius: min(20px, 1.5vw);
 }
 .membershipInfo-logo {
@@ -530,7 +531,7 @@ a {
 **********************************  |
 ------------------------------------|  
 */
-@media screen and (height >= 667px) and (width <= 1280px) and (orientation: portrait) {
+@media screen and (width <= 1280px) and (orientation: portrait) {
   .landingpage-container {
     height: 97vh;
   }
@@ -594,7 +595,7 @@ a {
     bottom: 34%;
   }
   .iphoneImage-container {
-    left: calc(50vh - 34vw);
+    display: none;
   }
   /* .hexagon-hidden,
   .hexagon {
@@ -648,6 +649,14 @@ a {
   }
   .quote {
     font-size: min(75px, 3.5vw);
+  }
+
+  .benefit-container {
+    width: 60%;
+  }
+  .membership-container {
+    background-size: calc(50vh + 50vw);
+    background-position: -17vw 14vh;
   }
 }
 /*
@@ -731,5 +740,23 @@ a {
   }
   .card-heading {
     font-size: 2.4vw;
+  }
+  .membership-container {
+    align-items: start;
+  }
+  .benefit-container {
+    width: 85%;
+    height: 20vh;
+    justify-content: space-around;
+  }
+  .membershipInfo-container {
+    height: 6vh;
+  }
+  .membershipInfo-title {
+    font-size: 2.4vw;
+  }
+  .membership-container {
+    background-size: calc(56vh + 66vw);
+    background-position: -28vw 26vh;
   }
 }
