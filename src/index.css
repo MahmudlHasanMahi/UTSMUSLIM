@@ -716,6 +716,7 @@ a {
     width: 38.5vw;
     height: 44vw;
     padding-block: 3vh;
+    padding-inline: 4vw;
   }
 
   .cardLogo {
