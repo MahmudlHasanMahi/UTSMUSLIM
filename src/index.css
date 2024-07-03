@@ -719,9 +719,9 @@ a {
   }
 
   .cardLogo {
-    padding: min(5px, 2vw);
-    height: 10vw;
-    width: 10vw;
+    padding: min(6px, 1vh);
+    height: 12vw;
+    width: 12vw;
   }
   .card-postTitle {
     display: contents;
