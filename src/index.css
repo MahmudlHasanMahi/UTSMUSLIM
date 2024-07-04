@@ -752,8 +752,14 @@ a {
   .membershipInfo-container {
     height: 6vh;
   }
+  .membershipInfo-logo {
+    width: 7vw;
+    height: 7vw;
+    margin-left: 4vw;
+  }
   .membershipInfo-title {
-    font-size: 2.4vw;
+    font-size: 3vw;
+    margin-left: 3vw;
   }
   .membership-container {
     background-size: calc(56vh + 66vw);
