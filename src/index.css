@@ -260,7 +260,7 @@ body::-webkit-scrollbar {
 }
 .ourvalues-container {
   background: #f5f3e1;
-  height: 170vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -597,21 +597,7 @@ a {
   .iphoneImage-container {
     display: none;
   }
-  /* .hexagon-hidden,
-  .hexagon {
-    height: min(300px, 21vw);
-    width: min(300px, 21vw);
-  }
-  .hexagon-container-2,
-  .hexagon-container-3 {
-    margin-top: max(-45px, -3vw);
-  } */
-  .ourvalues-container {
-    /* height: 150vh; */
-    /* outline: solid red; */
-    display: flex;
-    /* justify-content: start; */
-  }
+
   .quotesContent {
     padding: 0;
   }
@@ -764,5 +750,13 @@ a {
   .membership-container {
     background-size: calc(56vh + 66vw);
     background-position: -28vw 26vh;
+  }
+  .ourvalues-container {
+    justify-content: start;
+  }
+  .hexagon-hidden,
+  .hexagon {
+    height: 30vw;
+    width: 30vw;
   }
 }

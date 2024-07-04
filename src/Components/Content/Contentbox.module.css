@@ -303,6 +303,9 @@
   .paragraph.membership {
     width: 50%;
   }
+  .contentContainer.ourValue {
+    height: 33vw;
+  }
 }
 
 @media screen and (max-width: 703px) and (orientation: portrait) {
@@ -395,11 +398,31 @@
   }
   .paragraph.membership {
     width: 70%;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
   .btn-main.membership {
     width: auto;
     font-size: 3.5vw;
     padding-inline: 2.3vw;
+  }
+  .contentContainer.ourValue {
+    position: relative;
+    height: 40%;
+    padding: 13vh 0 0 0;
+  }
+  .postTitle.ourValue {
+    position: absolute;
+    padding-block: 2vw;
+    top: -4.5vw;
+    font-size: 3.4vw;
+    width: 25vw;
+  }
+  .heading.ourValue {
+    font-size: 6vw;
+    width: 85%;
+  }
+  .paragraph.ourValue {
+    width: 73%;
+    font-size: 3.5vw;
   }
 }
