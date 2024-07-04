@@ -382,11 +382,11 @@
 
   .postTitle.membership {
     position: absolute;
-    top: -4vw;
+    top: -4.5vw;
     font-size: 3.4vw;
     width: 25vw;
     background-color: #262624;
-    padding-block: 2vw;
+    padding-block: 2.5vw;
   }
   .heading.membership {
     font-size: 6vw;
