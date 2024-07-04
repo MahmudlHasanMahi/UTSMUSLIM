@@ -759,4 +759,11 @@ a {
     height: 30vw;
     width: 30vw;
   }
+  .hexagon-svg {
+    height: 15%;
+    width: 15%;
+  }
+  .hexagon-title {
+    font-size: (1rem, 3vw);
+  }
 }
