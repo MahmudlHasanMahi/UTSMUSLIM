@@ -766,21 +766,28 @@ a {
   .hexagon-title {
     font-size: (1rem, 2.5vw);
   }
+  .quotes-container {
+    outline: solid red;
+    justify-content: space-between;
+    padding-block-end: calc(28vh - 21vw);
+  }
   .arabicCalligraphy {
-    height: 45vh;
-    width: 60vw;
+    /* position: static; */
+    height: 40vh;
+    width: 70%;
   }
   .quotesContent {
-    /* outline: solid red; */
-    height: 45vw;
+    height: 55vw;
+    margin: 0;
   }
   .intro {
     font-size: 4vw;
   }
   .quote {
-    font-size: 3.5vw;
+    font-size: 5vw;
+    width: 80%;
   }
   .origin {
-    font-size: 2.7vw;
+    font-size: 3.4vw;
   }
 }
