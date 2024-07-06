@@ -773,8 +773,8 @@ a {
   }
   .arabicCalligraphy {
     /* position: static; */
-    height: 50%;
-    width: 70%;
+    height: 40vh;
+    width: calc(65% + 2vh);
   }
   .quotesContent {
     height: 60vw;
