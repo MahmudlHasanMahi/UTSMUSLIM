@@ -766,4 +766,21 @@ a {
   .hexagon-title {
     font-size: (1rem, 2.5vw);
   }
+  .arabicCalligraphy {
+    height: 45vh;
+    width: 60vw;
+  }
+  .quotesContent {
+    /* outline: solid red; */
+    height: 45vw;
+  }
+  .intro {
+    font-size: 4vw;
+  }
+  .quote {
+    font-size: 3.5vw;
+  }
+  .origin {
+    font-size: 2.7vw;
+  }
 }
