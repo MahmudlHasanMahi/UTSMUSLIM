@@ -769,12 +769,12 @@ a {
   .quotes-container {
     outline: solid red;
     justify-content: space-between;
-    padding-block-end: calc(23vh - 21vw);
+    padding-block-end: calc(29vh - 26vw);
   }
   .arabicCalligraphy {
     /* position: static; */
     height: 40vh;
-    width: calc(65% + 2vh);
+    width: calc(59% + 2vh + 2vw);
   }
   .quotesContent {
     height: 60vw;
