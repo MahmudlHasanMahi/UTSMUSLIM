@@ -777,8 +777,9 @@ a {
     width: 70%;
   }
   .quotesContent {
-    height: 70vw;
+    height: 65vw;
     margin: 0;
+    justify-content: space-between;
   }
   .intro {
     font-size: 4.5vw;
