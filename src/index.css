@@ -769,7 +769,7 @@ a {
   .quotes-container {
     outline: solid red;
     justify-content: space-between;
-    padding-block-end: calc(32vh - 21vw);
+    padding-block-end: calc(26vh - 28vw);
   }
   .arabicCalligraphy {
     /* position: static; */
@@ -777,17 +777,17 @@ a {
     width: 70%;
   }
   .quotesContent {
-    height: 55vw;
+    height: 70vw;
     margin: 0;
   }
   .intro {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
   .quote {
-    font-size: 5vw;
-    width: 80%;
+    font-size: 5.5vw;
+    /* width: 80%; */
   }
   .origin {
-    font-size: 3.4vw;
+    font-size: 3.8vw;
   }
 }
