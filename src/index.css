@@ -818,12 +818,15 @@ a {
     color: #fedaa3;
   }
   .socialMediaLogo {
-    width: min(2.5rem, 6vw);
-    height: min(2.5rem, 6vw);
-    padding: 1.3vw;
+    width: min(3.5rem, 8vw);
+    height: min(3.5rem, 8vw);
+    padding: 2vw;
+    margin-right: 2vw;
   }
+
   .socialMedia-container {
-    width: 30%;
+    width: 100%;
+    justify-content: center;
   }
   .UtsmuslimFooterLogo {
     display: none;
@@ -831,6 +834,6 @@ a {
   .UtsmuslimFooterLogo-long {
     display: block;
     margin-bottom: 3vh;
-    width: 50%;
+    width: 55%;
   }
 }
