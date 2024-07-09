@@ -265,14 +265,15 @@ body::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/OurvalueImage.png?updatedAt=1689504714751");
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position-x: 135%;
+  background-position-y: 100%;
+  background-size: 42%;
 }
 
 .hexagons-main-container {
-  background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/OurvalueImage.png?updatedAt=1689504714751");
-  background-repeat: no-repeat;
-  background-position-x: min(1700px, 77vw);
-  background-position-y: 70px;
-  background-size: contain;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -320,7 +321,7 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 700;
   position: absolute;
-  width: 58%;
+  width: 64%;
   font-size: min(30px, 1.5vw);
   text-align: center;
   z-index: 1;
@@ -608,6 +609,9 @@ a {
   .hexagon-title {
     font-size: min(2rem, 2.3vw);
   }
+  .ourvalues-container {
+    background-image: none;
+  }
   .quotesContent {
     padding: 0;
   }
@@ -621,6 +625,7 @@ a {
       rgba(170, 148, 115, 0) 173.39%
     );
   }
+
   .quotesContent {
     align-items: center;
     text-align: center;
@@ -748,6 +753,13 @@ a {
   .ourvalues-container {
     justify-content: start;
     height: 100vh;
+  }
+  .hexagon-container-2,
+  .hexagon-container-3 {
+    margin-top: max(-45px, -2vw);
+  }
+  .hexagons-main-container {
+    background-image: none;
   }
   .hexagon-hidden,
   .hexagon {
