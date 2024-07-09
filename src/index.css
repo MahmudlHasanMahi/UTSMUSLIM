@@ -567,10 +567,6 @@ a {
     align-content: stretch;
   }
   .card {
-    /* width: calc(38.5vw / 1.3);
-    height: calc(44vw / 1.3); */
-    /* width: 200px;
-    height: 200px; */
     height: auto;
   }
   .card-postTitle {
@@ -601,7 +597,14 @@ a {
   .iphoneImage-container {
     display: none;
   }
-
+  .hexagon,
+  .hexagon-hidden {
+    width: 25vw;
+    height: 25vw;
+  }
+  .hexagon-title {
+    font-size: min(2rem, 2.3vw);
+  }
   .quotesContent {
     padding: 0;
   }
@@ -616,7 +619,6 @@ a {
     );
   }
   .quotesContent {
-    /* outline: solid red; */
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
@@ -629,7 +631,6 @@ a {
     object-position: 0;
     position: absolute;
     top: 0;
-    /* border: solid red; */
     height: 45vh;
     width: 50vw;
   }
@@ -743,7 +744,7 @@ a {
   }
   .ourvalues-container {
     justify-content: start;
-    /* height: calc(100vh + 5rem); */
+    height: 100vh;
   }
   .hexagon-hidden,
   .hexagon {
@@ -754,12 +755,10 @@ a {
     font-size: min(3rem, 3vw);
   }
   .quotes-container {
-    outline: solid red;
     justify-content: space-between;
     padding-block-end: calc(29vh - 15vw);
   }
   .arabicCalligraphy {
-    /* position: static; */
     height: 40vh;
     width: calc(59% + 2vh + 2vw);
   }
