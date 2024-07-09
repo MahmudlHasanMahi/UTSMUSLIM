@@ -445,6 +445,9 @@ body::-webkit-scrollbar {
   height: min(97.03px, 6vw);
   margin-top: min(-40px, -2vw);
 }
+.UtsmuslimFooterLogo-long {
+  display: none;
+}
 .followUs {
   font-family: "Inter";
   font-style: normal;
@@ -776,5 +779,58 @@ a {
   }
   .origin {
     font-size: 3.8vw;
+  }
+  .joinUs-container {
+    display: none;
+  }
+  .footer-container {
+    height: 65vh;
+  }
+  .footer-section-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .footer-section-1 {
+    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+  }
+  .Link {
+    display: none;
+  }
+
+  .followUs {
+    display: none;
+  }
+  .footer-section-2 {
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Link-title {
+    font-size: min(2rem, 5vw);
+    color: #fedaa3;
+  }
+  .socialMediaLogo {
+    width: min(2.5rem, 6vw);
+    height: min(2.5rem, 6vw);
+    padding: 1.3vw;
+  }
+  .socialMedia-container {
+    width: 30%;
+  }
+  .UtsmuslimFooterLogo {
+    display: none;
+  }
+  .UtsmuslimFooterLogo-long {
+    display: block;
+    margin-bottom: 3vh;
+    width: 50%;
   }
 }

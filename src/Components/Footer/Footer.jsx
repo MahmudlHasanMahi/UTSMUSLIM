@@ -18,7 +18,13 @@ const Footer = () => {
             alt="UtsmuslimFooterLogo"
             loading="lazy"
           />
-
+          <img
+            className="UtsmuslimFooterLogo-long"
+            // src="https://ik.imagekit.io/ytjlb3rhi/assets/UtsmuslimFooterLogo.svg?updatedAt=1689504714655"
+            src="https://ik.imagekit.io/ytjlb3rhi/assets/Nav%20logo%20svg.svg?updatedAt=1689948604212"
+            alt="UtsmuslimFooterLogo"
+            loading="lazy"
+          />
           <span className="followUs">Follow Us</span>
           <SocialMediaLink />
         </div>
