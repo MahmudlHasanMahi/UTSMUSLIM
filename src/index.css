@@ -260,7 +260,7 @@ body::-webkit-scrollbar {
 }
 .ourvalues-container {
   background: #f5f3e1;
-  height: 100vh;
+  height: calc(100vh + 15rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -275,35 +275,38 @@ body::-webkit-scrollbar {
   background-size: contain;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .hexagon-container-1,
 .hexagon-container-2,
 .hexagon-container-3 {
   display: flex;
   justify-content: center;
-  outline: solid red;
+  height: calc(100% / 3);
 }
 .hexagon-container-2,
 .hexagon-container-3 {
-  margin-top: max(-45px, -3vw);
-  /* width: 100%; */
+  margin-top: max(-45px, -1vw);
 }
 
 .hexagon-hidden,
 .hexagon {
-  outline: solid rgb(41, 28, 163);
+  height: 15vw;
+  width: 15vw;
 }
 .hexagon {
   background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Hexagon.svg?updatedAt=1689504714696");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  display: inherit;
+  display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hexagon-hidden {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -316,15 +319,16 @@ body::-webkit-scrollbar {
   font-family: "TT Wellingtons Trl";
   font-style: normal;
   font-weight: 700;
-  font-size: min(30px, 2vw);
-  width: 59%;
+  position: absolute;
+  width: 58%;
+  font-size: min(30px, 1.5vw);
   text-align: center;
   z-index: 1;
+  /* outline: solid red; */
 }
 .hexagon-svg {
-  position: absolute;
-  width: min(200px, 12vw);
-  height: min(200px, 12vw);
+  width: 60%;
+  height: 60%;
 }
 .hexagon-utmslogo {
   display: flex;
@@ -739,18 +743,15 @@ a {
   }
   .ourvalues-container {
     justify-content: start;
+    /* height: calc(100vh + 5rem); */
   }
   .hexagon-hidden,
   .hexagon {
     height: 30vw;
     width: 30vw;
   }
-  .hexagon-svg {
-    height: 15%;
-    width: 15%;
-  }
   .hexagon-title {
-    font-size: (1rem, 2.5vw);
+    font-size: min(3rem, 3vw);
   }
   .quotes-container {
     outline: solid red;
