@@ -398,3 +398,5 @@
   height: min(35px, 2vw);
   color: rgba(63, 53, 72, 0.61);
 }
+@media screen and (max-width: 703px) and (orientation: portrait) {
+}

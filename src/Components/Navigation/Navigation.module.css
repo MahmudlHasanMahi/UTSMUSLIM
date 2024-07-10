@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 99;
-  height: calc(7vw - 1vh);
+  height: calc(6.5vw - 1vh);
   padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
   position: fixed;
   width: 100%;

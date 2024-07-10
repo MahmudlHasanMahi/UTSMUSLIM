@@ -8,17 +8,25 @@ const ServicesLandingPage = () => {
 
   return (
     <div className={styles["servicesLanding-container"]}>
-      <div className={styles["servicesLanding-image-container"]}>
-        <motion.img
-          src="https://ik.imagekit.io/ytjlb3rhi/assets/ServicesLandingPageImage.webp?updatedAt=1689609154688"
+      <motion.div
+        className={styles["servicesLanding-image-container"]}
+        initial={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
+      >
+        <img
+          src="https://ik.imagekit.io/ytjlb3rhi/assets/Frame.svg?updatedAt=1720598196762"
           alt=""
           srcset=""
-          className={styles["servicesLanding-image"]}
-          initial={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -100 }}
-          animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
+          className={styles["frame"]}
         />
-      </div>
 
+        <img
+          src="https://ik.imagekit.io/ytjlb3rhi/assets/Leaves.svg?updatedAt=1720598196168"
+          alt=""
+          srcset=""
+          className={styles["leaves"]}
+        />
+      </motion.div>
       <ContentBox />
     </div>
   );

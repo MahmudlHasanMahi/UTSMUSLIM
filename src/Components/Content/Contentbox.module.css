@@ -306,6 +306,9 @@
   .contentContainer.ourValue {
     height: 33vw;
   }
+  .contentContainer.PAS {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 703px) and (orientation: portrait) {
@@ -424,5 +427,8 @@
   .paragraph.ourValue {
     width: 73%;
     font-size: 3.5vw;
+  }
+  .contentContainer.PAS {
+    display: none;
   }
 }
