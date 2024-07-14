@@ -543,6 +543,7 @@
   }
   .Card3-container {
     height: 76%;
+    justify-content: space-around;
   }
   .Card1-title,
   .Card2-title {
@@ -586,5 +587,13 @@
   }
   .Card3-location {
     width: 40%;
+  }
+  /* .NextPrayer-Progress-Container  */
+  .Card3-section-1 {
+    height: 45%;
+    justify-content: space-evenly;
+  }
+  .Card3-section-2-Salah-container {
+    height: 100%;
   }
 }
