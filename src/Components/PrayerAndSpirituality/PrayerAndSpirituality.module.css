@@ -555,7 +555,7 @@
     font-size: 4.5em;
   }
   .Card3-section-2 {
-    width: 88%;
+    width: 85%;
   }
   .NextPrayer-container {
     font-size: 1.2em;
@@ -565,13 +565,13 @@
   }
   .Salah,
   .SalahTime {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .SalahTime-AmOrPm {
-    font-size: 1em;
+    font-size: 0.7em;
   }
   .Day-svg {
-    height: 1.8em;
-    width: 1.8em;
+    height: 1.5em;
+    width: 1.5em;
   }
 }
