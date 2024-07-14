@@ -29,6 +29,7 @@ const timeDifference = (t1day, t1hour, t1min, t2day, t2hour, t2min) => {
       0,
       0
     );
+
   let totalMinutes = Math.floor(difference / 1000 / 60);
   let hoursDifference = Math.floor(difference / 1000 / 60 / 60);
   difference -= hoursDifference * 1000 * 60 * 60;
@@ -65,6 +66,7 @@ const getPrayerTimeDifference = (t1, t2, currentTime) => {
     currentTime["24hour"],
     currentTime.minute
   );
+  console.log(currentDifference)
   const timeLeft = timeDifference(
     0,
     currentDifference[0],
@@ -134,10 +136,11 @@ export const getPrayer = (Gregorian, Time) => {
     nextprayer,
     Time
   );
+
   return {
     nextprayer: nextprayer,
     progress: prayerTimeDifference,
-    index:i,
+    index: i,
   };
 };
 
@@ -147,6 +150,5 @@ export const NextPrayer = (Time) => {
   useEffect(() => {
     setprayer(getPrayer(Gregorian, Time));
   }, [Time]);
-
   return prayer;
 };

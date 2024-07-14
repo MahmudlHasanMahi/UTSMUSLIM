@@ -500,7 +500,8 @@
   }
   .AmOrPm {
     align-content: end;
-    padding-bottom: 1em;
+    padding-bottom: 19px;
+    font-size: min(2em, 4vw);
   }
   .NextPrayer-Progress-Container {
     align-items: center;
@@ -508,7 +509,7 @@
   }
   .NextPrayer-container {
     text-wrap: nowrap;
-    font-size: 1.8em;
+    font-size: 1.6em;
     flex-grow: 1;
   }
   .Card3-section-2-Salah-container {
@@ -523,11 +524,17 @@
     font-size: 1.22em;
   }
   .Time {
-    font-size: 6.5em;
+    font-size: 6em;
   }
   .Timeleft {
     flex-grow: 3;
-    font-size: 1.6em;
+    font-size: 1.1em;
+  }
+  .Card3-location {
+    margin: 0 0 0 5em;
+
+    font-size: 0.7em;
+    width: 30%;
   }
 }
 @media screen and (max-width: 703px) and (orientation: portrait) {
@@ -558,7 +565,7 @@
     width: 85%;
   }
   .NextPrayer-container {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   .Timeleft {
     font-size: 1em;
@@ -576,5 +583,8 @@
   }
   .Salah-container {
     padding: 3%;
+  }
+  .Card3-location {
+    width: 40%;
   }
 }
