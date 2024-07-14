@@ -554,6 +554,9 @@
   .Time {
     font-size: 4.5em;
   }
+  .Card3-section-2 {
+    width: 88%;
+  }
   .NextPrayer-container {
     font-size: 1.2em;
   }
@@ -566,5 +569,9 @@
   }
   .SalahTime-AmOrPm {
     font-size: 1em;
+  }
+  .Day-svg {
+    height: 1.8em;
+    width: 1.8em;
   }
 }
