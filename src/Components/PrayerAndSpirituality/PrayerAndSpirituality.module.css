@@ -11,6 +11,8 @@
   flex-direction: column;
   justify-content: center;
   height: min(2380px, 123.5vw);
+  align-items: center;
+  justify-content: space-evenly;
 }
 .Card-Section-1 {
   display: flex;
@@ -212,7 +214,6 @@
   margin-inline-start: auto;
   margin-top: min(30px, 2vw);
   display: flex;
-  flex-direction: coloum;
 }
 .Card3-section-1 {
   height: 100%;
@@ -333,7 +334,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: min(25px, 1vw) min(30px, 1vw) min(25px, 1vw) min(20px, 1vw);
+  padding: 2.5%;
   border-radius: min(25px, 1.5vw);
   color: #3f3548;
 }
@@ -356,8 +357,7 @@
   margin-left: min(32px, 1vw);
   cursor: default;
 }
-.SalahTime-container {
-}
+
 .SalahTime {
   text-align: right;
   font-family: Montserrat;
@@ -398,5 +398,173 @@
   height: min(35px, 2vw);
   color: rgba(63, 53, 72, 0.61);
 }
+
+@media screen and (width <= 1280px) and (orientation: portrait) {
+  .PrayerAndSpirituality-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh + 10rem);
+  }
+  .card-container {
+    align-items: center;
+    height: 100%;
+    width: 68%;
+  }
+  .MainContentBox-container {
+    display: none;
+  }
+
+  .Card-Section-1 {
+    justify-content: space-between;
+    height: min(37rem, 10vh + 20vw);
+    width: 100%;
+  }
+
+  .Card2-container,
+  .Card1-container {
+    justify-content: center;
+    width: 47%;
+    padding: 0;
+    margin: 0;
+    border-radius: min(52px, 3vw);
+  }
+  .Card1-title-location-container,
+  .Card2-title-location-container {
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Card1-title,
+  .Card2-title {
+    text-align: center;
+    height: 25%;
+    align-content: end;
+    width: 90%;
+  }
+  .Card1-location-container,
+  .Card2-location-container {
+    height: 40%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .Card2-location,
+  .Card1-location {
+    text-align: center;
+  }
+  .Card2-location {
+    width: 80%;
+  }
+  .Card1-title,
+  .Card2-title {
+    font-size: 3vw;
+  }
+
+  .Card1-facilityInfo-container,
+  .Card2-facilityInfo-container {
+    display: none;
+  }
+  .Card1-info {
+    display: none;
+  }
+  .Card1-btn,
+  .Card2-btn {
+    margin: 0;
+  }
+  .Card3-container {
+    border-radius: min(52px, 3vw);
+    flex-direction: column;
+    height: 72%;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+  }
+  .Card3-date-svg-container {
+    justify-content: center;
+  }
+  .Card3-section-1 {
+    padding: 0;
+    width: 80%;
+    height: 50%;
+    justify-content: space-evenly;
+  }
+  .Card3-section-2 {
+    width: 80%;
+    height: 45%;
+  }
+  .Maintime-container {
+    display: flex;
+    justify-content: center;
+  }
+  .AmOrPm {
+    align-content: end;
+    padding-bottom: 1em;
+  }
+  .NextPrayer-Progress-Container {
+    align-items: center;
+    height: 30%;
+  }
+  .NextPrayer-container {
+    text-wrap: nowrap;
+    font-size: 1.8em;
+    flex-grow: 1;
+  }
+  .Card3-section-2-Salah-container {
+    width: 100%;
+    height: 80%;
+  }
+
+  .Card3-Islamic-date {
+    font-size: 1.4em;
+  }
+  .Card3-Gregorian-date {
+    font-size: 1.22em;
+  }
+  .Time {
+    font-size: 6.5em;
+  }
+  .Timeleft {
+    flex-grow: 3;
+    font-size: 1.6em;
+  }
+}
 @media screen and (max-width: 703px) and (orientation: portrait) {
+  .card-container {
+    width: 90%;
+  }
+  .Card3-container {
+    height: 76%;
+  }
+  .Card1-title,
+  .Card2-title {
+    font-size: 3.6vw;
+  }
+  .Card2-location,
+  .Card1-location {
+    font-size: 2.6vw;
+  }
+  .Card3-Islamic-date {
+    font-size: 1em;
+  }
+  .Card3-Gregorian-date {
+    font-size: 1em;
+  }
+  .Time {
+    font-size: 4.5em;
+  }
+  .NextPrayer-container {
+    font-size: 1.2em;
+  }
+  .Timeleft {
+    font-size: 1em;
+  }
+  .Salah,
+  .SalahTime {
+    font-size: 1.4em;
+  }
+  .SalahTime-AmOrPm {
+    font-size: 1em;
+  }
 }

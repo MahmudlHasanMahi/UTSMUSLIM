@@ -849,7 +849,4 @@ a {
     width: 55%;
   }
 }
-@media (hover: none) and (pointer: coarse) {
-  .socialMediaLogo:hover {
-  }
-}
+

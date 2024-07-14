@@ -30,18 +30,18 @@ export const Card1 = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{
-        opacity: isInView ? 1 : 0,
-        x: isInView ? 0 : 600,
-        transition: {
-          duration: 0.5,
-          type: "spring",
-          damping: 10,
-          mass: 0.75,
-          stiffness: 100,
-        },
-      }}
+      // initial={{ opacity: 0, x: -100 }}
+      // animate={{
+      //   opacity: isInView ? 1 : 0,
+      //   x: isInView ? 0 : 600,
+      //   transition: {
+      //     duration: 0.5,
+      //     type: "spring",
+      //     damping: 10,
+      //     mass: 0.75,
+      //     stiffness: 100,
+      //   },
+      // }}
       className={styles["Card1-container"]}
     >
       <div className={styles["Card1-title-location-container"]}>
@@ -92,14 +92,14 @@ export const Card2 = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: isInView ? 1 : 0,
-        transition: {
-          duration: 0.2,
-          delay: 0.3,
-        },
-      }}
+      // initial={{ opacity: 0 }}
+      // animate={{
+      //   opacity: isInView ? 1 : 0,
+      //   transition: {
+      //     duration: 0.2,
+      //     delay: 0.3,
+      //   },
+      // }}
       className={styles["Card2-container"]}
     >
       <div className={styles["Card2-title-location-container"]}>
