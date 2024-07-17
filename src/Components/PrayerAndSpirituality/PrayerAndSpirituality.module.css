@@ -461,7 +461,7 @@
   .Card1-btn::after,
   .Card2-btn::after {
     content: "Learn More";
-    font-size: clamp(1.2em, 2vw, 1.3em);
+    font-size: clamp(1.6em, 2vw, 0.6em);
   }
   .Card3-container {
     border-radius: min(52px, 3vw);
