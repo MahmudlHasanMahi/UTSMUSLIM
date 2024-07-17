@@ -434,17 +434,21 @@
     height: 100%;
     justify-content: space-around;
     align-items: center;
+    /* outline: solid red; */
+    font-size: 2em;
+    padding-top: clamp(0.5em, 3vw, 1.2em);
+    padding-inline: 0.5em;
   }
+
   .Card1-title,
   .Card2-title {
     text-align: center;
-    height: 25%;
     align-content: end;
-    width: 90%;
+    font-size: clamp(0.2em, 3.3vw, 1em);
   }
   .Card1-location-container,
   .Card2-location-container {
-    height: 40%;
+    height: 50%;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -452,13 +456,7 @@
   .Card2-location,
   .Card1-location {
     text-align: center;
-  }
-  .Card2-location {
-    width: 80%;
-  }
-  .Card1-title,
-  .Card2-title {
-    font-size: 3vw;
+    font-size: clamp(0.3em, 2.5vw, 0.6em);
   }
 
   .Card1-facilityInfo-container,
@@ -547,11 +545,11 @@
   }
   .Card1-title,
   .Card2-title {
-    font-size: 3.6vw;
+    /* font-size: 3.6vw; */
   }
   .Card2-location,
   .Card1-location {
-    font-size: 2.6vw;
+    /* font-size: 2.6vw; */
   }
   .Card3-Islamic-date {
     font-size: 1em;
