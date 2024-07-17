@@ -541,10 +541,10 @@
   }
 
   .Card3-Islamic-date {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .Card3-Gregorian-date {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .Time {
     font-size: 4.5em;
@@ -556,7 +556,7 @@
     font-size: 1.3em;
   }
   .Timeleft {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .Salah,
   .SalahTime {
