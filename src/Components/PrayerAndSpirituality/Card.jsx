@@ -48,7 +48,7 @@ export const Card1 = () => {
         <span className={styles["Card1-title"]}>UTS Bon Marche Musalla</span>
         <div className={styles["Card1-location-container"]}>
           <span className={styles["Card1-location"]}>Building 3 Level 5</span>
-          <button className={styles["Card1-btn"]}>Maps</button>
+          <button className={styles["Card1-btn"]}></button>
         </div>
       </div>
       <div ref={ref} className={styles["Card1-facilityInfo-container"]}>
@@ -108,7 +108,7 @@ export const Card2 = () => {
           <span className={styles["Card2-location"]}>
             Building 4, Ross Milbourne Sports Hall
           </span>
-          <button className={styles["Card2-btn"]}>Maps</button>
+          <button className={styles["Card2-btn"]}></button>
         </div>
       </div>
       <div ref={ref} className={styles["Card2-facilityInfo-container"]}>
