@@ -491,7 +491,7 @@
   }
   .AmOrPm {
     align-content: end;
-    padding-bottom: 19px;
+    padding-bottom: 12px;
     font-size: min(2em, 4vw);
   }
   .NextPrayer-Progress-Container {
@@ -554,14 +554,14 @@
     width: 85%;
   }
   .NextPrayer-container {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   .Timeleft {
     font-size: 0.8em;
   }
-  .AmOrPm{
+  .AmOrPm {
     font-size: 1.1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
   }
   .Salah,
   .SalahTime {
