@@ -437,7 +437,7 @@
     /* outline: solid red; */
     font-size: 2em;
     padding-top: clamp(0.5em, 3vw, 1.2em);
-    padding-inline: 0.5em;
+    padding-inline: clamp(0.2em, 4vw, 0.5em);
   }
 
   .Card1-title,
