@@ -557,18 +557,18 @@
     font-size: 1.2em;
   }
   .Timeleft {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .AmOrPm {
     font-size: 1.1em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.7em;
   }
   .Salah,
   .SalahTime {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .SalahTime-AmOrPm {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
   .Day-svg {
     height: 1.5em;
