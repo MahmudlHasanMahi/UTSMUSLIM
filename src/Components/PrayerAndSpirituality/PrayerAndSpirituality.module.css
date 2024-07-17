@@ -528,7 +528,7 @@
     width: 30%;
   }
   .Card3-date-container {
-    height: clamp(3em, 8vw, 4.5em);
+    height: clamp(2.5em, 8vw, 4.5em);
   }
 }
 @media screen and (max-width: 703px) and (orientation: portrait) {
@@ -547,7 +547,8 @@
     font-size: 0.8em;
   }
   .Time {
-    font-size: 4.5em;
+    font-size: 4em;
+    /* outline: solid red; */
   }
   .Card3-section-2 {
     width: 85%;
@@ -557,6 +558,10 @@
   }
   .Timeleft {
     font-size: 0.8em;
+  }
+  .AmOrPm{
+    font-size: 1.1em;
+    padding-bottom: 1em;
   }
   .Salah,
   .SalahTime {
