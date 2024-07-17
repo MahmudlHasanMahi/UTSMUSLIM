@@ -230,8 +230,8 @@
 }
 .Card3-svg {
   display: block;
-  width: min(50px, 3vw);
-  height: min(50px, 3vw);
+  height: 100%;
+  width: 8%;
   margin-right: min(46px, 2vw);
 }
 .Card3-date-container {
@@ -444,7 +444,7 @@
   .Card2-title {
     text-align: center;
     align-content: end;
-    font-size: clamp(0.2em, 3.3vw, 1em);
+    font-size: clamp(0.4em, 3.3vw, 1em);
   }
   .Card1-location-container,
   .Card2-location-container {
@@ -534,6 +534,9 @@
     font-size: 0.7em;
     width: 30%;
   }
+  .Card3-date-container {
+    height: clamp(3em, 8vw, 4.5em);
+  }
 }
 @media screen and (max-width: 703px) and (orientation: portrait) {
   .card-container {
@@ -543,14 +546,7 @@
     height: 76%;
     justify-content: space-around;
   }
-  .Card1-title,
-  .Card2-title {
-    /* font-size: 3.6vw; */
-  }
-  .Card2-location,
-  .Card1-location {
-    /* font-size: 2.6vw; */
-  }
+
   .Card3-Islamic-date {
     font-size: 1em;
   }
