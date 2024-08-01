@@ -1,17 +1,17 @@
 import Contentbox from "../Content/Contentbox";
 import Cards from "./Cards";
 import styles from "../Content/Contentbox.module.css";
-import { useNavUpdateContext } from "../../Utils/NavbarContext";
+import { useEffect, useContext } from "react";
+import NavbarContext from "../../Utils/NavbarContext";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 const Ourmission = () => {
-  const setNavigation = useNavUpdateContext();
+  const { toogleThemeNavbar } = useContext(NavbarContext);
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.7,
   });
   useEffect(() => {
     if (inView) {
-      setNavigation("Light");
+      toogleThemeNavbar("Light");
     }
   }, [inView]);
 

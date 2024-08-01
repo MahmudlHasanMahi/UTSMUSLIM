@@ -1,19 +1,19 @@
 import Contentbox from "../Content/Contentbox";
-import AboutImageBox from "./AboutImageBox";
 import Button from "../Content/Button";
 import styles from "../Content/Contentbox.module.css";
-import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useNavUpdateContext } from "../../Utils/NavbarContext";
+import { useEffect, useContext } from "react";
+import NavbarContext from "../../Utils/NavbarContext";
 const Aboutus = () => {
-  const setNavigation = useNavUpdateContext();
+  const { toogleThemeNavbar } = useContext(NavbarContext);
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.7,
   });
   useEffect(() => {
     if (inView) {
-      setNavigation("Light");
-    }
+      toogleThemeNavbar("Light");
+    } 
+    
   }, [inView]);
 
   return (

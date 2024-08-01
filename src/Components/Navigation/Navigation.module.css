@@ -1,19 +1,26 @@
 .navbar-container {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 99;
+  position: relative;
+  z-index: -1;
   height: calc(6.5vw - 1vh);
   padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
-  position: fixed;
-  width: 100%;
+
+  transition: background-color 500ms;
 }
-.navbar-container-Dark {
+.navbar-Dark {
   background: rgba(117, 117, 111, 0.29);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
-.navbar-container-Light {
+.navbar-Light {
   background: rgba(246, 244, 226, 0.76);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -91,25 +98,82 @@
   background: #ab9473;
   color: black;
 }
-.HamburgerMenu {
+
+.hamburger-wrapper {
+  height: 28px;
+  width: 28px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center;
+  position: absolute;
+  right: 7%;
   display: none;
 }
+
+.line {
+  width: 100%;
+  transform-origin: center;
+  transition: all 500ms;
+}
+.mobileNav-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80%;
+  background-color: #3f3526ea;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.mobileNav-items-wrapper {
+  border: solid rgb(0, 21, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%;
+}
+.mobNav-item {
+  font-size: min(1.2em, 5vw);
+  display: flex;
+  align-items: center;
+  height: min(3.5em, 16vw);
+}
+.mobNav-icon {
+  display: inline-block;
+  width: 1.8em;
+  align-content: center;
+  margin-left: 1.7em;
+}
+
+.mobNav-icon svg path {
+  fill: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+}
+
+.mobNav-title {
+  display: inline;
+  font-family: "Inter";
+  font-size: 1.5em;
+  color: white;
+  width: 100%;
+  margin-left: 0.8em;
+}
 @media screen and (max-width: 703px) {
-  .HamburgerMenu {
-    display: block;
-  }
-  .navbar-container {
+  .navbar {
     height: min(57px, 54px);
     align-items: center;
   }
-  .navitem-list-container {
-    justify-content: flex-end;
-
-    width: auto;
+  .hamburger-wrapper {
+    display: flex;
   }
-  .navitem {
+
+  .navitem-list-container {
     display: none;
   }
+
   .navlogo {
     width: 100%;
     height: min(12.95px, 3vw);

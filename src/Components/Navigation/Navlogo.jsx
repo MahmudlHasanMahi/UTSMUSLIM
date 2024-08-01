@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./Navigation.module.css";
-import { useNavContext } from "../../Utils/NavbarContext";
+import { useContext } from "react";
+import NavbarContext from "../../Utils/NavbarContext";
 import { motion } from "framer-motion";
 const Navlogo = () => {
-  const navigationContext = useNavContext();
+  const { navbar } = useContext(NavbarContext);
+
   return (
     <motion.img
       className={styles.navlogo}
       src={
-        navigationContext
-        ? "https://ik.imagekit.io/ytjlb3rhi/assets/Nav%20logo%20svg.svg?updatedAt=1689948604212"
+        navbar
+          ? "https://ik.imagekit.io/ytjlb3rhi/assets/Nav%20logo%20svg.svg?updatedAt=1689948604212"
           : "https://ik.imagekit.io/ytjlb3rhi/assets/nav%20logo%20light.svg?updatedAt=1689949022069"
       }
       alt="UTS Muslim Society Logo"

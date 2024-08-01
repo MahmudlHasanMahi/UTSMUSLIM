@@ -2,17 +2,19 @@ import React from "react";
 import styles from "./PrayerAndSpirituality.module.css";
 import ContentBox from "./ContentBox";
 import Cards from "./Cards";
-import { useNavUpdateContext } from "../../Utils/NavbarContext";
+import { useEffect, useContext } from "react";
+import NavbarContext from "../../Utils/NavbarContext";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 const PrayerAndSpirituality = () => {
-  const setNavigation = useNavUpdateContext();
+  const { toogleThemeNavbar } = useContext(NavbarContext);
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.4,
   });
   useEffect(() => {
     if (inView) {
-      setNavigation(null);
+      toogleThemeNavbar("Light");
+    } else {
+      toogleThemeNavbar(null);
     }
   }, [inView]);
   return (

@@ -1,17 +1,11 @@
-import { createContext } from "react";
-import { useState, useContext } from "react";
+import { useState, createContext } from "react";
 
-const navContext = createContext();
-const navUpdate = createContext();
-export function useNavContext() {
-  return useContext(navContext);
-}
-export function useNavUpdateContext() {
-  return useContext(navUpdate);
-}
-
-export default function NavbarProvider({ children }) {
+const NavbarContext = createContext();
+export default NavbarContext;
+export function NavbarProvider({ children }) {
   const [navbar, setNavbar] = useState(null);
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   function toogleThemeNavbar(value) {
     if (value == "Light") {
       setNavbar(false);
@@ -23,12 +17,15 @@ export default function NavbarProvider({ children }) {
       setNavbar(null);
     }
   }
-
+  const contextData = {
+    toogleThemeNavbar: toogleThemeNavbar,
+    navbar: navbar,
+    setToggleMenu: setToggleMenu,
+    toggleMenu: toggleMenu,
+  };
   return (
-    <navContext.Provider value={navbar}>
-      <navUpdate.Provider value={toogleThemeNavbar}>
-        {children}
-      </navUpdate.Provider>
-    </navContext.Provider>
+    <NavbarContext.Provider value={contextData}>
+      {children}
+    </NavbarContext.Provider>
   );
 }

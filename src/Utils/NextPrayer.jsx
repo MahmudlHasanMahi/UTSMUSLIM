@@ -66,7 +66,6 @@ const getPrayerTimeDifference = (t1, t2, currentTime) => {
     currentTime["24hour"],
     currentTime.minute
   );
-  console.log(currentDifference)
   const timeLeft = timeDifference(
     0,
     currentDifference[0],

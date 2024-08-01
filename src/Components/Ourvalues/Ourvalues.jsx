@@ -1,23 +1,22 @@
-import { useEffect } from "react";
-import { useNavUpdateContext } from "../../Utils/NavbarContext";
+import { useEffect, useContext } from "react";
 import { useInView } from "react-intersection-observer";
 import Contentbox from "../Content/Contentbox";
 import Hexagons from "./Hexagons";
 import styles from "../../Components/Content/Contentbox.module.css";
 import { motion } from "framer-motion";
+import NavbarContext from "../../Utils/NavbarContext";
 const Ourvalues = () => {
-  const setNavigation = useNavUpdateContext();
+  const { toogleThemeNavbar } = useContext(NavbarContext);
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.7,
   });
   useEffect(() => {
     if (inView) {
-      setNavigation("Light");
+      toogleThemeNavbar("Light");
     }
   }, [inView]);
-
   return (
-    <motion.div ref={ref} className="ourvalues-container">
+    <motion.div className="ourvalues-container" ref={ref}>
       <Contentbox
         postTitle={"Our Values"}
         heading={"What Do We Stand For?"}

@@ -4,13 +4,13 @@ import styles from "./ServicesLandingPage.module.css";
 import { useInView, motion } from "framer-motion";
 const ServicesLandingPage = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const inView = useInView(ref, { once: true });
 
   return (
     <div className={styles["servicesLanding-container"]}>
       <motion.div
         className={styles["servicesLanding-image-container"]}
-        initial={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -100 }}
+        initial={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
       >
         <img

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import styles from "./Navigation.module.css";
-import { useNavContext } from "../../Utils/NavbarContext";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
 import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import NavbarContext from "../../Utils/NavbarContext";
 const Listitem = ({
   title,
   lastchild = false,
@@ -11,7 +12,7 @@ const Listitem = ({
   active,
   setActive,
 }) => {
-  const listTheme = useNavContext();
+  const { navbar } = useContext(NavbarContext);
   const location = useLocation();
   return (
     <motion.div
@@ -33,12 +34,12 @@ const Listitem = ({
         className={
           lastchild
             ? `${styles.navitem} ${styles["navitem-lastChild"]} ${
-                listTheme
+                navbar
                   ? styles["navitem-lastChild-Dark"]
                   : styles["navitem-lastChild-Light"]
               }`
             : `${styles.navitem} ${
-                listTheme
+                navbar
                   ? active == linkTitle
                     ? styles["navitem-Dark-active"]
                     : styles["navitem-Dark"]
@@ -57,7 +58,7 @@ const Listitem = ({
         <motion.div
           layoutId="underline"
           className={` ${styles.underline} ${
-            listTheme ? styles["underline-Dark"] : styles["underline-Light"]
+            navbar ? styles["underline-Dark"] : styles["underline-Light"]
           }`}
         />
       )}

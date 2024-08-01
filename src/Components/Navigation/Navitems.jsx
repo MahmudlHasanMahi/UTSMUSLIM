@@ -53,7 +53,6 @@ const Navitems = () => {
         title="Contact Us"
         lastchild={true}
       />
-      <li className={styles.HamburgerMenu}>X</li>
     </ul>
   );
 };
