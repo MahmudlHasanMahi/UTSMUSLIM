@@ -6,7 +6,7 @@ import HambugerMenu from "../Icon/HambugerMenu";
 import navbarContext from "../../Utils/NavbarContext";
 import MobileNav from "./MobileNavgation/MobileNav";
 const Navbar = () => {
-  const { navbar } = useContext(navbarContext);
+  const { navbar, toggleMenu } = useContext(navbarContext);
   const [navBg, setNavBg] = useState(null);
   useEffect(() => {
     if (navbar) {
@@ -23,7 +23,12 @@ const Navbar = () => {
   return (
     <div className={styles["navbar-container"]}>
       <MobileNav />
-      <div className={`${styles["navbar"]} ${navBg}`}>
+      <div
+        className={`${styles["navbar"]} ${navBg}`}
+        style={
+          toggleMenu ? { backdropFilter: "none", background: "none" } : null
+        }
+      >
         <Navlogo />
         <Navitems />
         <HambugerMenu />

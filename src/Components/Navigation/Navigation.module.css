@@ -1,6 +1,6 @@
 .navbar-container {
   position: fixed;
-  z-index: 99;
+  z-index: 4;
   width: 100%;
 }
 
@@ -8,11 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  width: 100%;
   z-index: -1;
   height: calc(6.5vw - 1vh);
   padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
-
   transition: background-color 500ms;
 }
 .navbar-Dark {
@@ -119,20 +118,25 @@
 }
 .mobileNav-wrapper {
   position: absolute;
-  left: 0;
+  /* z-index: 9; */
   top: 0;
-  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.328);
+  display: none;
+}
+.mobleNav {
+  position: relative;
   width: 80%;
   background-color: #3f3526ea;
+  height: 100vh;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 .mobileNav-items-wrapper {
-  /* border: solid rgb(0, 21, 255); */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70%;
+  height: 35em;
 }
 .mobNav-item {
   font-size: min(1.2em, 5vw);
@@ -160,6 +164,10 @@
   color: white;
   width: 100%;
   margin-left: 0.8em;
+}
+.mobNav-icon,
+.mobNav-title {
+  /* outline: solid red; */
 }
 @media screen and (max-width: 703px) {
   .navbar {
