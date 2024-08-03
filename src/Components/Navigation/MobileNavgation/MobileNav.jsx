@@ -1,5 +1,5 @@
 import styles from "../../Navigation/Navigation.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import NavbarContext from "../../../Utils/NavbarContext";
 import Item from "./Item";
 import { Home, Apparels, Service, Blogs, Members } from "../../../Svg/LinkIcon";
@@ -9,7 +9,7 @@ const MobileNav = () => {
   const variants = {
     open: {
       left: 0,
-      transition: { duration: 0.2, type: "spring", damping: 18 },
+      transition: { duration: 0.17, type: "spring", damping: 18 },
     },
     closed: { left: "-100%" },
   };
@@ -17,6 +17,7 @@ const MobileNav = () => {
     open: {
       transition: { staggerChildren: 0.2, delayChildren: 0.15 },
     },
+    closed: { transition: { duration: 0 } },
   };
 
   return (

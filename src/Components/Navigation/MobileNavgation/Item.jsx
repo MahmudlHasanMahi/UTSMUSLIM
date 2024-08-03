@@ -15,7 +15,7 @@ const Item = ({ icon, title }) => {
       y: 60,
       opacity: 0,
       transition: {
-        y: { type: "spring", damping: 12 },
+        y: { type: "spring", damping: 12,  },
       },
     },
   };
