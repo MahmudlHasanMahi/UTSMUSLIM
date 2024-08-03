@@ -136,10 +136,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 35em;
+  height: 32em;
 }
 .mobNav-item {
-  font-size: min(1.2em, 5vw);
+  font-size: min(1.2em, 4vw);
   display: flex;
   align-items: center;
   height: 4em;
@@ -162,12 +162,13 @@
   font-family: "Inter";
   font-size: 1.5em;
   color: white;
-  margin-left: 0.8em;
+  margin-left: 1em;
 }
 .mobNav-highlight > svg,
 .mobNav-highlight {
   fill: #fedaa3;
   color: #fedaa3;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 703px) {

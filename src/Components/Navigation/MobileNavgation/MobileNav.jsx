@@ -32,13 +32,13 @@ const MobileNav = () => {
         className={styles["mobleNav"]}
         variants={variants}
         animate={toggleMenu ? "open" : "closed"}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         <motion.div
           variants={itemVariants}
           className={styles["mobileNav-items-wrapper"]}
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
         >
           <Item icon={<Home />} title={"Home"} linkTitle={"/"} />
           <Item icon={<Service />} title={"Services"} linkTitle={"/Services"} />
