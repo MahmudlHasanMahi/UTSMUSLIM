@@ -13,7 +13,6 @@ const Listitem = ({
   setActive,
 }) => {
   const { navbar } = useContext(NavbarContext);
-  const location = useLocation();
   return (
     <motion.div
       key={pk}

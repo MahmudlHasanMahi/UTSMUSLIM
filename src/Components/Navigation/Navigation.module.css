@@ -129,8 +129,8 @@
   width: 80%;
   background-color: #3f3526ea;
   height: 100vh;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .mobileNav-items-wrapper {
   display: flex;
@@ -146,12 +146,12 @@
 }
 .mobNav-icon {
   display: inline-block;
-  width: 1.8em;
+  width: 1.6em;
   align-content: center;
   margin-left: 1.7em;
 }
 
-.mobNav-icon svg path {
+.mobNav-icon svg {
   fill: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
@@ -162,13 +162,14 @@
   font-family: "Inter";
   font-size: 1.5em;
   color: white;
-  width: 100%;
   margin-left: 0.8em;
 }
-.mobNav-icon,
-.mobNav-title {
-  /* outline: solid red; */
+.mobNav-highlight > svg,
+.mobNav-highlight {
+  fill: #fedaa3;
+  color: #fedaa3;
 }
+
 @media screen and (max-width: 703px) {
   .navbar {
     height: min(57px, 54px);

@@ -5,7 +5,7 @@ import Item from "./Item";
 import { Home, Apparels, Service, Blogs, Members } from "../../../Svg/LinkIcon";
 import { motion } from "framer-motion";
 const MobileNav = () => {
-  const { toggleMenu } = useContext(NavbarContext);
+  const { toggleMenu, setToggleMenu } = useContext(NavbarContext);
   const variants = {
     open: {
       left: 0,
@@ -24,6 +24,9 @@ const MobileNav = () => {
     <div
       className={styles["mobileNav-wrapper"]}
       style={{ display: toggleMenu ? "block" : "none" }}
+      onClick={() => {
+        setToggleMenu(false);
+      }}
     >
       <motion.div
         className={styles["mobleNav"]}
@@ -33,12 +36,19 @@ const MobileNav = () => {
         <motion.div
           variants={itemVariants}
           className={styles["mobileNav-items-wrapper"]}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
         >
-          <Item icon={<Home />} title={"Home"} />
-          <Item icon={<Service />} title={"Services"} />
-          <Item icon={<Members />} title={"Members"} />
-          <Item icon={<Apparels />} title={"Apparels"} />
-          <Item icon={<Blogs />} title={"Blogs"} />
+          <Item icon={<Home />} title={"Home"} linkTitle={"/"} />
+          <Item icon={<Service />} title={"Services"} linkTitle={"/Services"} />
+          <Item icon={<Members />} title={"Members"} linkTitle={"/Members"} />
+          <Item
+            icon={<Apparels />}
+            title={"Apparels"}
+            linkTitle={"/Apparels"}
+          />
+          <Item icon={<Blogs />} title={"Blogs"} linkTitle={"/Blogs"} />
         </motion.div>
       </motion.div>
     </div>

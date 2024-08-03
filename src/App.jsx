@@ -5,6 +5,7 @@ import Services from "./Pages/Services.jsx/Services";
 import PageRoutes from "./PageRoutes";
 import { Routes, Route } from "react-router-dom";
 import { NavbarProvider } from "./Utils/NavbarContext";
+
 function App() {
   return (
     <NavbarProvider>
