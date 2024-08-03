@@ -30,6 +30,7 @@ const Item = ({ icon, title, linkTitle }) => {
         to={`${linkTitle}`}
         state={{ prevPath: location.pathname }}
         className={`${styles["mobNav-title"]} ${highlight}`}
+        
       >
         {title}
       </Link>
