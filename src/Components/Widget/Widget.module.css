@@ -1,24 +1,30 @@
+.prayerWidget-container-inner {
+  display: flex;
+  width: 18em;
+  justify-content: space-evenly;
+  height: 55%;
+}
 .nextPrayerWidget-container {
   position: relative;
-  width: min(527.66px, 28vw);
-  height: min(79.26px, 4vw);
   border-radius: 74.86px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #c4b0c9;
-  padding-inline: min(25px, 1.3vw);
+  padding-inline: 0.2em;
   overflow: hidden;
   filter: drop-shadow(
     0px 2.935500144958496px 2.935500144958496px rgba(0, 0, 0, 0.25)
   );
   border-radius: 75.2221908569336px;
   cursor: pointer;
+  font-size: 1.5em;
+  width: 4.4em;
 }
 
 .prayerSvg {
   display: block;
-  width: min(55px, 3vw);
+  width: 0.6em;
 }
 .nextprayer {
   font-family: Montserrat;
@@ -27,17 +33,20 @@
   font-size: min(1.65rem, 1.4vw);
   text-align: left;
   width: 100%;
-  padding-inline-start: min(21px, 1vw);
+  padding-inline-start: 0.7em;
+  font-size: 0.22em;
+  text-wrap: nowrap;
 }
 .time {
   font-size: min(2.42rem, 2vw);
   font-family: Montserrat;
   color: #4e2955;
   font-weight: bold;
+  font-size: 0.33em;
 }
 .amPm {
-  font-size: min(0.75rem, 1vw);
   margin-left: 2px;
+  font-size: 0.3em;
 }
 .progress-wrapper {
   position: absolute;
@@ -60,30 +69,34 @@
     0px 2.935500144958496px 2.935500144958496px rgba(0, 0, 0, 0.25)
   );
   border-radius: 75.2221908569336px;
-  border-radius: 50px;
-  height: min(79.26px, 4vw);
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: min(1.65rem, 1.4vw);
   font-family: Montserrat;
   font-weight: bold;
   justify-content: space-between;
-  padding-inline: min(30px, 1.5vw);
   cursor: pointer;
+  padding-inline: 2%;
+  font-size: 1.5em;
 }
+
 .widgetNav-logo {
   display: flex;
-  margin-right: min(20px, 1vw);
-  width: min(40px, 2vw);
+  width: 0.34em;
 }
-.prayerWidget-container-inner {
-  display: flex;
-  width: 75%;
-  justify-content: space-evenly;
+.widgetNav-title {
+  display: block;
+  font-size: 0.22em;
+  padding-inline-start: 0.7em;
 }
-@media screen and (max-width: 430px) {
-  .nextPrayerWidget-container {
+
+@media screen and (max-width: 703px) {
+  .prayerWidget-container-inner {
+    /* border: solid red; */
+
+    width: 19em;
+  }
+  /* .nextPrayerWidget-container {
     width: min(275.99px, 64vw);
     height: min(38.15px, 9vw);
     padding-inline: 11.3px;
@@ -95,8 +108,8 @@
   .prayerWidget-container-inner {
     width: 110%;
     /* height: 100%; */
-    /* margin-top: auto; */
-  }
+  /* margin-top: auto; */
+  /* }
   .prayerSvg {
     width: 19.43px;
   }
@@ -114,5 +127,5 @@
   }
   .widgetNav-logo {
     width: min(19.43px, 5vw);
-  }
+  }  */
 }

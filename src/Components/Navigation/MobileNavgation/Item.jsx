@@ -22,7 +22,6 @@ const Item = ({ icon, title, linkTitle }) => {
   };
   const highlight =
     location.pathname === linkTitle ? styles["mobNav-highlight"] : "";
-
   return (
     <motion.div variants={variants} className={styles["mobNav-item"]}>
       <span className={`${styles["mobNav-icon"]} ${highlight}`}>{icon}</span>
@@ -30,7 +29,6 @@ const Item = ({ icon, title, linkTitle }) => {
         to={`${linkTitle}`}
         state={{ prevPath: location.pathname }}
         className={`${styles["mobNav-title"]} ${highlight}`}
-        
       >
         {title}
       </Link>

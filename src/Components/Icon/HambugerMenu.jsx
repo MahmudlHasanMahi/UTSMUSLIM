@@ -7,7 +7,6 @@ const HambugerMenu = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 703) {
-        console.log(":asdf");
         setToggleMenu(false);
       }
     };

@@ -14,14 +14,14 @@ const ServicesLandingPage = () => {
         animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
       >
         <img
-          src="https://ik.imagekit.io/ytjlb3rhi/assets/Frame.svg?updatedAt=1720598196762"
+          src="https://ik.imagekit.io/ytjlb3rhi/assets/Group%2087.png?updatedAt=1723478780405"
           alt=""
           srcset=""
           className={styles["frame"]}
         />
 
         <img
-          src="https://ik.imagekit.io/ytjlb3rhi/assets/Leaves.svg?updatedAt=1720598196168"
+          src="https://ik.imagekit.io/ytjlb3rhi/assets/White%20and%20Orange%20Simple%20Light%20Real%20Estate%20Portfolio%20&%20Resume%20Website%20(3)%203.png?updatedAt=1723478780170"
           alt=""
           srcset=""
           className={styles["leaves"]}

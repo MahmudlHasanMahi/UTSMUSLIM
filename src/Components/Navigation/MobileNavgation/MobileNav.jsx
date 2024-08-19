@@ -41,14 +41,14 @@ const MobileNav = () => {
           className={styles["mobileNav-items-wrapper"]}
         >
           <Item icon={<Home />} title={"Home"} linkTitle={"/"} />
-          <Item icon={<Service />} title={"Services"} linkTitle={"/Services"} />
-          <Item icon={<Members />} title={"Members"} linkTitle={"/Members"} />
+          <Item icon={<Service />} title={"Services"} linkTitle={"/services"} />
+          <Item icon={<Members />} title={"Members"} linkTitle={"/members"} />
           <Item
             icon={<Apparels />}
             title={"Apparels"}
-            linkTitle={"/Apparels"}
+            linkTitle={"/apparels"}
           />
-          <Item icon={<Blogs />} title={"Blogs"} linkTitle={"/Blogs"} />
+          <Item icon={<Blogs />} title={"Blogs"} linkTitle={"/blogs"} />
         </motion.div>
       </motion.div>
     </div>

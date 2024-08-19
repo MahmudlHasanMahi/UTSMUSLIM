@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <PageRoutes>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path={"/"} element={<Home />} />
           <Route path="/services/" exact element={<Services />} />
         </Routes>
         <Footer />

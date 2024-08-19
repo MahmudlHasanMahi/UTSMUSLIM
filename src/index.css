@@ -28,14 +28,14 @@
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
 .pageRoutes {
   height: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   perspective: 50px;
-  position: relative;
+}
+.pageRoutes::-webkit-scrollbar {
+  display: none;
 }
 .landingpage-container {
   background: linear-gradient(
@@ -43,13 +43,14 @@ body::-webkit-scrollbar {
     #f5f3e1 44.66%,
     rgba(245, 243, 225, 0) 188.92%
   );
-  height: 100vh;
+  height: 93vh;
+  min-height: 5.2em;
   box-shadow: 1px 6px 15px rgba(119, 119, 119, 0.64);
   overflow: hidden;
-  height: 93vh;
   position: relative;
   display: flex;
   align-items: center;
+  font-size: clamp(6em, 8.4vw, 20em);
 }
 .image-1 {
   width: 80%;
@@ -67,35 +68,36 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  padding: 3vh 32% 0 6%;
+  width: 6.5em;
+  margin-left: 0.55em;
 }
 .landingtitle {
-  font-size: min(7rem, calc(4.3vw + 0.8vh));
   font-family: "TT Wellingtons Trl";
   color: #323232;
+  font-size: 0.55em;
 }
 .landingPage-title {
   color: #000;
   font-family: Open Sauce Sans;
-  font-size: min(39px, calc(2vw + 0.9vh));
   font-style: normal;
   font-weight: 400;
-  margin-top: min(140px, calc(7.2vw - 1.3vw));
+  margin-top: 3em;
+  font-size: 0.25em;
 }
-.prayerWidget-container {
-  height: min(135px, 7vw);
+.prayer˝-container {
+  height: clamp(1.8em, 12.5vh, 2.3em);
   display: flex;
   align-items: center;
   background-color: #f5f3e1;
   box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 0.8);
+  font-size: clamp(1em, 4.2vw, 9em);
 }
 
 .aboutus-container {
   background-color: #c3bead;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   width: 100%;
   position: relative;
@@ -540,13 +542,11 @@ a {
 */
 @media screen and (width <= 1280px) and (orientation: portrait) {
   .landingpage-container {
-    height: 97vh;
+    justify-content: center;
+    text-align: center;
   }
   .landingtitle-container {
-    padding: 0;
-    /* margin: 40vh 0 0 6vw; */
-    padding-inline: 15%;
-    text-align: center;
+    margin: 0;
   }
   .contentbox-container {
     width: 100%;
@@ -667,36 +667,29 @@ a {
 
 @media screen and (max-width: 703px) and (orientation: portrait) {
   .landingpage-container {
-    height: 798px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(
+      89.86deg,
+      #f5f3e1 33.66%,
+      rgba(245, 243, 225, 0) 300.92%
+    );
+    font-size: 3.7em;
+  }
+  .landingtitle-container {
+    width: min(7em, 64vw);
   }
   .image-1 {
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: right;
-    left: 150px;
+    left: 120px;
   }
-  .landingtitle-container {
-    padding-inline: 20%;
-  }
-  .landingtitle {
-    text-align: center;
-    font-size: min(2.05rem, 8vw);
-    line-height: 1.3;
-  }
-  .landingPage-title {
-    text-align: center;
-    font-size: min(0.83rem, 4vw);
-  }
+
   .prayerWidget-container {
     display: grid;
-
-    height: min(65px, 16vw);
     overflow-x: scroll;
+    height: 65px;
+    font-size: 2em;
   }
   .ourmission-container {
     justify-content: start;

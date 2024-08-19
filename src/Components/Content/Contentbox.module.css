@@ -235,7 +235,8 @@
   align-items: left;
   height: min(51%, 28vw);
   width: 100%;
-  margin: min(90px, 5vw) 0 0 min(97px, 5vw);
+  outline: solid red;
+  align-items: center;
 }
 .postTitle.event {
   background: #d9d7c4;
@@ -428,5 +429,4 @@
     width: 73%;
     font-size: 3.5vw;
   }
-  
 }

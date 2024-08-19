@@ -7,7 +7,9 @@ const PageRoutes = ({ children }) => {
   const { toggleMenu } = useContext(NavbarContext);
   const location = useLocation();
   useEffect(() => {
-    ref.current.scrollTo(0, 0);
+    if (location.hash == "") {
+      ref.current.scrollTo(0, 0);
+    }
   }, [location]);
   return (
     <div

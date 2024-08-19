@@ -26,7 +26,6 @@ const NextPrayerWidget = () => {
   const navigate = useNavigate();
   const Redirect = () => {
     navigate("/services#PrayerTimes");
-    console.log(window.set);
   };
   return (
     <div
@@ -42,14 +41,10 @@ const NextPrayerWidget = () => {
           <span className={styles["nextprayer"]}>
             Next Prayer: {PrayerInfo.nextprayer.prayer}
           </span>
-          <div className={styles["time-wrapper"]}>
-            <span className={styles["time"]}>
-              {`${PrayerInfo.nextprayer.hour}:${PrayerInfo.nextprayer.minute}`}
-              <span className={styles["amPm"]}>
-                {PrayerInfo.nextprayer.amPm}
-              </span>
-            </span>
-          </div>
+          <span className={styles["time"]}>
+            {`${PrayerInfo.nextprayer.hour}:${PrayerInfo.nextprayer.minute}`}
+            <span className={styles["amPm"]}>{PrayerInfo.nextprayer.amPm}</span>
+          </span>
           <div className={styles["progress-wrapper"]}>
             <div
               style={{ width: `${PrayerInfo.progress.progress}%` }}
