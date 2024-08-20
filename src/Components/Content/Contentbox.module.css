@@ -1,54 +1,51 @@
 .contentContainer.aboutUs {
+  width: 6.5em;
+  height: 66%;
+  max-height: 5em;
+  margin-left: 1.04em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: (40vh, 65%, 60vh); */
-  height: clamp(calc(2vh + 37vw), 65%, calc(40vh - 70vw));
-
-  width: 100%;
 }
+
 .postTitle.aboutUs {
-  font-size: clamp(1.7vw, 31px, 1vw);
-  background: #afab9c;
+  width: fit-content;
+  color: #323232;
+  background-color: #afab9c;
   border-radius: 100px;
-  padding: clamp(0.8vw, 15px, 0.3vw);
-  text-align: center;
+  padding: 0.77em 1.165em;
+  font-size: 0.193em;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  width: clamp(11vw, 207px, 12vw);
+  text-wrap: nowrap;
 }
 .heading.aboutUs {
+  font-size: 0.445em;
   font-family: "TT Wellingtons Trl";
-  font-size: clamp(4.5vw, 4.76rem, 1vw);
+  color: #323232;
 }
 .paragraph.aboutUs {
+  font-size: 0.2em;
   font-family: "Open Sauce Sans";
-  font-size: clamp(2vw, 2.2rem, 1.4vw);
+  color: #323232;
 }
 .btn-main.aboutUs {
+  text-wrap: nowrap;
+  border: none;
+  transition: background 500ms;
   background-color: #443115;
-  border-radius: 15px;
-  z-index: 99;
-  font-size: 28px;
-  font-size: clamp(1vw, 28px, 1.7vw);
+  color: white;
+  width: fit-content;
+  border-radius: 0.535em;
+  padding: 0.96em 1.78em;
+  font-size: 0.175em;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  color: white;
-  background: #443115;
-  border-radius: 15px;
-  border: none;
-  width: clamp(0vw, 209.89px, 15vw);
-  padding: clamp(0vw, 15px, 2vw);
-  transition: background-color 0.5s;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-wrap: nowrap;
 }
 .btn-main.aboutUs:hover {
-  background-color: #70562f;
+  background-color: rgb(110, 77, 30);
 }
 .contentContainer.ourMission {
   height: 40%;
@@ -261,7 +258,12 @@
   font-size: clamp(1vw, 2.2rem, 2.2vw);
   width: 46%;
 }
-@media screen and (min-height: 667px) and (max-width: 1280px) and (orientation: portrait) {
+@media screen and (width <= 1280px) and (orientation: portrait) {
+  .contentContainer.aboutUs {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
   .contentContainer.membership {
     align-items: center;
     margin: 0;
@@ -287,13 +289,6 @@
     font-size: clamp(1vw, 2.2rem, 2.5vw);
   }
 
-  .contentContainer.aboutUs {
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-    width: calc(72vw - 3vh);
-    height: calc(67vw - 10vh);
-  }
   .contentContainer.ourMission {
     height: 25%;
   }
@@ -313,6 +308,21 @@
 }
 
 @media screen and (max-width: 703px) and (orientation: portrait) {
+  .contentContainer.aboutUs {
+    max-height: 5.508em;
+    width: min(8.5em, 80vw);
+  }
+
+  .postTitle.aboutUs {
+    font-size: 0.25em;
+  }
+
+  .paragraph.aboutUs {
+    font-size: 0.23em;
+  }
+  .btn-main.aboutUs {
+    font-size: 0.247em;
+  }
   .contentContainer.ourMission {
     height: min(180px, 35vw);
   }
@@ -330,27 +340,6 @@
     width: 75%;
   }
 
-  .contentContainer.aboutUs {
-    height: calc(70vw + 3vh);
-    width: 90vw;
-  }
-
-  .postTitle.aboutUs {
-    font-size: 3.4vw;
-    width: 21vw;
-  }
-  .heading.aboutUs {
-    font-size: 6.5vw;
-  }
-  .paragraph.aboutUs {
-    font-size: 3.3vw;
-  }
-  .btn-main.aboutUs {
-    font-size: 2.5vw;
-    width: 18vw;
-    border-radius: 2vw;
-  }
-
   .contentContainer.ourMission {
     justify-content: space-evenly;
     height: calc(50vw + 16vh);
@@ -364,7 +353,6 @@
     padding-block: 0.8vw;
     position: absolute;
     top: -5%;
-    /* margin-bottom:auto ; */
   }
   .heading.ourMission {
     font-size: 6.5vw;

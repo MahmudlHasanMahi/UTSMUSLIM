@@ -2,9 +2,7 @@
   display: flex;
   height: fit-content;
   min-width: 200%;
-  /* border: solid black; */
-  animation-name: slide;
-  /* transform: translateX(-50%); */
+  /* -webkit-backface-visibility: hidden; */
 }
 
 .slider-track {
@@ -14,6 +12,7 @@
   /* border: 0.3rem solid green; */
   width: 100%;
   gap: 2vw;
+  /* -webkit-transform: translate3d(0, 0, 0); */
 }
 
 .slider-track > div {
@@ -25,7 +24,7 @@
   text-align: center;
   width: min(30em, 27vw);
   aspect-ratio: 12 / 8;
-  /* background-image: url("./image.png"); */
+  background-image: url("./image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -37,14 +37,14 @@
 .pageRoutes::-webkit-scrollbar {
   display: none;
 }
+
 .landingpage-container {
   background: linear-gradient(
     89.86deg,
     #f5f3e1 44.66%,
     rgba(245, 243, 225, 0) 188.92%
   );
-  height: 93vh;
-  min-height: 5.2em;
+  height: clamp(5.2em, 93vh, 15em);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -68,7 +68,7 @@
   flex-direction: column;
   width: 100%;
   width: 6.5em;
-  margin-left: 0.55em;
+  margin-left: 0.72em;
 }
 .landingtitle {
   font-family: "TT Wellingtons Trl";
@@ -90,20 +90,23 @@
   background-color: #f5f3e1;
   position: relative;
   font-size: clamp(1em, 4.2vw, 9em);
-  -webkit-box-shadow: 0px -1px 10px 2px rgba(0,0,0,0.28);
-  -moz-box-shadow: 0px -1px 10px 2px rgba(0,0,0,0.28);
-  box-shadow: 0px -1px 10px 2px rgba(0,0,0,0.28);
+  -webkit-box-shadow: 0px -1px 10px 2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px -1px 10px 2px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px -1px 10px 2px rgba(0, 0, 0, 0.28);
 }
 
 .aboutus-container {
   background-color: #c3bead;
-  height: 100vh;
+  height: clamp(5.2em, 93vh, 15em);
   display: flex;
   width: 100%;
   position: relative;
   z-index: -2;
   overflow: hidden;
+  align-items: center;
+  font-size: clamp(6em, 8.4vw, 20em);
 }
+
 .aboutImagebox-container {
   position: absolute;
   z-index: -1;
@@ -117,6 +120,7 @@
   width: 100%;
   height: 100vh;
   transform-style: preserve-3d;
+  display: none;
 }
 
 .aboutusImg1,
@@ -150,10 +154,11 @@
   bottom: 18%;
 }
 .contentbox-container {
-  display: flex;
-  width: 70%;
-  align-items: center;
-  padding-left: 10vw;
+  /* display: flex; */
+  /* width: 70%; */
+  /* align-items: center; */
+  /* padding-left: 10vw; */
+  border: solid red;
 }
 .ourmission-container {
   background: #f5f3e1;
@@ -554,7 +559,9 @@ a {
 
     justify-content: center;
   }
-
+  .aboutus-container {
+    justify-content: center;
+  }
   .image-1 {
     width: 100%;
     height: 100%;
@@ -676,6 +683,9 @@ a {
   }
   .landingtitle-container {
     width: min(7em, 64vw);
+  }
+  .aboutus-container {
+    font-size: 3.2em;
   }
   .image-1 {
     height: 100%;
