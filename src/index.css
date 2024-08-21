@@ -153,62 +153,54 @@
   right: 25%;
   bottom: 18%;
 }
-.contentbox-container {
-  /* display: flex; */
-  /* width: 70%; */
-  /* align-items: center; */
-  /* padding-left: 10vw; */
-  border: solid red;
-}
+
 .ourmission-container {
   background: #f5f3e1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100vh;
+  height: clamp(6.5em, 100vh + 0.5em, 8em);
+  font-size: clamp(6em, 8.4vw, 20em);
+  padding-block-start: 0.2em;
 }
 .card-container {
+  height: 2.6em;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 21%);
-  gap: 1.5%;
+  grid-template-columns: repeat(4, 2.47em);
+  grid-template-rows: repeat(1, 2.8em);
+  gap: 0.33em;
   justify-content: center;
+  margin-top: 0.25em;
 }
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: min(417px, 25vw);
   background: #e4e3d3;
-  border-radius: 10%;
+  border-radius: 0.3em;
   justify-content: space-evenly;
-  padding: clamp(0vw, 40px, 1.7vw);
+  padding: 0.28125em 0.21875em;
+}
+.card-logo {
+  display: inherit;
+  width: 0.815125em;
+  height: 0.815125em;
 }
 .cardLogo {
+  padding: 0.15em;
   border-radius: 50%;
-  /* padding: min(15px, 1.5vw);
-  width: min(110px, 8.5vw);
-  height: min(110px, 8.5vw); */
-
-  border-radius: 50%;
-  padding: min(15px, 1vw);
-  width: min(110px, 7.5vw);
-  height: min(110px, 7.5vw);
+  width: 100%;
+  height: 100%;
 }
 .card-postTitle {
   font-family: "TT Wellingtons Trl";
   font-style: normal;
   font-weight: 800;
-  font-size: min(36px, 2.2vw);
-  line-height: 50px;
-  text-align: center;
+  font-size: 0.21875em;
 }
 .card-heading {
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: min(21px, 1.4vw);
+  font-size: 0.13125em;
 
   text-align: center;
   color: #000000;
@@ -553,14 +545,13 @@ a {
   .landingtitle-container {
     margin: 0;
   }
-  .contentbox-container {
-    width: 100%;
-    padding: 0;
 
-    justify-content: center;
-  }
   .aboutus-container {
     justify-content: center;
+  }
+  .ourmission-container {
+    height: clamp(13em, 100vh, 15em);
+    padding-block: 1em;
   }
   .image-1 {
     width: 100%;
@@ -568,22 +559,14 @@ a {
   }
 
   .card-container {
-    height: calc(51vw + 14vh);
-
-    margin-top: 5vh;
-    grid-template-columns: repeat(2, 30%);
-    grid-template-rows: repeat(2, 50%);
-    grid-gap: 7px;
+    grid-template-columns: repeat(2, min(3.568409091em, 45vw));
+    grid-template-rows: repeat(2, 3.7619318183em);
+    grid-gap: 0.1em;
     align-content: stretch;
+    height: fit-content;
   }
   .card {
-    height: auto;
-  }
-  .card-postTitle {
-    font-size: min(23px, 3vw);
-  }
-  .card-heading {
-    font-size: min(14px, 2vw);
+    font-size: 1.2em;
   }
   .aboutusImg2 {
     display: none;
@@ -685,7 +668,8 @@ a {
     width: min(7em, 64vw);
   }
   .aboutus-container {
-    font-size: 3.2em;
+    height: clamp(13em, 94vh, 20em);
+    font-size: max(3.2em, 9vw);
   }
   .image-1 {
     height: 100%;
@@ -702,31 +686,16 @@ a {
     font-size: 2em;
   }
   .ourmission-container {
+    height: clamp(15em, 94vh, 19em);
     justify-content: start;
+    font-size: max(3.2em, 9vw);
+    padding: 0;
   }
-
   .card-container {
-    height: calc(10vw + 35vh);
-    grid-template-columns: repeat(2, 39%);
-    grid-template-rows: repeat(2, 55%);
+    grid-gap: 0.2em;
   }
   .card {
-    padding-block: 3vh;
-    padding-inline: 4vw;
-  }
-
-  .cardLogo {
-    padding: min(6px, 1vh);
-    height: 12vw;
-    width: 12vw;
-  }
-  .card-postTitle {
-    display: contents;
-    font-size: min(13px, 5vw);
-    line-height: 3;
-  }
-  .card-heading {
-    font-size: 2.4vw;
+    font-size: 1.4em;
   }
   .membership-container {
     align-items: start;
