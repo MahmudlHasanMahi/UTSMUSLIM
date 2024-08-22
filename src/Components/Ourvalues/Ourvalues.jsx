@@ -23,7 +23,7 @@ const Ourvalues = () => {
         paragraph={
           "We aim to strengthen the muslim community at UTS with a range of activities and services"
         }
-        styleArg={styles.ourValue}
+        styleArg={styles.ourMission}
         animate={true}
       />
       <Hexagons />

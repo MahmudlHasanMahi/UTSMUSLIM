@@ -1,6 +1,6 @@
 .prayerWidget-container-inner {
   display: flex;
-  width: 18em;
+  min-width: 18em;
   justify-content: space-evenly;
   height: 55%;
 }
@@ -19,7 +19,7 @@
   border-radius: 75.2221908569336px;
   cursor: pointer;
   font-size: 1.5em;
-  width: 4.4em;
+  width: fit-content;
 }
 
 .prayerSvg {
@@ -92,40 +92,6 @@
 
 @media screen and (max-width: 703px) {
   .prayerWidget-container-inner {
-    /* border: solid red; */
-
     width: 19em;
   }
-  /* .nextPrayerWidget-container {
-    width: min(275.99px, 64vw);
-    height: min(38.15px, 9vw);
-    padding-inline: 11.3px;
-  }
-
-  .nextprayer {
-    font-size: min(0.8rem, 3vw);
-  }
-  .prayerWidget-container-inner {
-    width: 110%;
-    /* height: 100%; */
-  /* margin-top: auto; */
-  /* }
-  .prayerSvg {
-    width: 19.43px;
-  }
-  .time {
-    font-size: min(1.16rem, 4vw);
-  }
-  .amPm {
-    font-size: min(5.8px, 2vw);
-  }
-  .widgetNav-wrapper {
-    height: min(38.15px, 9vw);
-    font-size: min(0.8rem, 3vw);
-    text-wrap: nowrap;
-    padding-inline: min(15px, 4vw);
-  }
-  .widgetNav-logo {
-    width: min(19.43px, 5vw);
-  }  */
 }
