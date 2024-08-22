@@ -289,9 +289,11 @@
     position: absolute;
     top: -1.5em;
   }
+
   .contentContainer.membership {
     justify-content: space-between;
     padding-block: 2.4em 2em;
+    min-height: 13em;
   }
 
   .postTitle.membership {
