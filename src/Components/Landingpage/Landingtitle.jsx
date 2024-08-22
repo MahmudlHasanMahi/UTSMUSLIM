@@ -10,7 +10,7 @@ const Landingtitle = () => {
       >
         Empowering Muslims On Campus
       </motion.div>
-      <motion.span
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
@@ -20,7 +20,7 @@ const Landingtitle = () => {
       >
         We are the UTS Muslim Society. We are the sole representatives for
         muslims since 94’.
-      </motion.span>
+      </motion.div>
     </div>
   );
 };

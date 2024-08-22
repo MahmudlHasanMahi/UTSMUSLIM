@@ -1,7 +1,8 @@
 const MemberShipInfo = ({ logo, title }) => {
   return (
     <div className="membershipInfo-container">
-      <span>{logo}</span>
+      <div className="membershipInfo-logo">{logo}</div>
+
       <span className="membershipInfo-title">{title}</span>
     </div>
   );

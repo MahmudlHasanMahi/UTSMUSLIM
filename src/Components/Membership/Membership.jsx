@@ -21,7 +21,7 @@ const Membership = () => {
     <div ref={ref} className="membership-container">
       <Contentbox
         postTitle="Membership"
-        heading="Become Part of An Ever-Growing Community"
+        heading="Become Part of An Ever Growing Community"
         paragraph="By becoming a UTSMS member, you will have the chance to support the MSA and receive benefits from our loyalty program."
         styleArg={styles.membership}
         animate={true}

@@ -58,17 +58,13 @@
   position: relative;
   right: -20vw;
   display: inline;
-
   z-index: -1;
 }
 
 .landingtitle-container {
+  display: block;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  width: 6.5em;
-  margin-left: 0.72em;
+  padding-inline: 0.72em 4.5em;
 }
 .landingtitle {
   font-family: "TT Wellingtons Trl";
@@ -207,46 +203,40 @@
 }
 
 .membership-container {
-  height: 110vh;
+  height: clamp(9em, 140vh, 10.5em);
   background: #343431;
   display: flex;
   align-items: center;
   background-image: url("https://ik.imagekit.io/ytjlb3rhi/assets/Membership-image.png?updatedAt=1689504714904");
-  background-position: 125%;
+  background-position: 155%;
   background-repeat: no-repeat;
   background-size: contain;
+  font-size: clamp(6em, 8.4vw, 20em);
 }
-.benefit-container {
-  height: min(484px, 21vw);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 100%;
-}
-.membershipInfo-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: min(115px, 6vw);
-  background-color: rgba(38, 38, 36, 0.84);
 
-  border-radius: min(20px, 1.5vw);
+.membershipInfo-container {
+  background-color: rgb(0, 0, 0, 0.27);
+  padding: 0.25em 0 0.25em 0.25em;
+  margin-bottom: 0.15em;
+  display: flex;
+  border-radius: 20px;
 }
 .membershipInfo-logo {
-  width: min(63px, 3.5vw);
-  height: min(63px, 3.5vw);
-  margin-left: 25px;
+  display: block;
+  width: 0.4em;
+}
+.membershipInfo-logo > svg {
+  height: 100%;
+  width: 100%;
 }
 .membershipInfo-title {
+  /* text-wrap: nowrap; */
+  align-content: center;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: min(30px, 1.7vw);
-  margin-left: min(35px, 1.5vw);
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
+  font-size: 0.2em;
+  margin-left: 1.03125em;
   color: #ffffff;
 }
 .iphoneImage-container {
@@ -256,6 +246,7 @@
   right: 0;
   object-fit: cover;
 }
+
 .ourvalues-container {
   background: #f5f3e1;
   height: calc(100vh + 15rem);
@@ -543,7 +534,7 @@ a {
     text-align: center;
   }
   .landingtitle-container {
-    margin: 0;
+    padding: 1em;
   }
 
   .aboutus-container {
@@ -552,6 +543,16 @@ a {
   .ourmission-container {
     height: clamp(13em, 100vh, 15em);
     padding-block: 1em;
+  }
+  .membership-container {
+    padding: 2em 1.5em;
+    height: clamp(15em, 94vh, 19em);
+    background-position-y: 3em;
+    background-position-x: 50%;
+    background-size: 12em;
+  }
+  .membershipInfo-container {
+    background-color: rgb(38, 38, 36, 0.84);
   }
   .image-1 {
     width: 100%;
@@ -562,8 +563,6 @@ a {
     grid-template-columns: repeat(2, min(3.568409091em, 45vw));
     grid-template-rows: repeat(2, 3.7619318183em);
     grid-gap: 0.1em;
-    align-content: stretch;
-    height: fit-content;
   }
   .card {
     font-size: 1.2em;
@@ -587,6 +586,14 @@ a {
     right: calc(74vw - 8vh);
     bottom: 34%;
   }
+  .benefit-container {
+    width: 100%;
+    font-size: 1.1em;
+  }
+  .membershipInfo-logo {
+    width: 0.4em;
+  }
+
   .iphoneImage-container {
     display: none;
   }
@@ -638,14 +645,6 @@ a {
   .quote {
     font-size: min(75px, 3.5vw);
   }
-
-  .benefit-container {
-    width: 60%;
-  }
-  .membership-container {
-    background-size: calc(50vh + 50vw);
-    background-position: -17vw 14vh;
-  }
 }
 /*
 ------------------------------------| 
@@ -663,9 +662,6 @@ a {
       rgba(245, 243, 225, 0) 300.92%
     );
     font-size: 3.7em;
-  }
-  .landingtitle-container {
-    width: min(7em, 64vw);
   }
   .aboutus-container {
     height: clamp(13em, 94vh, 20em);
@@ -687,9 +683,14 @@ a {
   }
   .ourmission-container {
     height: clamp(15em, 94vh, 19em);
-    justify-content: start;
     font-size: max(3.2em, 9vw);
+    justify-content: start;
     padding: 0;
+  }
+  .membership-container {
+    align-items: start;
+    font-size: max(3.2em, 9vw);
+    padding: 0 1em;
   }
   .card-container {
     grid-gap: 0.2em;
@@ -697,29 +698,8 @@ a {
   .card {
     font-size: 1.4em;
   }
-  .membership-container {
-    align-items: start;
-  }
-  .benefit-container {
-    width: 85%;
-    height: 20vh;
-    justify-content: space-around;
-  }
   .membershipInfo-container {
-    height: 6vh;
-  }
-  .membershipInfo-logo {
-    width: 7vw;
-    height: 7vw;
-    margin-left: 4vw;
-  }
-  .membershipInfo-title {
-    font-size: 3vw;
-    margin-left: 3vw;
-  }
-  .membership-container {
-    background-size: calc(56vh + 66vw);
-    background-position: -28vw 26vh;
+    border-radius: 6.79px;
   }
   .ourvalues-container {
     justify-content: start;
