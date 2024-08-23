@@ -243,19 +243,7 @@
   .contentContainer.ourValue {
     height: 35vh;
   }
-  .postTitle.ourValue {
-    font-size: clamp(1vw, 31px, 1.9vw);
-  }
-  .heading.ourValue {
-    font-size: clamp(1vw, 4.76rem, 4.6vw);
-  }
-  .paragraph.ourValue {
-    font-size: clamp(1vw, 2.2rem, 2.5vw);
-  }
 
-  .contentContainer.ourValue {
-    height: 33vw;
-  }
   .contentContainer.PAS {
     display: none;
   }
