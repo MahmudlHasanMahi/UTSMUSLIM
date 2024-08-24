@@ -557,6 +557,7 @@ a {
   }
 
   .card-container {
+    font-size: 0.9em;
     grid-template-columns: repeat(2, min(3.56em, 45vw));
     grid-template-rows: repeat(2, 3.76em);
     grid-gap: 0.15em;
@@ -701,6 +702,7 @@ a {
     font-size: min(1.5em, 17.5vw);
   }
   .card-container {
+    font-size: 0.9em;
     grid-gap: 0.2em;
   }
   .card {
