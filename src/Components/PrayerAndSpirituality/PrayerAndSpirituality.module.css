@@ -1,10 +1,15 @@
 .PrayerAndSpirituality-container {
-  background-color: #f5f3e1;
+  background-color: #f5f3e1
 }
 .MainContentBox-container {
   display: flex;
   align-items: center;
-  height: min(960px, 48vw);
+  height: clamp(5.2em, 93vh, 15em);
+  font-size: clamp(6em, 8.4vw, 20em);
+  outline: solid red;
+}
+.MainContentBox-container > div{
+  height: 100%;
 }
 .card-container {
   display: flex;

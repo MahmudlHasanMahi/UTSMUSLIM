@@ -32,6 +32,7 @@
   height: 100vh;
   perspective: 50px;
   -ms-overflow-style: none;
+  overflow-x: hidden;
   scrollbar-width: none;
 }
 .pageRoutes::-webkit-scrollbar {
@@ -47,11 +48,11 @@
     #f5f3e1 44.66%,
     rgba(245, 243, 225, 0) 188.92%
   );
-  height: clamp(5.2em, 93vh, 15em);
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
+  height: clamp(5.2em, 93vh, 15em);
   font-size: clamp(6em, 8.4vw, 20em);
 }
 .image-1 {
