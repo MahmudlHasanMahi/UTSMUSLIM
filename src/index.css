@@ -695,6 +695,9 @@ a {
     justify-content: right;
     padding-block-end: 13%;
   }
+  .ourvalues-container > :first-child > :nth-child(2) {
+    width: 80%;
+  }
   .quotes-container {
     font-size: max(3.2em, 9vw);
   }
