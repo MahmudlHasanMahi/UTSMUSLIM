@@ -122,9 +122,7 @@
   color: #ffffff;
   background-color: rgb(0, 0, 0, 0.27);
 }
-.heading.membership {
-  color: #ffffff;
-}
+.heading.membership,
 .paragraph.membership {
   color: #ffffff;
 }
@@ -139,24 +137,12 @@
 }
 
 .btn-main.joinUs {
+  padding: 0.85em 2.07em;
   background-color: #d9d7c4;
-  border-radius: 15px;
-  font-size: 28px;
-  font-size: clamp(1vw, 28px, 1.7vw);
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  color: rgb(0, 0, 0);
-  border-radius: min(15px, 1.2vw);
-  border: none;
-  width: clamp(0vw, 209.89px, 15vw);
-  padding: min(18px, 1.4vw);
-  transition: background-color 0.5s;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
-
+.btn-main.joinUs:hover {
+  background-color: #fffdee;
+}
 .contentContainer.PAS {
   display: flex;
   flex-direction: column;

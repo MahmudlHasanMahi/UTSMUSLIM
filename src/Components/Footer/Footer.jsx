@@ -39,6 +39,7 @@ const Footer = () => {
             <Link title={"ActivateUTS"} />
           </Links>
           <Links heading={"Our Services"}></Links>
+          
         </div>
       </div>
     </div>

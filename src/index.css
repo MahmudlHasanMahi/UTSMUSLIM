@@ -390,45 +390,44 @@
   height: 100%;
 }
 .footer-container {
-  height: min(850px, 45vw);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background: #3f3526;
+  font-size: clamp(6em, 8.4vw, 20em);
+  height: fit-content;
+  position: relative;
 }
 
 .joinUs-container {
-  width: min(1507px, 83vw);
-  height: min(141px, 8vw);
+  position: absolute;
+  top: -10%;
+  padding: 0.2em 0.5em;
+  width: 78%;
   background: #000000;
-  padding-inline: min(90px, 5vw);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.75);
-  border-radius: 70.5px;
-  position: relative;
-  top: -24%;
+  border-radius: 1em;
 }
 .joinUs-title {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: min(40px, 2vw);
+  font-size: 0.25em;
   color: white;
 }
 .footer-section-container {
   display: flex;
   justify-content: space-between;
-  padding-inline: min(130px, 6vw);
   width: 100%;
-  margin-top: -100px;
+  padding-inline: 0.625em 0.4em;
+  padding-block: 1.4em 1em;
 }
 .UtsmuslimFooterLogo {
-  width: min(501px, 25vw);
-  height: min(97.03px, 6vw);
-  margin-top: min(-40px, -2vw);
+  width: 3.1em;
 }
 .UtsmuslimFooterLogo-long {
   display: none;
@@ -437,38 +436,38 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: min(36px, 2vw);
+  font-size: 0.225em;
   color: white;
+  padding-block: 2em 1em;
 }
 .footer-section-1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: min(385px, 26vw);
+  justify-content: center;
 }
 .footer-section-2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: min(700px, 36vw);
+  width: 40%;
 }
 .socialMedia-container {
+  width: 65%;
   display: flex;
   justify-content: space-around;
-  width: min(275px, 20vw);
+  margin-left: -10px;
 }
 .socialMediaLogo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: min(52px, 3vw);
-  width: min(52px, 3vw);
-  padding: min(13px, 0.8vw);
+  display: block;
+  background-color: #ab9473;
+  padding: 10px;
+  border-radius: 100%;
   cursor: pointer;
-  background: #ab9473;
-  border-radius: 50%;
-  transition: 0.3s ease-in;
+  width: 0.325em;
+  height: 0.325em;
+}
+.socialMediaLogo > svg {
+  display: block;
 }
 .socialMediaLogo:hover {
   background: #f0d2a8;
@@ -477,11 +476,15 @@
 .link-container {
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  padding-inline: 0.1em;
 }
+
 .Link-title,
 .Link {
-  font-size: min(29px, 1.2vw);
-  line-height: min(75px, 3.5vw);
+  font-size: 0.18em;
+  line-height: 2.5em;
+  text-wrap: nowrap;
 }
 .Link-title {
   font-family: "Inter";
@@ -730,7 +733,7 @@ a {
     display: none;
   }
   .footer-container {
-    height: 65vh;
+    height: 6em;
   }
   .footer-section-container {
     height: 100%;
@@ -740,10 +743,7 @@ a {
     justify-content: space-evenly;
   }
   .footer-section-1 {
-    justify-content: end;
     align-items: center;
-    justify-content: space-between;
-    height: auto;
   }
   .Link {
     display: none;
@@ -754,32 +754,29 @@ a {
   }
   .footer-section-2 {
     width: 100%;
-    height: 30%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    font-size: 1.5em;
   }
   .Link-title {
-    font-size: min(2rem, 5vw);
+    cursor: pointer;
     color: #fedaa3;
   }
-  .socialMediaLogo {
-    width: min(3.5rem, 8vw);
-    height: min(3.5rem, 8vw);
-    padding: 2vw;
-    margin-right: 2vw;
+  .Link-title:hover {
+    text-decoration: underline;
   }
 
   .socialMedia-container {
-    width: 100%;
-    justify-content: center;
+    font-size: 1.5em;
+    width: 1.8em;
   }
   .UtsmuslimFooterLogo {
     display: none;
   }
   .UtsmuslimFooterLogo-long {
     display: block;
-    margin-bottom: 3vh;
-    width: 55%;
+    margin-bottom: 0.4em;
+    width: 68%;
+    outline: 3.4em;
   }
 }
