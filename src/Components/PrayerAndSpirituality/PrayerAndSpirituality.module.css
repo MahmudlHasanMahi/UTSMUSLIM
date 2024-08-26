@@ -1,89 +1,85 @@
 .PrayerAndSpirituality-container {
-  background-color: #f5f3e1
+  background-color: #f5f3e1;
 }
 .MainContentBox-container {
   display: flex;
   align-items: center;
-  height: clamp(5.2em, 93vh, 15em);
+  height: clamp(6em, 80vh, 8em);
   font-size: clamp(6em, 8.4vw, 20em);
-  outline: solid red;
 }
-.MainContentBox-container > div{
-  height: 100%;
+.MainContentBox-container > div {
+  height: 60%;
+  justify-content: space-evenly;
+  max-height: 5em;
 }
 .card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: min(2380px, 123.5vw);
+  height: fit-content;
   align-items: center;
   justify-content: space-evenly;
 }
 .Card-Section-1 {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  height: min(1273px, 66vw);
 }
 .Card1-container {
   background: #dfc693;
-  border-radius: 0px min(52px, 3vw) min(52px, 3vw) 0px;
+  padding: 1.6em 1em 1.2em 1.6em;
   width: 55.6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-inline: min(120px, 5vw);
+  font-size: 5em;
+  font-size: 4.17cqw;
+  border-radius: 0 0.7em 0.7em 0;
 }
+
 .Card2-container {
-  border-radius: min(52px, 3vw);
+  border-radius: 0.7em;
   background: rgba(121, 186, 163, 0.63);
   width: 41.3%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-inline: min(63px, 3vw);
+  margin-left: 1.5cqw;
+  font-size: 4.17cqw;
+  padding: 1.6em 0.8em 0 0.2em;
 }
 
 .Card1-title-location-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 28%;
+  /* padding-inline-end: 1em; */
+  padding-inline-end: 0.2em;
 }
 .Card1-title {
   color: #674a0d;
   font-family: Montserrat;
-  font-size: min(76px, 4vw);
+  font-size: 0.95em;
   font-style: normal;
   font-weight: 700;
 }
+
 .Card1-location-container {
   display: flex;
   justify-content: space-between;
+  margin-block: 1.05em;
 }
 .Card1-location {
   color: #674a0d;
   font-family: Open Sauce Sans;
-  font-size: min(38px, 2vw);
   font-style: normal;
   font-weight: 400;
   display: flex;
-
+  font-size: 0.475em;
   align-items: center;
 }
 .Card1-btn,
 .Card2-btn {
-  border-radius: min(15px, 1vw);
   background: #674a0d;
   color: #fff;
   text-align: center;
+  font-size: 0.35em;
   font-family: Inter;
-  font-size: min(28px, 1.5vw);
+  border-radius: 0.53em;
+  padding: 0.8em 1.65em;
   font-style: normal;
   font-weight: 700;
-  padding-inline: min(40px, 2vw);
-  padding-block: min(20px, 1vw);
-  margin-right: min(70px, 3vw);
   border: none;
   box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 3px 4px -3px rgba(0, 0, 0, 0.75);
@@ -104,201 +100,177 @@
 .Card2-btn:hover {
   background: #238538;
 }
-.Card1-facilityInfo-container {
+.Card1-facilityInfo-container,
+.Card2-facilityInfo-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 45%;
 }
+.Card2-facilityInfo-container {
+  align-items: end;
+}
+
 .facilitySvg {
   display: block;
-  width: min(50px, 3vw);
-  height: min(50px, 3vw);
-  margin-right: min(46px, 2vw);
+  width: 0.7em;
 }
-.facilityInfo.Card1 {
+.facilityInfo.Card1,
+.facilityInfo.Card2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: max-content;
-  border-radius: 47px;
+  border-radius: 100px;
+  width: fit-content;
   background: #c8b184;
-  padding-block: min(20px, 1vw);
-  padding-inline: min(30px, 2vw);
   cursor: default;
+  padding: 0.275em 0.675em 0.275em 0.2875em;
+  margin-bottom: 0.25em;
 }
-.facilityTitle.Card1 {
-  color: #343431;
+.facilityTitle.Card1,
+.facilityTitle.Card2 {
   font-family: Inter;
-  font-size: min(31px, 2vw);
   font-style: normal;
+  font-size: 0.3875em;
   font-weight: 700;
+  padding-inline-start: 1em;
+  text-wrap: nowrap;
+  color: #343431;
 }
 .Card1-info {
   color: #323232;
   font-family: Inter;
-  font-size: min(18px, 1vw);
+  font-size: 0.225em;
   font-style: normal;
   font-weight: 400;
 }
 
 .Card2-title-location-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 59%;
+  text-align: right;
+  margin-bottom: 1em;
 }
 .Card2-title {
   color: #1a5527;
   font-family: Montserrat;
-  font-size: min(76px, 4vw);
   font-style: normal;
   font-weight: 700;
-  text-align: right;
 }
 .Card2-location-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  height: min(345px, 18vw);
+  align-items: end;
 }
 .Card2-location {
   color: #1a5527;
+  padding-block: 2.2em 1.5em;
   font-family: Open Sauce Sans;
-  font-size: min(38px, 2vw);
+  font-size: 0.475em;
   font-style: normal;
   font-weight: 400;
-  text-align: right;
 }
 
-.Card2-facilityInfo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  height: 40%;
-  margin-top: max(-120px, -7vw);
-}
 .facilityInfo.Card2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: max-content;
-  border-radius: 47px;
-  background: #86bfa2;
-  padding-block: min(20px, 1vw);
-  padding-inline: min(30px, 2vw);
-  cursor: default;
+  background-color: #86bfa2;
 }
-.facilityTitle.Card2 {
-  color: #343431;
-  font-family: Inter;
-  font-size: min(31px, 2vw);
-  font-style: normal;
-  font-weight: 700;
-}
+
 .Card3-container {
-  border-radius: min(52px, 3vw) 0px 0px min(52px, 3vw);
   background: rgba(167, 137, 186, 0.63);
-  width: 98.43%;
-  height: min(1045px, 52vw);
   margin-inline-start: auto;
-  margin-top: min(30px, 2vw);
+  width: 98.5%;
   display: flex;
+  align-items: center;
+  font-size: 4.17cqw;
+  padding-inline: 1.48em;
+  margin-top: 0.38em;
+  border-radius: 0.65em;
+  justify-content: space-between;
 }
 .Card3-section-1 {
-  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-inline: min(120px, 7vw);
-  padding-block: min(160px, 8vw);
+  padding-block: 2.3em;
 }
 .Card3-date-svg-container {
   display: flex;
   align-items: center;
 }
 .Card3-svg {
+  width: 0.7em;
   display: block;
-  height: 100%;
-  width: 8%;
-  margin-right: min(46px, 2vw);
 }
 .Card3-date-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: min(100px, 6vw);
-  cursor: default;
+  margin-left: 0.47em;
 }
-.Card3-Islamic-date {
-  color: #4e2955;
-  font-family: "Open Sauce Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: min(34px, 1.8vw);
-}
+
+.Card3-Islamic-date,
 .Card3-Gregorian-date {
   color: #4e2955;
-  font-family: Open Sauce Sans;
-  font-size: min(34px, 1.8vw);
+  font-size: 0.42em;
+  font-family: "Open Sauce Sans";
   font-style: normal;
+  text-wrap: nowrap;
+}
+.Card3-Islamic-date {
+  font-weight: bold;
+}
+.Card3-Gregorian-date {
   font-weight: 400;
+  padding-top: 0.1em;
 }
 .Maintime-container {
   cursor: default;
+  /* text-align: center; */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  padding-block: 1em;
 }
 .Time {
   color: #4e2955;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: min(132px, 6.7vw);
-  font-style: normal;
-  font-weight: 700;
+
+  font-size: 1.64em;
 }
 .AmOrPm {
   color: #4e2955;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: min(41px, 2vw);
-  font-style: normal;
-  font-weight: 700;
-  margin-left: min(15px, 0.9vw);
+  font-size: 0.51em;
+  padding-inline-start: 0.18em;
 }
 .NextPrayer-Progress-Container {
   display: flex;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  height: min(170px, 10vw);
 }
 .NextPrayer-container {
   color: #4e2955;
   font-family: Open Sauce Sans;
-  font-size: min(48px, 3vw);
+  font-size: 0.48em;
   cursor: default;
 }
 .Next-Prayer {
   font-family: "Open Sauce Sans";
   font-style: normal;
+  padding-inline-start: 0.2em;
   font-weight: bold;
-  margin-left: min(15px, 1vw);
 }
 .Timeleft {
   color: #4e2955;
   text-align: center;
   font-family: Open Sauce Sans;
-  font-size: min(37px, 2vw);
   font-style: normal;
   font-weight: 400;
   text-align: left;
+  font-size: 0.46em;
+  padding-block: 1.4em 1.25em;
 }
 .Progress-container,
 .Progress {
-  height: min(10px, 0.5vw);
-  border-radius: min(12px, 0.5vw);
+  height: 0.11em;
+
+  border-radius: 50px;
 }
 .Progress-container {
   background-color: #b87cc5;
@@ -309,26 +281,26 @@
   background-color: #873a97;
 }
 .Card3-section-2 {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 9em;
+  width: 9.13em;
 }
 .Card3-section-2-Salah-container {
-  margin-right: min(115px, 6vw);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 73%;
+  height: inherit;
+  /* height: 73%; */
 }
 .Salah-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5%;
-  border-radius: min(25px, 1.5vw);
   color: #3f3548;
+  padding: 0.25em;
+  border-radius: 0.3em;
 }
 .Salah-container.active {
   background: #bc9cc2;
@@ -336,51 +308,51 @@
 }
 .Day-svg {
   display: block;
-  width: min(50px, 3vw);
-  height: min(50px, 3vw);
-  margin-right: min(46px, 2vw);
+  width: 0.68em;
 }
 .Salah {
   font-family: Montserrat;
-  font-size: min(50px, 2.5vw);
+  font-size: 0.62em;
   font-style: normal;
   font-weight: 700;
   flex-grow: 1;
-  margin-left: min(32px, 1vw);
+  margin-left: 0.4em;
+  font-size: 0.62em;
   cursor: default;
 }
 
 .SalahTime {
   text-align: right;
   font-family: Montserrat;
-  font-size: min(50px, 2.6vw);
   font-style: normal;
   font-weight: 400;
   cursor: default;
+  font-size: 0.62em;
 }
 .SalahTime-AmOrPm {
+  font-size: 0.42em;
   text-align: right;
   font-family: Montserrat;
-  font-size: min(34px, 1.75vw);
   font-style: normal;
   font-weight: 400;
   cursor: default;
 }
 .Card3-location {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 32%;
   color: rgba(63, 53, 72, 0.61);
   font-family: Montserrat;
-  font-size: min(18px, 1vw);
+  font-size: 0.23em;
   font-style: normal;
   font-weight: 700;
-  margin-left: 17%;
-  margin-top: -6%;
   cursor: pointer;
   transition: color 0.5s;
+  padding-inline-start: 6em;
+  position: relative;
+  top: -1.5em;
+}
+.Card3-location > span {
+  margin-right: 1em;
 }
 .Card3-location:hover {
   color: black;
@@ -396,59 +368,61 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: calc(100vh + 10rem);
   }
   .card-container {
+    margin-top: 12em;
     align-items: center;
     height: 100%;
-    width: 68%;
   }
   .MainContentBox-container {
     display: none;
   }
-
-  .Card-Section-1 {
-    justify-content: space-between;
-    height: min(37rem, 10vh + 20vw);
-    width: 100%;
+  .Card1-container,
+  .Card2-container,
+  .Card3-container {
+    font-size: 2.5cqw;
   }
 
   .Card2-container,
   .Card1-container {
-    justify-content: center;
-    width: 47%;
+    width: 16em;
+    aspect-ratio: 167 / 173;
+
+    border-radius: 1.3em;
     padding: 0;
     margin: 0;
-    border-radius: min(52px, 3vw);
   }
-  .Card1-title-location-container,
-  .Card2-title-location-container {
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
-    /* outline: solid red; */
-    font-size: 2em;
-    padding-top: clamp(0.5em, 3vw, 1.2em);
-    padding-inline: clamp(0.2em, 4vw, 0.5em);
+  .Card1-container {
+    margin-right: 1em;
+  }
+  .Card-Section-1 {
+    justify-content: space-between;
   }
 
-  .Card1-title,
-  .Card2-title {
+  .Card1-title-location-container,
+  .Card2-title-location-container {
+    font-size: 1.4em;
+    padding: 2em 0.5em 0.75em 0.5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    align-content: end;
-    font-size: clamp(0.4em, 3.3vw, 1em);
   }
+
   .Card1-location-container,
   .Card2-location-container {
-    height: 50%;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    height: 55%;
   }
   .Card2-location,
   .Card1-location {
     text-align: center;
-    font-size: clamp(0.3em, 2.5vw, 0.6em);
+    padding: 0;
+    font-size: 0.7em;
   }
 
   .Card1-facilityInfo-container,
@@ -460,137 +434,97 @@
   }
   .Card1-btn,
   .Card2-btn {
-    margin: 0;
-    padding: 1em 2em;
+    font-size: 0.68em;
   }
   .Card1-btn::after,
   .Card2-btn::after {
     content: "Learn More";
-    font-size: clamp(1.6em, 2vw, 0.6em);
   }
   .Card3-container {
-    border-radius: min(52px, 3vw);
+    padding-block: 2.35em;
+    border-radius: 1.3em;
     flex-direction: column;
-    height: 72%;
     width: 100%;
+    height: fit-content;
     align-items: center;
-    margin: 0;
+    margin: 1em 0 5em 0;
     justify-content: center;
   }
   .Card3-date-svg-container {
     justify-content: center;
   }
+  .Card3-svg {
+    width: 0.85em;
+  }
+
   .Card3-section-1 {
     padding: 0;
-    width: 80%;
-    height: 50%;
-    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2.2em;
   }
   .Card3-section-2 {
-    width: 80%;
-    height: 45%;
+    height: fit-content;
+    margin-top: 4em;
   }
-  .Maintime-container {
-    display: flex;
-    justify-content: center;
-  }
+
   .AmOrPm {
     align-content: end;
-    padding-bottom: 12px;
-    font-size: min(2em, 4vw);
+    margin-left: 0.2em;
+    height: 10%;
   }
   .NextPrayer-Progress-Container {
     align-items: center;
-    height: 30%;
   }
   .NextPrayer-container {
-    text-wrap: nowrap;
-    font-size: 1.6em;
-    flex-grow: 1;
+    font-size: 0.65em;
   }
-  .Card3-section-2-Salah-container {
-    width: 100%;
-    height: 80%;
+  .Card3-section-2 {
+    width: 70%;
+  }
+  .Maintime-container {
+    font-size: 1.3em;
   }
 
-  .Card3-Islamic-date {
-    font-size: 1.4em;
-  }
   .Card3-Gregorian-date {
-    font-size: 1.22em;
+    padding-top: 1em;
   }
-  .Time {
-    font-size: 6em;
-  }
+
   .Timeleft {
-    flex-grow: 3;
-    font-size: 1.1em;
+    text-align: center;
+    font-size: 0.5em;
+    padding-block: 1.4em 3em;
+  }
+  .Progress-container {
+    width: 7em;
+  }
+  .Salah-container {
+    font-size: 2em;
   }
   .Card3-location {
-    margin: 0 0 0 5em;
-
-    font-size: 0.7em;
-    width: 30%;
-  }
-  .Card3-date-container {
-    height: clamp(2.5em, 8vw, 4.5em);
+    font-size: 0.5em;
+    margin-top: 1em;
   }
 }
 @media screen and (max-width: 703px) and (orientation: portrait) {
+  .Card1-container,
+  .Card2-container,
+  .Card3-container {
+    font-size: 2.8cqw;
+  }
   .card-container {
-    width: 90%;
+    margin-top: 6em;
   }
   .Card3-container {
-    height: 76%;
-    justify-content: space-around;
+    padding-block: 4.6em;
   }
-
-  .Card3-Islamic-date {
-    font-size: 0.8em;
-  }
-  .Card3-Gregorian-date {
-    font-size: 0.8em;
-  }
-  .Time {
-    font-size: 4em;
-    /* outline: solid red; */
+  .Card3-section-1 {
+    font-size: 2.4em;
   }
   .Card3-section-2 {
-    width: 85%;
+    font-size: 1.45em;
+    width: 90%;
   }
-  .NextPrayer-container {
-    font-size: 1.2em;
-  }
-  .Timeleft {
-    font-size: 1em;
-  }
-  .AmOrPm {
-    font-size: 1.1em;
-    padding-bottom: 0.7em;
-  }
-  .Salah,
-  .SalahTime {
-    font-size: 1em;
-  }
-  .SalahTime-AmOrPm {
-    font-size: 0.6em;
-  }
-  .Day-svg {
-    height: 1.5em;
-    width: 1.5em;
-  }
-  .Salah-container {
-    padding: 3%;
-  }
-  .Card3-location {
-    width: 40%;
-  }
-  /* .NextPrayer-Progress-Container  */
-  .Card3-section-1 {
-    height: 45%;
-    justify-content: space-evenly;
-  }
-  .Card3-section-2-Salah-container {
-    height: 100%;
+  .Salah {
+    margin-left: 0.6em;
   }
 }
