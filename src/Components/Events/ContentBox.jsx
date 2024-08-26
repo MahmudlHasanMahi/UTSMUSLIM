@@ -5,7 +5,7 @@ const ContentBox = () => {
   return (
     <Contentbox
       postTitle={"Events"}
-      heading={"Educating and Having Fun too!"}
+      heading={"The Core Essence of Unity"}
       paragraph={
         "At the heart of the UTSMS, we love to plan events. However while organising we have two key goals. To educate our youth and keep them entertained."
       }

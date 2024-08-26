@@ -143,70 +143,20 @@
 .btn-main.joinUs:hover {
   background-color: #fffdee;
 }
-.contentContainer.PAS {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: min(51%, 28vw);
-  width: 100%;
-}
-.postTitle.PAS {
-  background: #d9d7c4;
-  border-radius: 40px;
-  font-size: clamp(1vw, 31px, 1.7vw);
-  padding: clamp(0.8vw, 15px, 0.3vw);
-  text-align: center;
-  line-height: 30px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  width: clamp(1vw, 377px, 20vw);
-}
-.heading.PAS {
-  font-family: "TT Wellingtons Trl";
-  text-align: center;
-  font-size: clamp(1vw, 4.76rem, 4vw);
-  width: 60%;
-}
-.paragraph.PAS {
-  font-family: "Open Sauce Sans";
-  text-align: center;
-  font-size: clamp(1vw, 2.2rem, 2.2vw);
-  width: 60%;
-}
+
 .contentContainer.event {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: left;
-  height: min(51%, 28vw);
-  width: 100%;
-  outline: solid red;
-  align-items: center;
+  padding-inline: 2.5em;
+  justify-content: center;
+  height: 4em;
 }
 .postTitle.event {
-  background: #d9d7c4;
-  border-radius: 40px;
-  font-size: clamp(1vw, 31px, 1.7vw);
-  padding: clamp(0.8vw, 15px, 0.3vw);
-  text-align: center;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  width: clamp(1vw, 195px, 12vw);
+  background-color: #aeab9e;
+  padding-inline: 3em;
 }
 .heading.event {
-  font-family: "TT Wellingtons Trl";
-  text-align: left;
-  font-size: clamp(1vw, 4.76rem, 4vw);
-  width: 63%;
+  padding-block: 1em;
 }
 .paragraph.event {
-  font-family: "Open Sauce Sans";
-  text-align: left;
-  font-size: clamp(1vw, 2.2rem, 2.2vw);
-  width: 46%;
 }
 @media screen and (width <= 1280px) and (orientation: portrait) {
   .contentContainer.aboutUs {
@@ -232,6 +182,9 @@
 
   .contentContainer.PAS {
     display: none;
+  }
+  .contentContainer.event {
+    padding-inline: 1em;
   }
 }
 
@@ -301,5 +254,16 @@
   .paragraph.ourValue {
     width: 73%;
     font-size: 3.5vw;
+  }
+
+  .contentContainer.event {
+    display: relative;
+    padding-block-start: 2.3em;
+    height: fit-content;
+    margin-bottom: 1em;
+  }
+  .postTitle.event {
+    top: -1.5em;
+    position: absolute;
   }
 }

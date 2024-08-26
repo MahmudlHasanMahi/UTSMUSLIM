@@ -447,7 +447,7 @@
     width: 100%;
     height: fit-content;
     align-items: center;
-    margin: 1em 0 5em 0;
+    margin: 1em 0 4em 0;
     justify-content: center;
   }
   .Card3-date-svg-container {
@@ -479,7 +479,7 @@
     font-size: 0.65em;
   }
   .Card3-section-2 {
-    width: 70%;
+    width: 75%;
   }
   .Maintime-container {
     font-size: 1.3em;
