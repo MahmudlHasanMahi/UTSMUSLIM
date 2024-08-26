@@ -1,4 +1,11 @@
 .event-container {
-  height: 120vh;
+  font-size: clamp(6em, 8.4vw, 20em);
   background-color: #c3bead;
+  padding-block-end: 1em;
+}
+@media screen and (max-width: 703px) and (orientation: portrait) {
+  .event-container {
+    font-size: max(3.2em, 9vw);
+    height: clamp(13em, 94vh, 20em);
+  }
 }
