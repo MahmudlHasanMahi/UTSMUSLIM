@@ -759,7 +759,7 @@ a {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .Link-title {
     cursor: pointer;
@@ -770,7 +770,7 @@ a {
   }
 
   .socialMedia-container {
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 1.8em;
   }
   .UtsmuslimFooterLogo {
@@ -779,7 +779,10 @@ a {
   .UtsmuslimFooterLogo-long {
     display: block;
     margin-bottom: 0.4em;
-    width: 68%;
+    width: 2.6em;
     outline: 3.4em;
+  }
+  .socialMediaLogo {
+    padding: 8px;
   }
 }
