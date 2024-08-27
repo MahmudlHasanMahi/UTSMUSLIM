@@ -38,8 +38,7 @@ const Footer = () => {
             <Link title={"LinkTree"} link={"https://linktr.ee/UTSMS"} />
             <Link title={"ActivateUTS"} />
           </Links>
-          <Links heading={"Our Services"}></Links>
-          
+          <Links heading={"About Islam"}></Links>
         </div>
       </div>
     </div>
@@ -47,3 +46,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

@@ -180,8 +180,9 @@
   align-items: center;
   font-size: 4.17cqw;
   padding-inline: 1.48em;
+  margin-bottom: 0.5em;
   margin-top: 0.38em;
-  border-radius: 0.65em;
+  border-radius: 0.65em 0 0 0.65em;
   justify-content: space-between;
 }
 .Card3-section-1 {

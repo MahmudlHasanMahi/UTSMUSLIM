@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./PrayerAndSpirituality.module.css";
 import FacilityInfo from "./FacilityInfo";
 import { useRef, useMemo } from "react";
-import { useInView, motion, useTransform, useScroll } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { hijriDate as hd } from "../../Utils/HijriDate";
 import { Gregorian as gr, time } from "../../Utils/Gregorian";
 import { Timings } from "../../PrayerTimings";
 import Salah from "./Salah";
-import { getPrayer } from "../../Utils/NextPrayer";
 import {
   Wc,
   WaterDrop,
@@ -24,7 +23,7 @@ import {
   Location,
 } from "../../Svg/ServicesSvg";
 import { NextPrayer } from "../../Utils/NextPrayer";
-
+import LoadingBar from "../LoadingAnimation/LoadingBar";
 export const Card1 = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -180,13 +179,15 @@ export const Card3 = () => {
           <div className={styles["Card3-date-container"]}>
             <span className={styles["Card3-Islamic-date"]}>
               {(hijriDate &&
-                `${hijriDate.day} ${hijriDate.month}, ${hijriDate.year}`) ||
-                "-------"}
+                `${hijriDate.day} ${hijriDate.month}, ${hijriDate.year}`) || (
+                <LoadingBar />
+              )}
             </span>
             <span className={styles["Card3-Gregorian-date"]}>
               {(Gregorian &&
-                `${Gregorian.day} ${Gregorian.month}, ${Gregorian.year}`) ||
-                "-------"}
+                `${Gregorian.day} ${Gregorian.month}, ${Gregorian.year}`) || (
+                <LoadingBar />
+              )}
             </span>
           </div>
         </div>
