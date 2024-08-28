@@ -30,7 +30,6 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  transition: none;
 }
 .contentBox-wrapper {
   display: flex;
@@ -111,6 +110,11 @@
 ------------------------------------|  
 */
 @media screen and (max-width: 703px) and (orientation: portrait) {
+  .servicesLanding-container {
+    height: 90vh;
+    min-height: 8em;
+    max-height: 10em;
+  }
   .servicesLanding-image-container {
     margin-top: 0;
   }
