@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 4;
   width: 100%;
+  font-size: clamp(4em, 5cqw, 12em);
 }
 
 .navbar {
@@ -10,8 +11,7 @@
   align-items: center;
   width: 100%;
   z-index: -1;
-  height: calc(6.5vw - 1vh);
-  padding: 0 min(53px, 5vw) 0 min(97px, 3vw);
+  padding: 1.8% 4%;
   transition: background-color 500ms;
 }
 .navbar-Dark {
@@ -26,24 +26,23 @@
 }
 
 .navlogo {
-  width: min(350px, 18vw);
-  height: 74px;
-  margin-left: min(40px, 2vw);
-  object-position: center;
-  object-fit: scale-down;
+  object-fit: cover;
+  width: 3.38em;
 }
 .navitem-list-container {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(910px, 47vw);
+  margin-left: 1em;
+  width: 9em;
 }
+
 .navitem {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: min(28px, calc(0.8vw + 0.4rem));
+  font-size: 0.5em;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -61,16 +60,18 @@
   font-weight: 700;
 }
 .underline {
-  bottom: max(-8px, -1vw);
+  /* bottom: max(-8px, -1vw); */
+  bottom: -0.3em;
   position: absolute;
   width: 60%;
   border-radius: 10px;
+  background-color: #6c4e22;
 }
 .underline-Light {
-  border: 1.4px solid #6c4e22;
+  border: 0.05em solid #6c4e22;
 }
 .underline-Dark {
-  border: 1.4px solid #c7c7c7;
+  border: 0.05em solid #c7c7c7;
 }
 .navitem-Light {
   color: #000000;
@@ -84,10 +85,9 @@
   font-weight: 700;
 }
 .navitem-lastChild {
-  border-radius: min(13px, 1vw);
-  font-weight: 500;
-  font-size: min(28px, calc(0.8vw + 0.4rem));
-  padding: min(18px, 1vw);
+  padding: 0.8em;
+  /* padding:20% 10%; */
+  border-radius: 0.54em;
 }
 .navitem-lastChild-Light {
   background: #6c4e22;
@@ -131,15 +131,16 @@
   height: 100vh;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  padding-block-start: 0.8em;
 }
 .mobileNav-items-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   height: 30em;
 }
 .mobNav-item {
-  font-size: min(1.2em, 4vw);
+  font-size: min(1.2em, 3.3vw);
   display: flex;
   align-items: center;
   height: 4em;
@@ -173,8 +174,9 @@
 
 @media screen and (max-width: 703px) {
   .navbar {
-    height: min(57px, 54px);
     align-items: center;
+    height: 1.3em;
+    justify-content: center;
   }
   .hamburger-wrapper {
     display: flex;
@@ -185,8 +187,6 @@
   }
 
   .navlogo {
-    width: 100%;
-    height: min(12.95px, 3vw);
-    object-position: center;
+    width: 45cqw;
   }
 }
