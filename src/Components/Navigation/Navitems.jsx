@@ -47,7 +47,7 @@ const Navitems = () => {
       />
       <Listitem
         pk={5}
-        linkTitle={"/contactUs"}
+        linkTitle={"/contact-us"}
         active={active}
         setActive={setActive}
         title="Contact Us"
