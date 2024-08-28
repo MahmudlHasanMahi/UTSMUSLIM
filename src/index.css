@@ -169,9 +169,9 @@
   height: 2.6em;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 2.47em);
+  grid-template-columns: repeat(4, min(2.47em,23vw));
   grid-template-rows: repeat(1, 2.8em);
-  gap: 0.33em;
+  gap: min(0.33em,2vw);
   justify-content: center;
   margin-top: 0.25em;
 }
