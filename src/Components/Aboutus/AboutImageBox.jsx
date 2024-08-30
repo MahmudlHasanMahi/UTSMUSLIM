@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-import images from "../../assets/aboutusImg1.png";
+import image1 from "../../assets/aboutusImg1.png";
+import image2 from "../../assets/aboutusImg2.png";
+import image3 from "../../assets/aboutusImg3.png";
+import image4 from "../../assets/aboutusImg4.png";
+import image5 from "../../assets/aboutusImg5.png";
 const AboutImageBox = () => {
   const ref = useRef(null);
   const [x, setX] = useState(0);
@@ -18,11 +22,11 @@ const AboutImageBox = () => {
       style={{ transform: `translateY(${x}px)` }}
       ref={ref}
     >
-      <img src="/src/img/aboutusImg3.png" className="aboutus-image" />
-      <img src="/src/img/aboutusImg2.png" className="aboutus-image" />
-      <img src={images} className="aboutus-image" />
-      <img src="/src/img/aboutusImg4.png" className="aboutus-image" />
-      <img src="/src/img/aboutusImg5.png" className="aboutus-image" />
+      <img src={image3} className="aboutus-image" />
+      <img src={image2} className="aboutus-image" />
+      <img src={image1} className="aboutus-image" />
+      <img src={image4} className="aboutus-image" />
+      <img src={image5} className="aboutus-image" />
     </div>
   );
 };
