@@ -350,7 +350,6 @@
   transition: color 0.5s;
   padding-inline-start: 6em;
   position: relative;
-  top: -1.5em;
 }
 .Card3-location > span {
   margin-right: 1em;
@@ -437,6 +436,7 @@
   .Card1-btn,
   .Card2-btn {
     font-size: 0.68em;
+    margin-top: 3.5em;
   }
   .Card1-btn::after,
   .Card2-btn::after {

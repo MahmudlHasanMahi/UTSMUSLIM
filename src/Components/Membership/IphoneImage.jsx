@@ -13,7 +13,6 @@ const IphoneImage = () => {
       className="iphoneImage-container"
       src="https://ik.imagekit.io/ytjlb3rhi/assets/Iphone.png?updatedAt=1689504714722"
       alt="Iphone"
-      srcset=""
       loading="lazy"
       style={{
         opacity: isInview ? 1 : 0,

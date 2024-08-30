@@ -4,6 +4,7 @@ import styles from "../Content/Contentbox.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useContext } from "react";
 import NavbarContext from "../../Utils/NavbarContext";
+import AboutImageBox from "./AboutImageBox";
 const Aboutus = () => {
   const { toogleThemeNavbar } = useContext(NavbarContext);
   const { ref, inView } = useInView({
@@ -17,6 +18,7 @@ const Aboutus = () => {
 
   return (
     <div className="aboutus-container" ref={ref}>
+      <AboutImageBox />
       <Contentbox
         postTitle="About Us"
         heading="UTSMS: Where Muslims Connect, Learn and Grow"

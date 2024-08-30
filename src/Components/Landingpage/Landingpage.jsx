@@ -25,7 +25,6 @@ const Landingpage = () => {
         src="
         https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
         alt="Univeristy Of Technology Campus Sydney"
-        srcset=""
         loading="lazy"
       />
 
