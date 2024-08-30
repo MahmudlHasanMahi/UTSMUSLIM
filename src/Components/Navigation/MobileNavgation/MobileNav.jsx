@@ -9,13 +9,13 @@ const MobileNav = () => {
   const variants = {
     open: {
       left: 0,
-      transition: { duration: 0.17, type: "spring", damping: 18 },
+      transition: { duration: 0.13, type: "spring", damping: 18 },
     },
     closed: { left: "-100%" },
   };
   const itemVariants = {
     open: {
-      transition: { staggerChildren: 0.2, delayChildren: 0.15 },
+      transition: { staggerChildren: 0.16, delayChildren: 0.1 },
     },
     closed: { transition: { duration: 0 } },
   };
