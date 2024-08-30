@@ -18,6 +18,7 @@ function App() {
           <Route path="/blogs" exact element={<PageUnavailable />} />
           <Route path="/store" exact element={<PageUnavailable />} />
           <Route path="/contact-us" exact element={<PageUnavailable />} />
+          <Route path="/apparels" exact element={<PageUnavailable />} />
         </Routes>
         <Footer />
       </PageRoutes>
