@@ -8,7 +8,11 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <JoinUs>
-        <Button title={"Join us"} styleArg={styles.joinUs} />
+        <Button
+          title={"Join us"}
+          styleArg={styles.joinUs}
+          link="https://www.activateuts.com.au/clubs/muslim-society-utsms/"
+        />
       </JoinUs>
       <div className="footer-section-container">
         <div className="footer-section-1">
@@ -38,7 +42,6 @@ const Footer = () => {
             <Link title={"LinkTree"} link={"https://linktr.ee/UTSMS"} />
             <Link title={"ActivateUTS"} />
           </Links>
-          <Links heading={"About Islam"}></Links>
         </div>
       </div>
     </div>
@@ -46,5 +49,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

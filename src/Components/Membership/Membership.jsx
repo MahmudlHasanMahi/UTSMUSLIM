@@ -27,7 +27,11 @@ const Membership = () => {
         animate={true}
       >
         <Benefits />
-        <Button title={"Learn More"} styleArg={styles.membership} />
+        <Button
+          title={"Learn More"}
+          styleArg={styles.membership}
+          link="https://www.activateuts.com.au/clubs/muslim-society-utsms/"
+        />
       </Contentbox>
       <IphoneImage />
     </div>

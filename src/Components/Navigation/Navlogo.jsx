@@ -3,11 +3,17 @@ import styles from "./Navigation.module.css";
 import { useContext } from "react";
 import NavbarContext from "../../Utils/NavbarContext";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+useNavigate;
 const Navlogo = () => {
   const { navbar } = useContext(NavbarContext);
-
+  const navigate = useNavigate();
+  const Redirect = () => {
+    navigate("/");
+  };
   return (
     <motion.img
+      onClick={Redirect}
       className={styles.navlogo}
       src={
         navbar

@@ -24,6 +24,7 @@ import {
 } from "../../Svg/ServicesSvg";
 import { NextPrayer } from "../../Utils/NextPrayer";
 import LoadingBar from "../LoadingAnimation/LoadingBar";
+import { Link } from "react-router-dom";
 export const Card1 = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -47,7 +48,11 @@ export const Card1 = () => {
         <span className={styles["Card1-title"]}>UTS Bon Marche Musalla</span>
         <div className={styles["Card1-location-container"]}>
           <span className={styles["Card1-location"]}>Building 3 Level 5</span>
-          <button className={styles["Card1-btn"]}></button>
+          <Link
+            className={styles["Card1-btn"]}
+            to={"https://maps.app.goo.gl/jRaF49qdKyNUjfNk6"}
+            target="_blank"
+          />
         </div>
       </div>
       <div ref={ref} className={styles["Card1-facilityInfo-container"]}>
@@ -105,9 +110,13 @@ export const Card2 = () => {
         <span className={styles["Card2-title"]}>Jumuah Salah On Campus</span>
         <div className={styles["Card2-location-container"]}>
           <span className={styles["Card2-location"]}>
-            Building 4, Ross Milbourne Sports Hall
+            Ross-Milbourne Sports Hall, Thomas St, Ultimo NSW 2007
           </span>
-          <button className={styles["Card2-btn"]}></button>
+          <Link
+            className={styles["Card2-btn"]}
+            to={"https://maps.app.goo.gl/SBnXUHjzyxNz5uVN6"}
+            target="_blank"
+          />
         </div>
       </div>
       <div ref={ref} className={styles["Card2-facilityInfo-container"]}>

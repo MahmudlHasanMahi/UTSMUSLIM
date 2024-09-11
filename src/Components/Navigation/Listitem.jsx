@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./Navigation.module.css";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import NavbarContext from "../../Utils/NavbarContext";
 const Listitem = ({
@@ -11,6 +11,7 @@ const Listitem = ({
   pk,
   active,
   setActive,
+  target = false,
 }) => {
   const { navbar } = useContext(NavbarContext);
   return (
@@ -27,6 +28,7 @@ const Listitem = ({
     >
       <Link
         to={`${linkTitle}`}
+        target={target}
         className={
           lastchild
             ? `${styles.navitem} ${styles["navitem-lastChild"]} ${

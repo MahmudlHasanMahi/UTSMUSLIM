@@ -445,7 +445,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
+  justify-content: space-around;
+  width: 32%;
 }
 .socialMedia-container {
   width: 65%;
@@ -456,11 +457,14 @@
 .socialMediaLogo {
   display: block;
   background-color: #ab9473;
-  padding: 10px;
+  padding: 4%;
   border-radius: 100%;
   cursor: pointer;
   width: 0.325em;
   height: 0.325em;
+}
+.socialMediaLogo:nth-child(2) {
+  padding: 3%;
 }
 .socialMediaLogo > svg {
   display: block;
@@ -790,6 +794,7 @@ a {
   }
   .footer-section-1 {
     align-items: center;
+    font-size: 1.2em;
   }
   .Link {
     display: none;
@@ -799,11 +804,7 @@ a {
     display: none;
   }
   .footer-section-2 {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    height: 1.7em;
-    justify-content: space-between;
+    display: none;
   }
   .Link-title {
     cursor: pointer;
@@ -821,11 +822,8 @@ a {
   }
   .UtsmuslimFooterLogo-long {
     display: block;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.6em;
     width: 2em;
     outline: 3.4em;
-  }
-  .socialMediaLogo {
-    padding: 8px;
   }
 }

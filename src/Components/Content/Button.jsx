@@ -1,9 +1,14 @@
 import styles from "./Contentbox.module.css";
-const Button = ({ title, styleArg }) => {
+import { Link } from "react-router-dom";
+const Button = ({ title, styleArg, link = "#" }) => {
   return (
-    <button  className={`${styles["btn-main"]} ${styleArg}`}>
+    <Link
+      className={`${styles["btn-main"]} ${styleArg}`}
+      target="_blank"
+      to={link}
+    >
       {title}
-    </button>
+    </Link>
   );
 };
 

@@ -3,7 +3,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Pages/HomePage/Home";
 import Services from "./Pages/Services.jsx/Services";
 import PageRoutes from "./PageRoutes";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { NavbarProvider } from "./Utils/NavbarContext";
 import PageUnavailable from "./Pages/PageUnavailable/PageUnavailable";
 function App() {
@@ -16,7 +16,6 @@ function App() {
           <Route path="/services" exact element={<Services />} />
           <Route path="/members" exact element={<PageUnavailable />} />
           <Route path="/blogs" exact element={<PageUnavailable />} />
-          <Route path="/store" exact element={<PageUnavailable />} />
           <Route path="/contact-us" exact element={<PageUnavailable />} />
           <Route path="/apparels" exact element={<PageUnavailable />} />
         </Routes>

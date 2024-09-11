@@ -40,9 +40,8 @@ const Navitems = () => {
       />
       <Listitem
         pk={4}
-        linkTitle={"/store"}
-        active={active}
-        setActive={setActive}
+        linkTitle={"https://utsms-apparel.square.site/"}
+        target="_blank"
         title="Store"
       />
       <Listitem

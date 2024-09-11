@@ -26,7 +26,11 @@ const Aboutus = () => {
         styleArg={styles.aboutUs}
         animate={true}
       >
-        <Button title={"Join Us"} styleArg={styles.aboutUs} />
+        <Button
+          title={"Join Us"}
+          styleArg={styles.aboutUs}
+          link="https://www.activateuts.com.au/clubs/muslim-society-utsms/"
+        />
       </Contentbox>
     </div>
   );
