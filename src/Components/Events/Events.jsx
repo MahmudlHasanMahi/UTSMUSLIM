@@ -7,6 +7,7 @@ import image2 from "./pics/SliderImage2.jpg";
 import image3 from "./pics/SliderImage3.jpg";
 import image4 from "./pics/SliderImage4.png";
 import image5 from "./pics/SliderImage5.png";
+import blur from "./pics/blur.png";
 const Events = () => {
   const Images = [image1, image2, image3, image4, image5];
   return (
@@ -14,7 +15,7 @@ const Events = () => {
       <ContentBox />
       <ImageSlider direction={1}>
         {Images.map((image) => (
-          <div>
+          <div style={{ backgroundImage: `url(${blur})` }}>
             <img
               loading="lazy"
               decoding="async"
