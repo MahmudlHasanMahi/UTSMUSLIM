@@ -34,6 +34,9 @@
 }
 
 @media screen and (max-width: 703px) and (orientation: portrait) {
+  .slider-track {
+    width: 120%;
+  }
   .slider-track > div {
     aspect-ratio: 18 / 13;
   }
