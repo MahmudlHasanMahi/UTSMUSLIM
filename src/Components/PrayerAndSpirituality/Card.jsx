@@ -30,10 +30,10 @@ export const Card1 = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <motion.div
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: "-100%" }}
       animate={{
         opacity: isInView ? 1 : 0,
-        x: isInView ? 0 : 600,
+        x: isInView ? 0 : `100%`,
         transition: {
           duration: 0.5,
           type: "spring",
