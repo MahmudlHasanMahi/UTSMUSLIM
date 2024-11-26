@@ -9,7 +9,13 @@ import image4 from "./pics/SliderImage4.png";
 import image5 from "./pics/SliderImage5.png";
 import blur from "./pics/blur.png";
 const Events = () => {
-  const Images = [image1, image2, image3, image4, image5];
+  const Images = [
+    { url: image1, alt: "UTSM student Hiking" },
+    { url: image2, alt: "UTSM handing out free Quran" },
+    { url: image3, alt: "UTSM club activity" },
+    { url: image4, alt: "UTSM friday prayer" },
+    { url: image5, alt: "" },
+  ];
   return (
     <div className={styles["event-container"]}>
       <ContentBox />
@@ -20,7 +26,8 @@ const Events = () => {
               loading="lazy"
               decoding="async"
               role="Presentation"
-              src={image}
+              alt={image.alt}
+              src={image.url}
               width={"100%"}
               height={"100%"}
             />
@@ -30,12 +37,13 @@ const Events = () => {
 
       <ImageSlider direction={-1}>
         {Images.map((image) => (
-          <div>
+          <div style={{ backgroundImage: `url(${blur})` }}>
             <img
               loading="lazy"
               decoding="async"
               role="Presentation"
-              src={image}
+              alt={image.alt}
+              src={image.url}
               width={"100%"}
               height={"100%"}
             />

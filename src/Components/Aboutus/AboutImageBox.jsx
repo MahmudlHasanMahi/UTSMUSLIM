@@ -22,11 +22,26 @@ const AboutImageBox = () => {
       style={{ transform: `translateY(${x}px)` }}
       ref={ref}
     >
-      <img src={image3} className="aboutus-image" />
-      <img src={image2} className="aboutus-image" />
-      <img src={image1} className="aboutus-image" />
-      <img src={image4} className="aboutus-image" />
-      <img src={image5} className="aboutus-image" />
+      <img
+        loading="lazy"
+        src={image3}
+        alt="Dining at UTS cafeteria"
+        className="aboutus-image"
+      />
+      <img
+        loading="lazy"
+        alt="Praying on UTS campus"
+        src={image2}
+        className="aboutus-image"
+      />
+      <img
+        loading="lazy"
+        alt="UTS event"
+        src={image1}
+        className="aboutus-image"
+      />
+      <img loading="lazy" src={image4} className="aboutus-image" />
+      <img sloading="lazy" src={image5} className="aboutus-image" />
     </div>
   );
 };

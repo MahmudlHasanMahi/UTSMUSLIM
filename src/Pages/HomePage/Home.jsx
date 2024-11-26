@@ -5,15 +5,13 @@ import Landingpage from "../../Components/Landingpage/Landingpage";
 import Membership from "../../Components/Membership/Membership";
 import Ourvalues from "../../Components/Ourvalues/Ourvalues";
 import Quotes from "../../Components/Quotes/Quotes";
-import { useEffect } from "react";
 import { setDocumentTitle } from "../../Utils/DocumentTitle";
 import Prayerwidget from "../../Components/Widget/Prayerwidget";
 const Home = () => {
+  setDocumentTitle("Home");
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        
-
         <Landingpage />
         <Prayerwidget />
         <Aboutus />

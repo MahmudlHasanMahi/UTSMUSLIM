@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./PageUnavailable.module.css";
+import { setDocumentTitle } from "../../Utils/DocumentTitle";
 const PageUnavailable = () => {
+  setDocumentTitle("Page unavailable :(");
   return (
     <div className={styles["pageUnavailable"]}>
       <div className={styles["status-container"]}>

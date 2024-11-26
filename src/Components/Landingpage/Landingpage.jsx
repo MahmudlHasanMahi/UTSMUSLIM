@@ -21,11 +21,10 @@ const Landingpage = () => {
         initial={{ x: 60, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="image-1"
-        src="
-        https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
-        alt="Univeristy Of Technology Campus Sydney"
         loading="lazy"
+        className="image-1"
+        src="https://ik.imagekit.io/ytjlb3rhi/assets/Image-1.png?updatedAt=1689504714926"
+        alt="Univeristy Of Technology Campus Sydney UTS Cental"
       />
 
       <Landingtitle />
