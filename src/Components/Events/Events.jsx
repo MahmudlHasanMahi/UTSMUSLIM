@@ -2,65 +2,37 @@ import React from "react";
 import styles from "./Events.module.css";
 import ContentBox from "./ContentBox";
 import ImageSlider from "./ImageSlider";
-import image from "./image.png";
+import image from "./pics/SliderImage1.jpg";
 const Events = () => {
+  console.log(image);
+  const Images = [
+    "/src/Components/Events/pics/SliderImage1.jpg",
+    "/src/Components/Events/pics/SliderImage2.jpg",
+    "/src/Components/Events/pics/SliderImage3.jpg",
+    "/src/Components/Events/pics/SliderImage4.png",
+    "/src/Components/Events/pics/SliderImage5.png",
+  ];
   return (
     <div className={styles["event-container"]}>
       <ContentBox />
-
       <ImageSlider direction={1}>
-        <div
-          style={{
-            backgroundImage: `url("https://plus.unsplash.com/premium_photo-1720442410336-e02bdf318c9d?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1653233792055-421f2d4de16b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://plus.unsplash.com/premium_photo-1720442410336-e02bdf318c9d?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1720640320081-763dc112f1b1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1432538501018-e71b8a676975?q=80&w=2822&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
+        {Images.map((url) => (
+          <div
+            style={{
+              backgroundImage: `url(${url})`,
+            }}
+          />
+        ))}
       </ImageSlider>
+
       <ImageSlider direction={-1}>
-        <div
-          style={{
-            backgroundImage: `url("https://plus.unsplash.com/premium_photo-1720442410336-e02bdf318c9d?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1653233792055-421f2d4de16b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://plus.unsplash.com/premium_photo-1720442410336-e02bdf318c9d?q=80&w=2948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1720640320081-763dc112f1b1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
-        <div
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1432538501018-e71b8a676975?q=80&w=2822&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
-          }}
-        ></div>
+        {Images.map((url) => (
+          <div
+            style={{
+              backgroundImage: `url(${url})`,
+            }}
+          />
+        ))}
       </ImageSlider>
     </div>
   );
