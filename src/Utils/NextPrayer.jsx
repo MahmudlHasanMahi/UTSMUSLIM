@@ -41,10 +41,9 @@ const timeDifference = (t1day, t1hour, t1min, t2day, t2hour, t2min) => {
 
 const getPrayerTimeDifference = (t1, t2, currentTime) => {
   let day = 0;
-  if (t2.prayer == "Jumuah" || t2.prayer == "Dhur") {
+  if (t2.prayer == "Jumuah" || t2.prayer == "Dhuhr") {
     day = 1;
   }
-
   const PrayerTimeDifference = timeDifference(
     0,
     getPrayerFormatted(t1),
@@ -58,6 +57,7 @@ const getPrayerTimeDifference = (t1, t2, currentTime) => {
   } else {
     day = 0;
   }
+
   const currentDifference = timeDifference(
     0,
     getPrayerFormatted(t1),
@@ -66,6 +66,7 @@ const getPrayerTimeDifference = (t1, t2, currentTime) => {
     currentTime["24hour"],
     currentTime.minute
   );
+
   const timeLeft = timeDifference(
     0,
     currentDifference[0],
@@ -74,6 +75,7 @@ const getPrayerTimeDifference = (t1, t2, currentTime) => {
     PrayerTimeDifference[0],
     PrayerTimeDifference[1]
   );
+
   let format = "";
   if (timeLeft[0] <= 0) {
     format = `${timeLeft[1]} min left`;
