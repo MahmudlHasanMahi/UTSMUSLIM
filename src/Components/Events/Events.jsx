@@ -14,21 +14,29 @@ const Events = () => {
       <ContentBox />
       <ImageSlider direction={1}>
         {Images.map((image) => (
-          <div
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-          />
+          <div>
+            <img
+              loading="lazy"
+              role="Presentation"
+              src={image}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
         ))}
       </ImageSlider>
 
       <ImageSlider direction={-1}>
         {Images.map((image) => (
-          <div
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
-          />
+          <div>
+            <img
+              loading="lazy"
+              role="Presentation"
+              src={image}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
         ))}
       </ImageSlider>
     </div>

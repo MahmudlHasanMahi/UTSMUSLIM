@@ -12,10 +12,10 @@
   width: 100%;
   gap: 2vw;
 }
-
 .slider-track > div {
   align-content: center;
   font-family: sans-serif;
+  display: flex;
   font-size: 6em;
   text-align: center;
   width: 0.6em;
@@ -24,6 +24,9 @@
   background-size: cover;
   background-position: center;
   border-radius: 1.5vw;
+}
+.slider-track > div > img{
+  border-radius: inherit;
 }
 
 .slider-track > div:first-child {
