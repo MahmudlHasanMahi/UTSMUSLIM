@@ -17,6 +17,7 @@ const Events = () => {
           <div>
             <img
               loading="lazy"
+              decoding="async"
               role="Presentation"
               src={image}
               width={"100%"}
@@ -31,6 +32,7 @@ const Events = () => {
           <div>
             <img
               loading="lazy"
+              decoding="async"
               role="Presentation"
               src={image}
               width={"100%"}
