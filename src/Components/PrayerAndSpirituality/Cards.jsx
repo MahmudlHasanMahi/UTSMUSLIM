@@ -5,6 +5,7 @@ const Cards = () => {
   return (
     <div className={styles["card-container"]}>
       <div className={styles["Card-Section-1"]}>
+        
         <Card1 />
         <Card2 />
       </div>

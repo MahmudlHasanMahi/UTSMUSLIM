@@ -55,7 +55,8 @@ export const Card1 = () => {
           />
         </div>
       </div>
-      <div ref={ref} className={styles["Card1-facilityInfo-container"]}>
+      <div ref={ref}></div>
+      <div className={styles["Card1-facilityInfo-container"]}>
         <FacilityInfo
           svg={<Wc />}
           title={"Separate brothers and sisters rooms"}
@@ -83,6 +84,7 @@ export const Card1 = () => {
           styleArg={styles.Card1}
         />
       </div>
+
       <span id="PrayerTimes" className={styles["Card1-info"]}>
         * If you are a UTS College Student, contact us and we will organise
         access for you
@@ -119,7 +121,8 @@ export const Card2 = () => {
           />
         </div>
       </div>
-      <div ref={ref} className={styles["Card2-facilityInfo-container"]}>
+      <div ref={ref}></div>
+      <div className={styles["Card2-facilityInfo-container"]}>
         <FacilityInfo
           svg={<Wc />}
           title={"Brothers and sisters section"}
