@@ -6,7 +6,7 @@ import image1 from "./pics/SliderImage1.jpg";
 import image2 from "./pics/SliderImage2.jpg";
 import image3 from "./pics/SliderImage3.jpg";
 import image4 from "./pics/SliderImage4.png";
-import image5 from "./pics/SliderImage5.png";
+import image5 from "./pics/SliderImage5.jpeg";
 import blur from "./pics/blur.png";
 const Events = () => {
   const Images = [
