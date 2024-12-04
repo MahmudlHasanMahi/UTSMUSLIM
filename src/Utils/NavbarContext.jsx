@@ -7,9 +7,7 @@ export function NavbarProvider({ children }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    if (location.state?.prevPath != location.pathname) {
-      setToggleMenu(false);
-    }
+    setToggleMenu(false);
   }, [location]);
   function toogleThemeNavbar(value) {
     if (value == "Light") {
