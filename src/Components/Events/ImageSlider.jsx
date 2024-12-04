@@ -18,7 +18,7 @@ const ImageSlider = ({ children, direction = 1 }) => {
           : ref.current.lastChild.getBoundingClientRect().x * -1,
     };
     const controls = animate(animationTo.from, animationTo.to, {
-      duration: 10,
+      duration: 20,
       ease: "linear",
       repeat: Infinity,
     });
