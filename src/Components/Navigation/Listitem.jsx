@@ -11,9 +11,9 @@ const Listitem = ({
   pk,
   active,
   setActive,
-  target = false,
 }) => {
   const { navbar } = useContext(NavbarContext);
+  // const location = useLocation();
   return (
     <motion.div
       key={pk}
@@ -28,7 +28,7 @@ const Listitem = ({
     >
       <Link
         to={`${linkTitle}`}
-        target={target}
+        state={{ prevPath: location.pathname }}
         className={
           lastchild
             ? `${styles.navitem} ${styles["navitem-lastChild"]} ${

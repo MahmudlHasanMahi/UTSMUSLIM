@@ -31,17 +31,18 @@ const Navitems = () => {
         setActive={setActive}
         title="Members"
       />
-      <Listitem
+      {/* <Listitem
         pk={4}
         linkTitle={"/blogs"}
         active={active}
         setActive={setActive}
         title="Blog"
-      />
+      /> */}
       <Listitem
         pk={4}
-        linkTitle={"https://utsms-apparel.square.site/"}
-        target="_blank"
+        linkTitle={"/store"}
+        active={active}
+        setActive={setActive}
         title="Store"
       />
       <Listitem
