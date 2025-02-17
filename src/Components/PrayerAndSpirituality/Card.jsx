@@ -229,7 +229,7 @@ export const Card3 = () => {
             <motion.div
               initial={{ width: 0 }}
               animate={{
-                width: `${PrayerInfo && PrayerInfo.progress.progress}%`,
+                width: `${PrayerInfo ? PrayerInfo.progress.progress : 0}%`,
                 transition: { duration: 1 },
               }}
               className={styles["Progress"]}

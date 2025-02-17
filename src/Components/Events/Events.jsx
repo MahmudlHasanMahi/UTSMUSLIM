@@ -20,8 +20,8 @@ const Events = () => {
     <div className={styles["event-container"]}>
       <ContentBox />
       <ImageSlider direction={1}>
-        {Images.map((image) => (
-          <div style={{ backgroundImage: `url(${blur})` }}>
+        {Images.map((image, idx) => (
+          <div key={idx} style={{ backgroundImage: `url(${blur})` }}>
             <img
               loading="lazy"
               decoding="async"
@@ -36,8 +36,8 @@ const Events = () => {
       </ImageSlider>
 
       <ImageSlider direction={-1}>
-        {Images.map((image) => (
-          <div style={{ backgroundImage: `url(${blur})` }}>
+        {Images.map((image, idx) => (
+          <div key={idx} style={{ backgroundImage: `url(${blur})` }}>
             <img
               loading="lazy"
               decoding="async"

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import NavbarContext from "./Utils/NavbarContext";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+
 const PageRoutes = ({ children }) => {
   const ref = useRef();
   const { toggleMenu } = useContext(NavbarContext);

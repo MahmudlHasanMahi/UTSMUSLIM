@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 const Navitems = () => {
   const location = useLocation();
-  const [active, setActive] = useState(location.pathname);
+  const [active, setActive] = useState(location.pathname.toLowerCase());
   useEffect(() => {
-    setActive(location.pathname);
+    setActive(location.pathname.toLowerCase());
   }, [location]);
   return (
     <ul className={styles["navitem-list-container"]}>
